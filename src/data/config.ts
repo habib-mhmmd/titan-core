@@ -1,5 +1,5 @@
 export const siteConfig = {
-  companyName: 'Habib Muhammad',
+  companyName: 'Habibmhmmd',
   siteUrl: 'https://titan-core.com',
   Socials: {
       xSocial: 'https://x.com/astrodotbuild',
