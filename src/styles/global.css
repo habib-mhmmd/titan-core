@@ -80,10 +80,10 @@
     --border-radius-large: 2rem;
     
     --font-bruno-ace: 'Plus Jakarta Sans', sans-serif;
-    --font-noto-sans-kr: "Noto Sans KR", sans-serif;
-    --font-base: 'Noto Sans KR', sans-serif;
+    --font-noto-sans-kr: 'Plus Jakarta Sans', sans-serif;
+    --font-base: 'Plus Jakarta Sans', sans-serif;
     --font-logo: 'Plus Jakarta Sans', sans-serif;
-    --font-headline: 'Noto Sans KR', sans-serif;
+    --font-headline: 'Plus Jakarta Sans', sans-serif;
 }
 
 @layer base {
