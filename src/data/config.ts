@@ -15,7 +15,7 @@ export const siteConfig = {
 export const SEO = {
   Separator: '|',
   SiteName: 'Portfolio',
-  defaultDescription: 'A modern, high-performance Astro JS theme',
+  defaultDescription: '',
 };
   
 export const blogSetting = {
