@@ -7,12 +7,12 @@ const categoryNames = categories.map((category) => category.name);
 
 const blog = defineCollection({
     loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
-    schema: ({ image }) =>
+    schema: ({ image }: { image: () => z.ZodTypeAny }) =>
         z.object({
             title: z.string(),
             excerpt: z.string(),
             featuredImage: image().optional(),
-            publishDate: z.string().transform((str) => new Date(str)),
+            publishDate: z.string().transform((str: string) => new Date(str)),
             publish: z.boolean().optional(),
             categories: z.array(z.enum(categoryNames as [string, ...string[]])),
             seo: z
@@ -27,7 +27,7 @@ const blog = defineCollection({
 
 const team = defineCollection({
     loader: glob({ base: './src/content/team', pattern: '**/*.md' }),
-    schema: ({ image }) =>
+    schema: ({ image }: { image: () => z.ZodTypeAny }) =>
         z.object({
             name: z.string(),
             headshot: image().optional(),
@@ -48,7 +48,7 @@ const legal = defineCollection({
     loader: glob({ base: './src/content/legal', pattern: '**/*.md' }),
     schema: z.object({
         title: z.string(),
-        lastUpdated: z.string().transform((str) => new Date(str)),
+        lastUpdated: z.string().transform((str:string) => new Date(str)),
         seo: z
             .object({
                 title: z.string().optional(),
