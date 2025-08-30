@@ -126,7 +126,7 @@
         --color-nav-text-hover: var(--color-primary);
         --color-nav-text-active: var(--color-primary);
         --color-nav-text-current: var(--color-primary);
-        --color-nav-submenu-bg: var(--color-background-light);
+        --color-nav-submenu-bg: var(--color-grays);
         --color-nav-mobile-text: #ffffff;
         --color-nav-mobile-text-hover: #e6b800;
         --color-nav-mobile-text-active: #ffffff;
