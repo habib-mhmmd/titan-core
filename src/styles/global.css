@@ -130,8 +130,8 @@
         --color-nav-mobile-text-hover: #e6b800;
         --color-nav-mobile-text-active: #ffffff;
         --color-nav-mobile-text-current: #ffffff;
-        --color-header-logo: var(--color-primary);
-        --color-footer-logo: var(--color-primary);
+        --color-header-logo: var(--color-whites);
+        --color-footer-logo: var(--color-whites);
     }
 
     [data-theme='poseidon'] {
