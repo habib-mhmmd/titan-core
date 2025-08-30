@@ -2,8 +2,6 @@
 import type { Feature } from '@data/features';
 import Button from '@components/ui/Button.astro';
 import Eyebrow from '@components/ui/Eyebrow.astro';
-import { getPaddingClass, getBackgroundColor, getTextColor } from '@utils/styleUtils';
-import type { PaddingSize, ThemeColor } from '@utils/styleUtils';
 
 export interface Props {
     content: {
@@ -17,49 +15,33 @@ export interface Props {
         };
         features: Feature[];
     };
-    background?: ThemeColor;
-    padding?: PaddingSize;
-    paddingTop?: PaddingSize;
-    paddingBottom?: PaddingSize;
 }
-
 const {
     content: {
-        //eyebrow,
+        eyebrow,
         title,
         description,
         button,
         features
-    },
-    background = 'base'
+    }
 } = Astro.props;
-
-//const bgColor = getBackgroundColor(background);
-const textColor = getTextColor(background);
-const paddingClass = getPaddingClass({ 
-    padding: Astro.props.padding,
-    paddingTop: Astro.props.paddingTop,
-    paddingBottom: Astro.props.paddingBottom 
-});
 ---
 
-<section class:list={["relative",  paddingClass]} style="background-color: var(--color-background);">
-    <div class="site-container px-4" >
+<section 
+    class="relative py-16"
+    style="background-color: var(--color-background); color: var(--color-text, #fff);"
+>
+    <div class="site-container px-4">
         {(title || description) && (
             <div class="text-center mb-16 max-w-3xl mx-auto">
-                {/* {eyebrow && (
-                    <Eyebrow 
-                        text={eyebrow} 
-                        background={background} 
-                    />
-                )} */}
-                {title && (
-                    <h2 class:list={[textColor]} data-aos="fade-up">
-                        {title}
-                    </h2>
-                )}
+                {eyebrow && <Eyebrow text={eyebrow} background="base" />}
+                {title && <h2 data-aos="fade-up">{title}</h2>}
                 {description && (
-                    <p class:list={["mt-4", textColor, "opacity-90"]} data-aos="fade-up" data-aos-delay="100">
+                    <p 
+                        class="mt-4 opacity-90"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
                         {description}
                     </p>
                 )}
@@ -79,29 +61,22 @@ const paddingClass = getPaddingClass({
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-auto-fit gap-8 auto-rows-fr">
             {features.map((feature, index) => (
                 <div 
-                    class:list={[
-                        "p-6 rounded-lg border border-black",
-                        background === 'dark' ? 'bg-background-base/10' : 'bg-background/90',
-                        "flex flex-col"
-                    ]}
+                    class="p-6 rounded-lg border flex flex-col"
+                    style="border-color: rgba(255,255,255,0.2);" 
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
                 >
-                    <div class:list={[
-                        "w-12 h-12 flex items-center justify-center rounded-lg mb-4",
-                        "bg-primary"
-                    ]}>
+                    <div 
+                        class="w-12 h-12 flex items-center justify-center rounded-lg mb-4"
+                        style="background-color: var(--color-primary, #2563eb);"
+                    >
                         <feature.icon
                             size={24}
-                            class="text-white"
+                            style="color: var(--color-on-primary, #fff);"
                         />
                     </div>
-                    <h3 class:list={["text-h4 mb-2", textColor]}>
-                        {feature.title}
-                    </h3>
-                    <p class:list={["text-base", textColor, "opacity-90"]}>
-                        {feature.description}
-                    </p>
+                    <h3 class="text-h4 mb-2">{feature.title}</h3>
+                    <p class="text-base opacity-90">{feature.description}</p>
                 </div>
             ))}
         </div>
@@ -113,4 +88,3 @@ const paddingClass = getPaddingClass({
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 </style>
-
