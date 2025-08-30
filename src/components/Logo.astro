@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/astro.svg';
-interface Props {
-    variant?: 'header' | 'footer' | 'dark';
-}
+// interface Props {
+//     variant?: 'header' | 'footer' | 'dark';
+// }
 
 // const { variant = 'header' } = Astro.props;
 
@@ -33,11 +33,6 @@ interface Props {
 // </a>
 
 <a href="/" class="font-logo transition-colors duration-200 font-light text-header-logo hover:text-primary">
-    {
-        // If image is the only element in this link, its alt attribute should be a textual representation.
-        // Please, use something like your company name or “Home”, not “logo.”
-        // If there is link text, leave alt empty.
-    }
-    <Image src={logo} alt="" class="hidden" />
-    <span class="font-semibold">Habibmuhd</span>
+  <Image src={logo} alt="Habibmuhd Logo" class="hidden" />
+  <span class="font-semibold">Habibmuhd</span>
 </a>
