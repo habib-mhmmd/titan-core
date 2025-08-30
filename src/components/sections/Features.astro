@@ -5,7 +5,7 @@ import Eyebrow from '@components/ui/Eyebrow.astro';
 
 export interface Props {
     content: {
-        eyebrow?: string;
+        //eyebrow?: string;
         title?: string;
         description?: string;
         button?: {
@@ -18,7 +18,7 @@ export interface Props {
 }
 const {
     content: {
-        eyebrow,
+        //eyebrow,
         title,
         description,
         button,
@@ -34,7 +34,7 @@ const {
     <div class="site-container px-4">
         {(title || description) && (
             <div class="text-center mb-16 max-w-3xl mx-auto">
-                {eyebrow && <Eyebrow text={eyebrow} background="base" />}
+                
                 {title && <h2 data-aos="fade-up">{title}</h2>}
                 {description && (
                     <p 
