@@ -3,6 +3,7 @@ import Button from '@components/ui/Button.astro';
 import { Image } from 'astro:assets';
 
 interface HeroContent {
+    intro: string;
     title: string;
     description: string;
         buttons?: {
@@ -46,7 +47,8 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
 
     <div class="absolute inset-0 left-0 top-0 w-full h-full hero-background"></div>
     <div class="site-container mx-auto px-4 py-large relative z-10 flex flex-col md:items-center md:justify-center md:text-center">
-        <h1 class="text-white text-balance whitespace-pre-line" data-aos="fade-up">
+        <h5 class="text-white" data-aos="fade-up">{content.intro}</h5>
+        <h1 class="text-white text-balance whitespace-pre-line" data-aos="fade-up" data-aos-delay="50">
             {content.title}
         </h1>
         <p class="text-white mt-2 text-balance" data-aos="fade-up" data-aos-delay="100">{content.description}</p>
