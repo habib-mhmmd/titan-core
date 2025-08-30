@@ -18,7 +18,7 @@ export const getPaddingClass = ({ padding, paddingTop, paddingBottom }: PaddingO
 
 export const getBackgroundColor = (background: ThemeColor = 'base'): string => {
     const bgColors = {
-        base: 'bg-background-base',
+        base: 'bg-background-base',   // <- ini sekarang pakai var(--color-background)
         light: 'bg-background-light',
         dark: 'bg-background-dark'
     };
