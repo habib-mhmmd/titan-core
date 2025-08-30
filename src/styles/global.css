@@ -27,7 +27,9 @@
     --color-body-light: #1a1f3c;
     --color-body-dark: #ffffff;
 
+    /* custom */
     --color-border: #373737;
+    --color-whhites: #eaeaea;
     
     --color-input: var(--color-background-light);
     --color-input-light: var(--color-background-light);
@@ -46,8 +48,10 @@
     --color-nav-mobile-text-active: #ffffff;
     --color-nav-mobile-text-current: #ffffff;
     
-    --color-header-logo: var(--color-primary);
-    --color-footer-logo: var(--color-primary);
+    /* --color-header-logo: var(--color-primary);
+    --color-footer-logo: var(--color-primary); */
+    --color-header-logo: var(--color-whites);
+    --color-footer-logo: var(--color-whhites);
     
     --text-h1: clamp(2rem, 5vw + 1rem, 4rem);
     --text-h2: clamp(1.5rem, 4vw + 0.5rem, 2.5rem);
