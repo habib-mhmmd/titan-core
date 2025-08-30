@@ -38,7 +38,7 @@
     --color-input-text-light: var(--color-headline-light);
     --color-input-text-dark: var(--color-headline-dark);
     
-    --color-nav-text: var(--color-grays);
+    --color-nav-text: var(--color-gray-300);
     --color-nav-text-hover: var(--color-primary);
     --color-nav-text-active: var(--color-primary);
     --color-nav-text-current: var(--color-primary);
