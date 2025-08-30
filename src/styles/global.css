@@ -2,6 +2,11 @@
 
 @theme {
 
+   /* custom */
+    --color-grays: #373737;
+    --color-grays-light: #AEAEAE;
+    --color-whites: #eaeaea;
+
     --color-primary: #3557c1;
     --color-primary-light: #4b6ed4;
     --color-primary-dark: #1a3c8c;
@@ -27,10 +32,6 @@
     --color-body-light: #1a1f3c;
     --color-body-dark: #ffffff;
 
-    /* custom */
-    --color-grays: #373737;
-    --color-whites: #eaeaea;
-    
     --color-input: var(--color-background-light);
     --color-input-light: var(--color-background-light);
     --color-input-dark: var(--color-background-dark);
