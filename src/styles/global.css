@@ -26,6 +26,8 @@
     --color-body-base: #1a1f3c;
     --color-body-light: #1a1f3c;
     --color-body-dark: #ffffff;
+
+    --color-border: #373737;
     
     --color-input: var(--color-background-light);
     --color-input-light: var(--color-background-light);
