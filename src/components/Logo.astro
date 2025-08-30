@@ -1,41 +1,39 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/astro.svg';
-// interface Props {
-//     variant?: 'header' | 'footer' | 'dark';
-// }
+interface Props {
+    variant?: 'header' | 'footer' | 'dark';
+}
 
-// const { variant = 'header' } = Astro.props;
+const { variant = 'header' } = Astro.props;
 
-// // Determine the appropriate CSS class based on the variant
-// const getLogoClass = () => {
-//     switch (variant) {
-//         case 'header':
-//             return 'text-header-logo hover:text-primary';
-//         case 'footer':
-//             return 'text-footer-logo hover:text-primary';
-//         case 'dark':
-//             return 'text-header-logo hover:text-primary';
-//         default:
-//             return 'text-header-logo hover:text-primary';
-//     }
-// };
-// ---
+// Determine the appropriate CSS class based on the variant
+const getLogoClass = () => {
+    switch (variant) {
+        case 'header':
+            return 'text-header-logo hover:text-primary';
+        case 'footer':
+            return 'text-footer-logo hover:text-primary';
+        case 'dark':
+            return 'text-header-logo hover:text-primary';
+        default:
+            return 'text-header-logo hover:text-primary';
+    }
+};
+---
 
-// <a href="/" class:list={['font-logo transition-colors duration-200 font-light', getLogoClass()]}>
-//     {
-//         // If image is the only element in this link, its alt attribute should be a textual representation.
-//         // Please, use something like your company name or “Home”, not “logo.”
-//         // If there is link text, leave alt empty.
-//     }
-//     <Image src={logo} alt="" class="hidden" />
-//     <span class="font-semibold">Habibmuhd</span>
-// </a>
-
-<a href="/" class="font-logo transition-colors duration-200 font-light hover:text-primary">
-  <Image src={logo} alt="Habibmuhd Logo" class="hidden" />
-  //<span class="font-semibold text-header-logo">Habibmuhd</span>
-  <span class="font-semibold" style="color: var(--color-whhites);">
-    Habibmuhd
-  </span>
+<a href="/" class:list={['font-logo transition-colors duration-200 font-light', getLogoClass()]}>
+    {
+        // If image is the only element in this link, its alt attribute should be a textual representation.
+        // Please, use something like your company name or “Home”, not “logo.”
+        // If there is link text, leave alt empty.
+    }
+    <Image src={logo} alt="" class="hidden" />
+    <span class="font-semibold">Habibmuhd</span>
 </a>
+
+<!-- // <a href="/" class="font-logo transition-colors duration-200 font-light hover:text-primary">
+//   <Image src={logo} alt="Habibmuhd Logo" class="hidden" />
+//   //<span class="font-semibold text-header-logo">Habibmuhd</span>
+//   <span class="font-semibold" style="color: var(--color-whhites);">Habibmuhd</span>
+// </a> -->
