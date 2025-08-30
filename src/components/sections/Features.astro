@@ -54,6 +54,16 @@ const paddingClass = getPaddingClass({
                     />
                 )}
                 {title && (
+                    <h2 data-aos="fade-up" style="color: var(--color-whites);">
+                        {title}
+                    </h2>
+                )}
+                {description && (
+                    <p data-aos="fade-up" data-aos-delay="100" style="color: var(--color-grays-light);">
+                        {description}
+                    </p>
+                )}
+                {/* {title && (
                     <h2 class:list={[textColor]} data-aos="fade-up">
                         {title}
                     </h2>
@@ -62,7 +72,7 @@ const paddingClass = getPaddingClass({
                     <p class:list={["mt-4", textColor, "opacity-90"]} data-aos="fade-up" data-aos-delay="100">
                         {description}
                     </p>
-                )}
+                )} */}
                 {button && (
                     <div class="mt-8" data-aos="fade-up" data-aos-delay="200">
                         <Button
