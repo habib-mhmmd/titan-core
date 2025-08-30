@@ -28,7 +28,7 @@
     --color-body-dark: #ffffff;
 
     /* custom */
-    --color-border: #373737;
+    --color-grays: #373737;
     --color-whhites: #eaeaea;
     
     --color-input: var(--color-background-light);
@@ -38,7 +38,7 @@
     --color-input-text-light: var(--color-headline-light);
     --color-input-text-dark: var(--color-headline-dark);
     
-    --color-nav-text: var(--color-body-base);
+    --color-nav-text: var(--color-grays);
     --color-nav-text-hover: var(--color-primary);
     --color-nav-text-active: var(--color-primary);
     --color-nav-text-current: var(--color-primary);
@@ -121,7 +121,7 @@
         --color-input-text: var(--color-body-base);
         --color-input-text-light: var(--color-headline-light);
         --color-input-text-dark: var(--color-headline-dark);
-        --color-nav-text: var(--color-body-base);
+        --color-nav-text: var(--color-grays);
         --color-nav-text-hover: var(--color-primary);
         --color-nav-text-active: var(--color-primary);
         --color-nav-text-current: var(--color-primary);
