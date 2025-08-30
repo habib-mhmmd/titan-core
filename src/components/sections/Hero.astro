@@ -46,14 +46,12 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
     )} -->
 
     <div class="absolute inset-0 left-0 top-0 w-full h-full hero-background"></div>
-    <div class="site-container mx-auto px-4 py-large relative z-10 flex flex-col md:items-center md:justify-center md:text-center">
+    <div class="site-container mx-auto px-6 py-large relative z-10 flex flex-col md:items-center md:justify-center md:text-center">
         <h5 class="text-white" data-aos="fade-up">{content.intro}</h5>
         <h1 class="text-white text-balance whitespace-pre-line" data-aos="fade-up" data-aos-delay="50">
             {content.title}
         </h1>
-        <div class="site-container mx-auto px-4 py-large relative z-10 flex flex-col md:items-center md:justify-center md:text-center">
-            <p class="text-white mt-2 text-balance" data-aos="fade-up" data-aos-delay="100">{content.description}</p>
-        </div>
+        <p class="text-white mt-2 text-balance" data-aos="fade-up" data-aos-delay="100">{content.description}</p>
         
         {content.buttons && content.buttons.length > 0 && (
             <div class="flex flex-wrap gap-4 mt-8" data-aos="fade-up">
