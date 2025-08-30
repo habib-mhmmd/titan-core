@@ -34,7 +34,7 @@ const {
     background = 'base'
 } = Astro.props;
 
-const bgColor = getBackgroundColor(background);
+//const bgColor = getBackgroundColor(background);
 const textColor = getTextColor(background);
 const paddingClass = getPaddingClass({ 
     padding: Astro.props.padding,
@@ -43,7 +43,7 @@ const paddingClass = getPaddingClass({
 });
 ---
 
-<section class:list={["relative", bgColor, paddingClass]}>
+<section class:list={["relative",  paddingClass]} style="background-color: var(--color-background);">
     <div class="site-container px-4">
         {(title || description) && (
             <div class="text-center mb-16 max-w-3xl mx-auto">
