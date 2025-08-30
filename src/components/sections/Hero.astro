@@ -48,8 +48,8 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
     <div class="absolute inset-0 left-0 top-0 w-full h-full hero-background"></div>
     <!-- site-container mx-auto px-6 py-large relative z-10 flex flex-col md:items-center md:justify-center md:text-center -->
     <div class="site-container mx-auto px-4 md:px-12 py-large relative z-10 flex flex-col text-left md:items-center md:justify-center md:text-center">
-        <h5 class="text-white" data-aos="fade-up">{content.intro}</h5>
-        <h1 class="text-white text-balance whitespace-pre-line" data-aos="fade-up" data-aos-delay="50">
+        <h5 data-aos="fade-up" style="color: var(--color-whites);">{content.intro}</h5>
+        <h1 class="text-balance whitespace-pre-line" data-aos="fade-up" data-aos-delay="50" style="color: var(--color-whites);">
             {content.title}
         </h1>
         <p class="mt-2 md:mt-4 px-0 lg:px-8 xl:px-12 2xl:px-16 text-balance" data-aos="fade-up" data-aos-delay="100" style="color: var(--color-grays-light);">{content.description}</p>
