@@ -6,7 +6,8 @@ interface HeroContent {
     intro: string;
     title: string;
     description: string;
-        buttons?: {
+    skills:string[];
+    buttons?: {
         icon?: {
             path?: string; // inline SVG path
             url?: string;  // link ke file svg
@@ -59,8 +60,33 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
         </h1>
         <p class="mt-2 md:mt-4 px-0 lg:px-8 xl:px-12 2xl:px-16 text-balance" data-aos="fade-up" data-aos-delay="100" style="color: var(--color-grays-light);">{content.description}</p>
         
+        {/* GRID SKILLS */}
+        {content.skills && content.skills.length > 0 && (
+        <div class="mt-6 grid gap-6 text-center" data-aos="fade-up" data-aos-delay="75">
+            
+            {/* baris 1 */}
+            <div class="grid grid-cols-4 gap-6">
+            {content.skills.slice(0,4).map((skill) => (
+                <h4 class="text-xl font-semibold" style="color: var(--color-grays-light);">
+                {skill}
+                </h4>
+            ))}
+            </div>
+
+            {/* baris 2 */}
+            <div class="flex justify-center gap-6">
+            {content.skills.slice(4).map((skill) => (
+                <h4 class="text-xl font-semibold" style="color: var(--color-grays-light);">
+                {skill}
+                </h4>
+            ))}
+            </div>
+        </div>
+        )}
+
+
         {content.buttons && content.buttons.length > 0 && (
-            <div class="flex flex-wrap gap-6 mt-8" data-aos="fade-up">
+            <div class="flex flex-wrap gap-5 mt-8" data-aos="fade-up">
                 {content.buttons.map((button) => (
                     <Button
                         href={button.link}
