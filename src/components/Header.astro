@@ -136,16 +136,17 @@ const isCurrentPage = (link: string) => {
                                             {item.children && (
                                                 <button
                                                     class:list={[
-                                                        'mobile-submenu-button p-2 -mr-2 rounded-md focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active',
+                                                        'mobile-submenu-button p-2 -mr-2',
+                                                        // rounded-md focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active
                                                         isCurrentPage(item.link)
-                                                            ? 'text-nav-text-current'
+                                                            ? 'text-nav-text'
                                                             : 'text-nav-text hover:text-nav-text-hover',
                                                     ]}
                                                     aria-label={`Toggle ${item.name} submenu`}
                                                     aria-expanded="false"
                                                 >
                                                     <ChevronDown
-                                                        size={16}
+                                                        size={20}
                                                         class="transform transition-transform duration-200"
                                                     />
                                                 </button>
