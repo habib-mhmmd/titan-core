@@ -122,8 +122,8 @@
         --color-input-text: var(--color-body-base);
         --color-input-text-light: var(--color-headline-light);
         --color-input-text-dark: var(--color-headline-dark);
-        --color-nav-text: var(--color-whites);
-        --color-nav-text-hover: var(--color-primary);
+        --color-nav-text: var(--color-body-light);
+        --color-nav-text-hover: var(--color-body-base);
         --color-nav-text-active: var(--color-primary);
         --color-nav-text-current: var(--color-primary);
         --color-nav-submenu-bg: var(--color-grays);
