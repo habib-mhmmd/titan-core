@@ -124,7 +124,7 @@
         --color-input-text-dark: var(--color-headline-dark);
         --color-nav-text: var(--color-body-light);
         --color-nav-text-hover: var(--color-body-base);
-        --color-nav-text-active: var(--color-primary);
+        --color-nav-text-active: var(--color-body-base);
         --color-nav-text-current: var(--color-primary);
         --color-nav-submenu-bg: var(--color-grays);
         --color-nav-mobile-text: #ffffff;
