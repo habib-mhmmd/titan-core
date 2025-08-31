@@ -62,13 +62,16 @@ const Element = href ? 'a' : 'button';
   {...(target && { target, rel: target === '_blank' ? 'noopener noreferrer' : undefined })}
 >
   {iconPath && (
-    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--color-whites);" >
+    // <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--color-whites);" >
+    //   <path d={iconPath} />
+    // </svg>
+    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="color: var(--color-whites);" >
       <path d={iconPath} />
     </svg>
   )}
 
   {iconUrl && (
-    <img src={iconUrl} alt="" class="w-5 h-5" />
+    <img src={iconUrl} alt="" class="w-6 h-6" />
   )}
   <span class="absolute left-0 -mt-12 h-32 w-1/2 translate-x-[250%] rotate-12 bg-white opacity-20 transition-all duration-250 ease-out group-hover:translate-x-[2%]"></span>
 
