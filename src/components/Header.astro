@@ -35,7 +35,8 @@ const isCurrentPage = (link: string) => {
                                     <a
                                         href={item.link}
                                         class:list={[
-                                            'text-small font-medium rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-nav-text-active',
+                                            'text-small font-medium rounded-md px-2 py-1',
+                                            // focus:outline-none focus:ring-2 focus:ring-nav-text-active
                                             isCurrentPage(item.link)
                                                 ? 'text-nav-text-current font-semibold'
                                                 : 'text-nav-text hover:text-nav-text-hover',
@@ -72,7 +73,8 @@ const isCurrentPage = (link: string) => {
                                                 <a
                                                     href={child.link}
                                                     class:list={[
-                                                        'block px-4 text-small py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-nav-text-active',
+                                                        'block px-4 text-small py-2',
+                                                        // focus:outline-none focus:ring-2 focus:ring-inset focus:ring-nav-text-active
                                                         isCurrentPage(child.link)
                                                             ? 'text-nav-text-current font-semibold'
                                                             : 'text-nav-text hover:text-nav-text-hover',
