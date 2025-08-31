@@ -1,5 +1,5 @@
 ---
-import Button from '@components/ui/Button.astro';
+import Button from '@components/ui/ButtonIcon.astro';
 import { Image } from 'astro:assets';
 
 interface HeroContent {
@@ -7,6 +7,7 @@ interface HeroContent {
     title: string;
     description: string;
         buttons?: {
+        icon:string
         text: string;
         link: string;
         variant?: 'primary' | 'secondary' | 'ghostLight' | 'ghostDark';
@@ -62,6 +63,7 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
                         target={button.target || '_self'}
                         variant={button.variant || 'primary'}
                     >
+                        {button.icon}
                         {button.text}
                     </Button>
                 ))}

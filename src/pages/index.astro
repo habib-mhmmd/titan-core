@@ -14,6 +14,7 @@ import { faqLists } from '@data/faqs';
 import RecentPosts from '@components/sections/RecentPosts.astro';
 import heroImage from '../assets/images/home/Linear1.png';
 import styleGuideImage from '../assets/images/home/developer.jpg';
+import { imageConfig } from 'astro:assets';
 
 const seoTitle = "Habibmuhd";
 const seoDescription = "Muhammad Habib Al Hudry | Graphic Designer";
@@ -24,11 +25,13 @@ const heroContent = {
     description: 'Informatics graduate passionate about graphic design, UI/UX, and basic animation using After Effects, Premiere Pro, Blender, and CLO3D. Skilled with creative tools including Photoshop, Illustrator, Figma, and CorelDraw. Actively involved in organizations and awarded 5th place in a national UI/UX competition. Ready to contribute fresh ideas and collaborate in a dynamic team environment.',
     buttons: [
         {
+            icon: 'm3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z',
             text: 'Get Started',
             link: '/contact',
             target: '_self'
         },
         {
+            icon: 'm3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z',
             text: 'View on GitHub',
             link: 'https://github.com/rspisarski/titan-core',
             target: '_blank'
