@@ -11,7 +11,7 @@ interface HeroContent {
             path?: string; // inline SVG path
             url?: string;  // link ke file svg
         };
-        text: string;
+        //text: string;
         link: string;
         variant?: 'primary' | 'secondary' | 'ghostLight' | 'ghostDark';
         target?: string;
@@ -68,7 +68,7 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
                         iconPath={button.icon?.path}
                         iconUrl={button.icon?.url}
                     >
-                        {button.text}
+                        {/* {button.text} */}
                     </Button>
                 ))}
             </div>
