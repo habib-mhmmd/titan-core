@@ -33,10 +33,10 @@ const activeCategories = categories.filter((category) =>
             <div class="flex flex-wrap gap-2">
                 <a
                     href="/blog"
-                    class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors border border-primary duration-200 ${
+                    class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors duration-200 ${
                         !currentCategory
-                            ? 'bg-secondary text-body-base'
-                            : 'bg-body-light text-body-light hover:bg-background-base hover:text-body-base'
+                            ? 'bg-primary text-body-base'
+                            : 'bg-body-light text-body-light hover:bg-background-base hover:text-body-base border border-body-light hover:border-body-base'
                     }`}
                 >
                     Show All
@@ -45,10 +45,10 @@ const activeCategories = categories.filter((category) =>
                     activeCategories.map((category) => (
                         <a
                             href={`/category/${category.slug}`}
-                            class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors border border-primary duration-200 ${
+                            class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors duration-200 ${
                                 currentCategory === category.name
-                                    ? 'bg-secondary text-body-base'
-                                    : 'bg-body-light text-body-light hover:bg-background-base hover:text-body-base'
+                                    ? 'bg-primary text-body-base'
+                                    : 'bg-body-light text-body-light hover:bg-background-base hover:text-body-base border border-body-light hover:border-body-base'
                             }`}
                             title={category.description}
                         >
