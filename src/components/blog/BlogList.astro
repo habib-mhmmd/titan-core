@@ -35,8 +35,8 @@ const activeCategories = categories.filter((category) =>
                     href="/blog"
                     class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors border border-primary duration-200 ${
                         !currentCategory
-                            ? 'bg-primary text-body-dark shadow-md'
-                            : 'bg-background text-body-base hover:bg-background-light hover:text-body-light'
+                            ? 'bg-secondary text-body-base'
+                            : 'bg-body-light text-body-light hover:bg-background-base hover:text-body-base'
                     }`}
                 >
                     Show All
@@ -47,8 +47,8 @@ const activeCategories = categories.filter((category) =>
                             href={`/category/${category.slug}`}
                             class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors border border-primary duration-200 ${
                                 currentCategory === category.name
-                                    ? 'bg-primary text-body-dark shadow-md'
-                                    : 'bg-background text-body-base hover:bg-background-light hover:text-body-light'
+                                    ? 'bg-secondary text-body-base'
+                                    : 'bg-body-light text-body-light hover:bg-background-base hover:text-body-base'
                             }`}
                             title={category.description}
                         >
