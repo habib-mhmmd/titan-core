@@ -47,7 +47,8 @@ const heroContent = {
 ---
 <Layout title={seoTitle} description={seoDescription}>
     <main>
-    <InnerHero content={heroContent}/>
+    <div class="absolute inset-0 left-0 top-0 w-full h-full hero-background"></div>
+    <!-- <InnerHero content={heroContent}/> -->
     <BlogList posts={paginatedPosts} currentCategory={currentCategory} />
 
     {totalPages > 1 && (
