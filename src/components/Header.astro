@@ -104,13 +104,13 @@ const isCurrentPage = (link: string) => {
                         <Menu size={24} class="text-body-base" />
                     </span>
                     <span class="close-icon hidden">
-                        <X size={24} class="text-white" />
+                        <X size={24} class="text-body-base" />
                     </span>
                 </button>
 
                 {/* Mobile Menu Panel */}
                 <div
-                    class="mobile-menu fixed inset-0 z-20 px-8 pt-20 bg-primary lg:hidden hidden opacity-0 scale-95 transform transition-all duration-200 ease-out overflow-y-auto"
+                    class="mobile-menu fixed inset-0 z-20 px-8 pt-20 bg-background lg:hidden hidden opacity-0 scale-95 transform transition-all duration-200 ease-out overflow-y-auto"
                 >
                     <ul class="flex flex-col gap-4">
                         {
@@ -121,7 +121,8 @@ const isCurrentPage = (link: string) => {
                                             <a
                                                 href={item.link}
                                                 class:list={[
-                                                    'py-1 rounded-md focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active',
+                                                    'py-1',
+                                                    // focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active
                                                     isCurrentPage(item.link)
                                                         ? 'text-nav-mobile-text-current font-semibold'
                                                         : 'text-nav-mobile-text hover:text-nav-mobile-text-hover',
