@@ -67,7 +67,7 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
             {/* baris 1 */}
             <div class="grid grid-cols-4 gap-6">
             {content.skills.slice(0,4).map((skill) => (
-                <h4 class="text-xl font-semibold" style="color: var(--color-grays-light);">
+                <h4 style="color: var(--color-grays-light);">
                 {skill}
                 </h4>
             ))}
@@ -76,7 +76,10 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
             {/* baris 2 */}
             <div class="flex justify-center gap-6">
             {content.skills.slice(4).map((skill) => (
-                <h4 class="text-xl font-semibold" style="color: var(--color-grays-light);">
+                <h4
+                    class="text-[var(--color-whites)] hover:text-[var(--color-whites)] transition-colors duration-300"
+                    //style="color: var(--color-grays-light);"
+                >
                 {skill}
                 </h4>
             ))}
