@@ -29,8 +29,8 @@
     --color-eyebrow-dark: #e6b800;
     
     --color-body-base: #eaeaea;
-    --color-body-light: #1a1f3c;
-    --color-body-dark: #ffffff;
+    --color-body-light: #aeaeae;
+    --color-body-dark: #373737;
 
     --color-input: var(--color-background-light);
     --color-input-light: var(--color-background-light);
@@ -110,7 +110,7 @@
         --color-headline: #1a1f3c;
         --color-headline-light: #1a1f3c;
         --color-headline-dark: #ffffff;
-        --color-body-base: #1a1f3c;
+        --color-body-base: #eaeaea;
         --color-body-light: #1a1f3c;
         --color-body-dark: #ffffff;
         --color-eyebrow: #1e3c8c;
