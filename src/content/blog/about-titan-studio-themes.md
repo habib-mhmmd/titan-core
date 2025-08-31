@@ -1,7 +1,7 @@
 ---
-title: "Introducing Titan Studio Themes"
-excerpt: "Learn about Titan Studio Themes and our mission to create beautiful, functional Astro JS themes"
-featuredImage: "./images/titan-studio-themes.jpg"
+title: "Vietnamese-style Advertising Poster for Promoting GoTo Services"
+excerpt: "A personal exploration in poster design inspired by Vietnamese advertising style, characterized by bright visuals, strong contrasts, and an optimistic atmosphere"
+featuredImage: "./images/ojol.jpg"
 publishDate: "2023-11-15"
 publish: true
 categories: ["Web Development", "Theme Usage"]
