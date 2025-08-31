@@ -62,13 +62,14 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
         
         {/* GRID SKILLS */}
         {content.skills && content.skills.length > 0 && (
-        <div class="mt-6 grid gap-6 text-center" data-aos="fade-up" data-aos-delay="75">
+        <div class="mt-6 grid gap-6" >
             
             {/* baris 1 */}
             <div class="grid grid-cols-4 gap-6">
             {content.skills.slice(0,4).map((skill) => (
                 <h4 
                     class="text-[var(--color-grays-light)] hover:text-[var(--color-whites)] transition-colors duration-300"
+                    data-aos="fade-up" data-aos-delay="75"
                 >
                 {skill}
                 </h4>
@@ -76,10 +77,11 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
             </div>
 
             {/* baris 2 */}
-            <div class="flex justify-center gap-6">
+            <div class="flex gap-6">
             {content.skills.slice(4).map((skill) => (
                 <h4
                     class="text-[var(--color-grays-light)] hover:text-[var(--color-whites)] transition-colors duration-300"
+                    data-aos="fade-up" data-aos-delay="100"
                     /*style="color: var(--color-grays-light);"*/
                 >
                 {skill}
@@ -91,7 +93,7 @@ const opacity = content.overlayOpacity ?? 1; // Default opacity if not specified
 
 
         {content.buttons && content.buttons.length > 0 && (
-            <div class="flex flex-wrap gap-5 mt-8" data-aos="fade-up">
+            <div class="flex flex-wrap gap-5 mt-8" data-aos="fade-up" data-aos-delay="125">
                 {content.buttons.map((button) => (
                     <Button
                         href={button.link}
