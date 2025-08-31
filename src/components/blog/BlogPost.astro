@@ -24,12 +24,12 @@ const validCategories = postCategories.filter((categoryName: string) =>
 
 <a
     href={`/blog/${slug}`}
-    class="group flex flex-col h-full overflow-hidden bg-white rounded-lg border border-black transition-all duration-300 hover:border-primary"
+    class="group flex flex-col h-full overflow-hidden bg-background-light rounded-lg border border-background-light hover:border-body-base transition-all duration-300"
     data-aos="fade-up"
     data-aos-delay={index * 100}
 >
     <div
-        class="relative aspect-[16/9] overflow-hidden border-black border-b group-hover:border-primary transition-colors duration-300"
+        class="relative aspect-[16/9] overflow-hidden"
     >
         {
             featuredImage && (
@@ -47,16 +47,16 @@ const validCategories = postCategories.filter((categoryName: string) =>
 
     <div class="py-4 px-4 flex flex-col flex-grow relative">
         {/* Date at the top */}
-        <div class="text-sm text-gray-600 mb-3 group-hover:text-primary/80 transition-colors duration-300">
+        <div class="text-sm text-body-light mb-3 group-hover:text-body-base transition-colors duration-300">
             <Date date={publishDate} />
         </div>
 
-        <h2 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+        <h2 class="text-xl font-bold text-body-base">
             {title}
         </h2>
 
         <p
-            class="mt-2 mb-8 text-body-base line-clamp-4 flex-grow text-small group-hover:text-gray-700 transition-colors duration-300"
+            class="mt-2 mb-8 text-body-light line-clamp-4 flex-grow text-small group-hover:text-body-base transition-colors duration-300"
         >
             {excerpt}
         </p>
