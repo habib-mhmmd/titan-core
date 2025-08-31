@@ -124,8 +124,10 @@ const isCurrentPage = (link: string) => {
                                                     'py-1',
                                                     // focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active
                                                     isCurrentPage(item.link)
-                                                        ? 'text-nav-mobile-text-current font-semibold'
-                                                        : 'text-nav-mobile-text hover:text-nav-mobile-text-hover',
+                                                        // ? 'text-nav-mobile-text-current font-semibold'
+                                                        // : 'text-nav-mobile-text hover:text-nav-mobile-text-hover',
+                                                        ? 'text-nav-text-current font-semibold'
+                                                        : 'text-nav-text hover:text-nav-text-hover',
                                                 ]}
                                                 aria-current={isCurrentPage(item.link) ? 'page' : undefined}
                                             >
@@ -136,8 +138,8 @@ const isCurrentPage = (link: string) => {
                                                     class:list={[
                                                         'mobile-submenu-button p-2 -mr-2 rounded-md focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active',
                                                         isCurrentPage(item.link)
-                                                            ? 'text-nav-mobile-text-current'
-                                                            : 'text-nav-mobile-text hover:text-nav-mobile-text-hover',
+                                                            ? 'text-nav-text-current'
+                                                            : 'text-nav-text hover:text-nav-text-hover',
                                                     ]}
                                                     aria-label={`Toggle ${item.name} submenu`}
                                                     aria-expanded="false"
@@ -156,10 +158,11 @@ const isCurrentPage = (link: string) => {
                                                         <a
                                                             href={child.link}
                                                             class:list={[
-                                                                'block py-1 rounded-md focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active',
+                                                                'block py-1 rounded-md',
+                                                                // focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active
                                                                 isCurrentPage(child.link)
-                                                                    ? 'text-nav-mobile-text-current font-semibold'
-                                                                    : 'text-nav-mobile-text hover:text-nav-mobile-text-hover',
+                                                                    ? 'text-nav-text-current font-semibold'
+                                                                    : 'text-nav-text hover:text-nav-mobile-text-hover',
                                                             ]}
                                                             role="menuitem"
                                                             aria-current={
@@ -180,7 +183,7 @@ const isCurrentPage = (link: string) => {
 
                     {/* Updated mobile CTA button styling */}
                     <div class="mt-8 pb-8">
-                        <Button href={ctaButton.link} variant="ghostLight">{ctaButton.name} </Button>
+                        <Button href={ctaButton.link} variant="primary">{ctaButton.name} </Button>
                     </div>
                 </div>
             </nav>
