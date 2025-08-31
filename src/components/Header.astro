@@ -158,11 +158,11 @@ const isCurrentPage = (link: string) => {
                                                         <a
                                                             href={child.link}
                                                             class:list={[
-                                                                'block py-1 rounded-md',
+                                                                'py-1 rounded-md',
                                                                 // focus:outline-none focus:ring-2 focus:ring-nav-mobile-text-active
                                                                 isCurrentPage(child.link)
                                                                     ? 'text-nav-text-current font-semibold'
-                                                                    : 'text-nav-text hover:text-nav-mobile-text-hover',
+                                                                    : 'text-nav-text hover:text-nav-text-hover',
                                                             ]}
                                                             role="menuitem"
                                                             aria-current={
