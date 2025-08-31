@@ -36,7 +36,7 @@ const activeCategories = categories.filter((category) =>
                     class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors duration-200 ${
                         !currentCategory
                             ? 'bg-primary text-body-base'
-                            : 'bg-body-light text-body-light hover:bg-background-base hover:text-body-base border border-body-light hover:border-body-base'
+                            : 'text-body-light hover:text-body-base border border-body-light hover:border-body-base'
                     }`}
                 >
                     Show All
@@ -48,7 +48,7 @@ const activeCategories = categories.filter((category) =>
                             class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors duration-200 ${
                                 currentCategory === category.name
                                     ? 'bg-primary text-body-base'
-                                    : 'bg-body-light text-body-light hover:bg-background-base hover:text-body-base border border-body-light hover:border-body-base'
+                                    : 'text-body-light hover:text-body-base border border-body-light hover:border-body-base'
                             }`}
                             title={category.description}
                         >
