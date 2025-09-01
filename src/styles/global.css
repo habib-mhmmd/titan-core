@@ -592,6 +592,9 @@ pre[class*="language-"] {
 }
 
 .markdown img {
-  /* border-radius: var(--border-radius-small); */
-  overflow: hidden;
+  border-radius: var(--border-radius-small); 
+  display: block;
+  margin: 1rem auto; /* biar center */
+  max-width: 100%;   /* biar responsif */
+  height: auto;
 }
