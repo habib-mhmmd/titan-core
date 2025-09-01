@@ -598,3 +598,16 @@ pre[class*="language-"] {
   max-width: 100%;   /* biar responsif */
   height: auto;
 }
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  @apply text-body-base;
+}
+
+.markdown p {
+  @apply text-body-light;
+}
