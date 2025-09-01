@@ -3,6 +3,7 @@ import { headerMenu } from '@data/menu';
 import Logo from '@components/Logo.astro';
 import { Menu, X, ChevronDown } from 'lucide-astro';
 import Button from '@components/ui/Button.astro';
+import Navigation from './ui/Navigation.astro';
 
 const ctaButton = {
     name: 'Contact Us',
@@ -21,13 +22,13 @@ const isCurrentPage = (link: string) => {
 };
 ---
 
-<header class="fixed top-0 z-50 w-full left-0 h-20">
-    <div class="site-container mx-auto h-full bg-primary"></div>
-    <div class="site-container z-40 mx-auto h-full">
-        <div class="flex justify-between items-center px-4 h-full">
+<header class="fixed top-0 z-50 w-full left-0 bg-background/30 backdrop-blur-md">
+    <div class="site-container z-40 mx-auto">
+        <div class="flex justify-between items-center py-4 px-4">
             <!-- style="background-color: var(--color-background); border-color: var(--color-grays);" rounded-lg bg-background/30 border border-body-dark backdrop-blur-md  bg-background/30 backdrop-blur-md-->
             <Logo />
-            <nav class="relative flex items-center gap-2 lg:gap-8" aria-label="Site Navigation">
+            <Navigation/>
+            <!-- <nav class="relative flex items-center gap-2 lg:gap-8" aria-label="Site Navigation">
                 {/* Desktop Menu */}
                 <ul class="hidden lg:flex lg:gap-8 items-center">
                     {
@@ -189,12 +190,12 @@ const isCurrentPage = (link: string) => {
                         <Button href={ctaButton.link} variant="primary">{ctaButton.name} </Button>
                     </div>
                 </div>
-            </nav>
+            </nav> -->
         </div>
     </div>
 </header>
 
-<script>
+<!-- <script>
     // Desktop Menu
     const desktopMenuItems = document.querySelectorAll('.group');
 
@@ -350,4 +351,4 @@ const isCurrentPage = (link: string) => {
             closeIcon?.classList.add('hidden');
         }
     });
-</script>
+</script> -->
