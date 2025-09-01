@@ -99,7 +99,7 @@ else if (!seoImage && post.data.featuredImage) {
                     alt=""
                     width={1200}
                     height={675}
-                    class="w-full h-auto rounded-lg border mt-24 md:mt-36 mb-6 md:mb-16 border-background-light"
+                    class="w-full h-auto rounded-lg border mt-24 md:mt-36 mb-4 md:mb-16 border-background-light"
                     quality={80}
                     format="webp"
                 />
@@ -107,7 +107,8 @@ else if (!seoImage && post.data.featuredImage) {
         }
         <div class="mt-12 mb-12 text-center">
             <h2 class="text-body-base">{post.data.title}</h2>
-            <div class="flex items-center justify-center gap-4 text-body-light text-sm font-medium">
+            <div class="flex text-left md:items-center md:justify-center md:text-center gap-4 text-body-light text-sm font-medium">
+                <!-- items-center justify-center   -->
                 <Date date={post.data.publishDate} />
                 {
                     post.data.categories && (
