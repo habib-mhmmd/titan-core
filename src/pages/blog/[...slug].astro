@@ -99,15 +99,15 @@ else if (!seoImage && post.data.featuredImage) {
                     alt=""
                     width={1200}
                     height={675}
-                    class="w-full h-auto rounded-lg border mt-42 mb-12 border-black"
+                    class="w-full h-auto rounded-lg border mt-42 mb-12 border-background-light"
                     quality={80}
                     format="webp"
                 />
             )
         }
         <div class="mt-12 mb-12 text-center">
-            <h1 class="text-body-base">{post.data.title}</h1>
-            <div class="flex items-center justify-center gap-4 text-body-light text-smfont-medium">
+            <h2 class="text-body-base">{post.data.title}</h2>
+            <div class="flex items-center justify-center gap-4 text-body-light text-sm font-medium">
                 <Date date={post.data.publishDate} />
                 {
                     post.data.categories && (
