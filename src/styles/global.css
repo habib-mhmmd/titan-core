@@ -612,3 +612,10 @@ pre[class*="language-"] {
 .markdown li{
   letter-spacing: 0.02em;
 }
+
+.markdown hr {
+    border: none;
+    height: 1px;
+    margin: 1rem 2rem;
+    background-color: var(--color-body-dark);
+}
