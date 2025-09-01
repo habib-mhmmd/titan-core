@@ -591,3 +591,7 @@ pre[class*="language-"] {
   background-color: var(--color-background-dark);
 }
 
+.markdown img {
+  border-radius: 16px;
+  overflow: hidden;
+}
