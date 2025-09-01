@@ -476,11 +476,11 @@
     article h4 { font-size: var(--text-article-h4); margin: 0 0 1.5rem}
     article h5 { font-size: var(--text-article-h5); margin: 0 0 1.25rem}
     article h6 { font-size: var(--text-article-h6); margin: 0 0 1rem}
-    article p { font-size: var(--text-base); margin: 0 0 1.75rem; line-height: 1.8;}
-    article ol { font-size: var(--text-base); margin: 0 0 2rem; padding-left: 2rem; list-style-type: decimal; }
-    article ol ::marker { color: var(--color-primary); }
-    article ul { font-size: var(--text-base); margin: 0 0 2rem; padding-left: 2rem; list-style-type: disc; }
-    article ul ::marker { color: var(--color-primary); }
+    article p { font-size: var(--text-base); margin: 0 0 1.75rem; line-height: 1.8; color: var(--color-body-light);}
+    article ol { font-size: var(--text-base); margin: 0 0 2rem; padding-left: 2rem; list-style-type: decimal; color: var(--color-body-light); }
+    article ol ::marker { color: var(--color-body-light);}
+    article ul { font-size: var(--text-base); margin: 0 0 2rem; padding-left: 2rem; list-style-type: disc; color: var(--color-body-light);}
+    article ul ::marker { color: var(--color-body-light);}
     article blockquote { font-size: var(--text-base); margin: 0 0 1.75rem; padding-left: 2rem; border-left: 4px solid var(--color-primary); }
     
 }
@@ -608,6 +608,7 @@ pre[class*="language-"] {
   @apply text-body-base;
 }
 
-.markdown p {
-  @apply text-body-light;
-}
+/* .markdown p {
+  color: var(--color-body-light);
+  font-size: var(--text-base);
+} */
