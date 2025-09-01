@@ -17,9 +17,9 @@ This project is a personal exploration in poster design inspired by Vietnamese a
 
 ## Our Foundation: Titan Core
 
-![GoTo Services Poster](./contenImages/ojk.jpg)
+![GoTo Services Poster](./images/ojk.jpg)
 
-![GoTo Services Poster](./contenImages/ojk2.jpg)
+![GoTo Services Poster](./images/ojk2.jpg)
 
 At the heart of our offerings is **Titan Core** - our foundational theme framework that serves as the building block for all our themes. Titan Core is designed with:
 
