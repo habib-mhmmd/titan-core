@@ -592,6 +592,6 @@ pre[class*="language-"] {
 }
 
 .markdown img {
-  border-radius: 2rem;
+  border-radius: var(--border-radius-base);
   overflow: hidden;
 }
