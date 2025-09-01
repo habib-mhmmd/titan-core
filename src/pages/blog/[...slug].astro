@@ -47,7 +47,7 @@ else if (!seoImage && post.data.featuredImage) {
                         alt=""
                         width={1920}
                         height={1080}
-                        class="w-full h-full object-cover grayscale opacity-30"
+                        class="w-full h-full object-cover grayscale opacity-60"
                         quality={60}
                     />
                     <div class="absolute inset-0 bg-background/20 backdrop-blur-md" />
@@ -59,7 +59,7 @@ else if (!seoImage && post.data.featuredImage) {
     <article class="site-container--small mx-auto px-4 prose relative z-10 pb-base">
         <div class="mt-42 mb-12 text-center">
             <h1 class="text-body-base">{post.data.title}</h1>
-            <div class="flex items-center justify-center gap-4 text-body-light font-medium mt-4">
+            <div class="flex items-center justify-center gap-4 text-body-light text-sm font-medium">
                 <Date date={post.data.publishDate} />
                 {
                     post.data.categories && (
