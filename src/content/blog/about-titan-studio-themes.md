@@ -7,13 +7,15 @@ publish: true
 categories: ["Web Development", "Theme Usage"]
 
 seo:
-  title: "Introducing Titan Studio Themes - Premium Astro JS Themes"
-  description: "Discover Titan Studio Themes, your source for high-quality free and premium Astro JS themes for various website needs"
+  title: "Vietnamese-style Advertising Poster"
+  description: ""
 ---
 
-## Who We Are
+## Description
 
-Titan Studio Themes is a dedicated team of designers and developers focused on creating beautiful, high-performance themes for Astro JS. Our mission is to empower developers, agencies, and businesses to build stunning websites quickly and efficiently using the power of Astro.
+This project is a personal exploration in poster design inspired by Vietnamese advertising style, characterized by bright visuals, strong contrasts, and an optimistic atmosphere. I applied digital image processing techniques and photo manipulation to create dynamic and eye-catching compositions. This poster promotes GoTo services, highlighting energy, enthusiasm, and positivity—elements commonly found in Vietnamese street advertising and billboards. This work also serves as a creative experiment in blending local identity with international design styles.
+
+![GoTo Services Poster](./images/ojol.jpg)
 
 ## Our Foundation: Titan Core
 
