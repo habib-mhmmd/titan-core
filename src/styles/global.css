@@ -610,5 +610,5 @@ pre[class*="language-"] {
 
 .markdown p,
 .markdown li{
-  letter-spacing: 0.075em;
+  letter-spacing: 0.05em;
 }
