@@ -594,7 +594,7 @@ pre[class*="language-"] {
 .markdown img {
   border-radius: var(--border-radius-small); 
   display: block;
-  margin: 1rem auto; /* biar center */
+  margin: 0 auto; /* biar center */
   max-width: 70%;   /* biar responsif */
   height: auto;
 }
