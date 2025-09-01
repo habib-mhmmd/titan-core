@@ -477,7 +477,7 @@
     article h5 { font-size: var(--text-article-h5); margin: 0 0 1.25rem; color: var(--color-body-base); }
     article h6 { font-size: var(--text-article-h6); margin: 0 0 1rem; color: var(--color-body-base); }
     article p { font-size: var(--text-small); margin: 0 0 1.75rem; line-height: 1.8; color: var(--color-body-light);}
-    article ol { font-size: var(--text-small); margin: 0 0 2rem; padding-left: 2rem; list-style-type: decimal; color: var(--color-body-light); letter-spacing: 0.05em;}
+    article ol { font-size: var(--text-small); margin: 0 0 2rem; padding-left: 2rem; list-style-type: decimal; color: var(--color-body-light);}
     article ol ::marker { color: var(--color-body-light);}
     article ul { font-size: var(--text-small); margin: 0 0 2rem; padding-left: 2rem; list-style-type: disc; color: var(--color-body-light);}
     article ul ::marker { color: var(--color-body-light);}
@@ -608,7 +608,7 @@ pre[class*="language-"] {
   @apply text-body-base;
 }
 
-/* .markdown p {
-  color: var(--color-body-light);
-  font-size: var(--text-base);
-} */
+.markdown p,
+.markdown li{
+  letter-spacing: 0.075em;
+}
