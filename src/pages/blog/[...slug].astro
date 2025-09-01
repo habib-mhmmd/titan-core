@@ -56,10 +56,10 @@ else if (!seoImage && post.data.featuredImage) {
         }
     </div>
 
-    <article class="site-container--small mx-auto px-4 prose relative z-10 pb-base">
+    <!-- <article class="site-container--small mx-auto px-4 prose relative z-10 pb-base">
         <div class="mt-42 mb-12 text-center">
             <h1 class="text-body-base">{post.data.title}</h1>
-            <div class="flex items-center justify-center gap-4 text-body-light text-sm font-medium">
+            <div class="flex items-center justify-center gap-4 text-body-light text-smfont-medium">
                 <Date date={post.data.publishDate} />
                 {
                     post.data.categories && (
@@ -86,6 +86,41 @@ else if (!seoImage && post.data.featuredImage) {
                 />
             )
         }
+
+        <div class="mt-8">
+            <Content />
+        </div>
+    </article> -->
+        <article class="site-container--small mx-auto px-4 prose relative z-10 pb-base">
+        {
+            post.data.featuredImage && (
+                <Image
+                    src={post.data.featuredImage}
+                    alt=""
+                    width={1200}
+                    height={675}
+                    class="w-full h-auto rounded-lg border mt-42 mb-12 border-black"
+                    quality={80}
+                    format="webp"
+                />
+            )
+        }
+        <div class="mt-12 mb-12 text-center">
+            <h1 class="text-body-base">{post.data.title}</h1>
+            <div class="flex items-center justify-center gap-4 text-body-light text-smfont-medium">
+                <Date date={post.data.publishDate} />
+                {
+                    post.data.categories && (
+                        <div class="flex flex-wrap gap-2">
+                            {post.data.categories.map((category) => (
+                                <CategoryPill category={category} />
+                            ))}
+                        </div>
+                    )
+                }
+            </div>
+        </div>
+
 
         <div class="mt-8">
             <Content />
