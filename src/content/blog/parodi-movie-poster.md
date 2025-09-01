@@ -1,5 +1,5 @@
 ---
-title: "Movie Poster Parody Design"
+title: "Designing a Parody Version of Movie Poster"
 excerpt: "This project is a personal project focused on creating a parody poster design for the film ..."
 featuredImage: "./images/parodi-film.jpg"
 publishDate: "2025-08-25"
@@ -23,3 +23,4 @@ This project is a personal project focused on creating a parody poster design fo
 ---
 
 ### Result
+![Tinggal Wisuda Poster](./images/poster-lulus.jpg)
