@@ -1,8 +1,8 @@
 ---
 title: "Vietnamese-style Advertising Poster for Promoting GoTo Services"
-excerpt: "A personal exploration in poster design inspired by Vietnamese advertising style, characterized by bright visuals, strong contrasts, and an optimistic atmosphere"
+excerpt: "A personal exploration in poster design inspired by Vietnamese advertising style, characterized..."
 featuredImage: "./images/ojol.jpg"
-publishDate: "2023-11-15"
+publishDate: "2025-08-15"
 publish: true
 categories: ["Web Development", "Theme Usage"]
 
