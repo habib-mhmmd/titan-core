@@ -595,7 +595,7 @@ pre[class*="language-"] {
   border-radius: var(--border-radius-small); 
   display: block;
   margin: 1rem auto; /* biar center */
-  max-width: 70%;   /* biar responsif */
+  max-width: 50%;   /* biar responsif */
   height: auto;
 }
 
