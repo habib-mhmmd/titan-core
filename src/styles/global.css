@@ -587,14 +587,6 @@ pre[class*="language-"] {
   height: auto;
 }
 
-.markdown img[src*=".gif"] {
-  border-radius: var(--border-radius-small); 
-  display: block;
-  margin: 0 auto; /* biar center */
-  max-width: 100%;   /* biar responsif */
-  height: auto;
-}
-
 .markdown h1,
 .markdown h2,
 .markdown h3,
