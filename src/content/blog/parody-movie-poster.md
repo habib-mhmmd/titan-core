@@ -25,10 +25,7 @@ This project is a personal project focused on creating a parody poster design fo
 ### Result
 ![Tinggal Wisuda Poster](./images/poster-lulus.jpg)
 
-<!-- <video width="640" height="360" autoplay muted loop playsinline>
-  <source src="/poster-lulus.mp4" type="video/mp4">
-  Download video for watch.
-</video> -->
+![Tinggal Wisuda](./images/tinggal-lulus.gif)
 
-![](src/content/blog/images/tinggal-lulus.mp4)
-<video src="src/content/blog/images/tinggal-lulus.mp4" controls preload></video>
+<!-- ![](src/content/blog/images/tinggal-lulus.mp4)
+<video src="src/content/blog/images/tinggal-lulus.mp4" controls preload></video> -->
