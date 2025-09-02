@@ -580,7 +580,13 @@ pre[class*="language-"] {
 }
 
 .markdown {
-  @apply text-base md:text-small;
+  font-size: var(--text-base);
+}
+
+@media (min-width: 768px) {
+  .markdown {
+    font-size: var(--text-small);
+  }
 }
 
 .markdown img {
