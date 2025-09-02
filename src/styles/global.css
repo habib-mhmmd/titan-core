@@ -605,6 +605,7 @@ pre[class*="language-"] {
     border: none;
     height: 1px;
     margin: 1rem 0 2rem 0;
-    background-color: var(--color-body-dark);
+    background-color: transparent;
+    /* background-color: var(--color-body-dark); */
     width: 100%;
 }
