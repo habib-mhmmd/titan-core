@@ -1,6 +1,6 @@
 ---
 title: "Podcast Area Mistis | Poster and Thumbnail Design"
-excerpt: "Creating poster and thumbnail designs for one of Ampu Studio content segments, Podcast ‘Area Mistis’..."
+excerpt: "Creating poster and thumbnail designs for one of Ampu Studio content, Podcast ‘Area Mistis’..."
 featuredImage: "./images/mockup-amis.jpg"
 publishDate: "2025-02-07"
 publish: true
