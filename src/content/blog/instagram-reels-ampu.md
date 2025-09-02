@@ -13,7 +13,7 @@ seo:
 ---
 
 ### Description
-This project is a personal project focused on creating a parody poster design for the film ‘Tinggal Meninggal’. In this parody version, the poster title has been changed to ‘Tinggal Wisuda’ to evoke a sense of humor and satire. The creative process involved digital imaging techniques and image manipulation, resulting in a visual composition that resembles the original film poster but with the distinctive comedic touch characteristic of parody style.
+This project was completed during my internship at Ampu Studio, focusing on creating thumbnail designs for Instagram Reels Music Cover content. The designs were created to showcase a consistent visual identity, attract audience attention, and support Ampu Studio's branding in presenting music cover content. The thumbnails designed help enhance visual appeal so that the content stands out more in the Instagram feed.
 
 ---
 

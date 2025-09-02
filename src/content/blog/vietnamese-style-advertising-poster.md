@@ -22,14 +22,11 @@ This project is a personal exploration in poster design inspired by Vietnamese a
 ---
 
 ### Result
-![GoTo Services Poster](./images/ojk.jpg)
-
-
-
-![GoTo Services Poster](./images/ojk2.jpg)
-<!-- |          |          |
+<!-- ![GoTo Services Poster](./images/ojk.jpg)
+![GoTo Services Poster](./images/ojk2.jpg) -->
+|          |          |
 |----------|----------|
-| ![GoTo Services Poster](./images/ojk.jpg) | ![GoTo Services Poster](./images/ojk2.jpg) | -->
+| ![GoTo Services Poster1](./images/ojk.jpg) | ![GoTo Services Poster2](./images/ojk2.jpg) |
 
 
 
