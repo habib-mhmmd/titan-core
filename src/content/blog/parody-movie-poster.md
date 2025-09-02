@@ -30,5 +30,5 @@ This project is a personal project focused on creating a parody poster design fo
   Download video for watch.
 </video> -->
 
-![](/poster-lulus.mp4)
-<video src="/poster-lulus.mp4" controls preload></video>
+![](src/content/blog/images/tinggal-lulus.mp4)
+<video src="src/content/blog/images/tinggal-lulus.mp4" controls preload></video>
