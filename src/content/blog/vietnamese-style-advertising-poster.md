@@ -4,7 +4,7 @@ excerpt: "A personal exploration in poster design inspired by Vietnamese adverti
 featuredImage: "./images/ojol.jpg"
 publishDate: "2025-08-15"
 publish: true
-categories: ["Web Development", "Theme Usage"]
+categories: ["Poster Design"]
 
 seo:
   title: "Vietnamese-style Advertising Poster"

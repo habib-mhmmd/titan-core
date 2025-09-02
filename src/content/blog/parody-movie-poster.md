@@ -4,7 +4,7 @@ excerpt: "This project is a personal project focused on creating a parody poster
 featuredImage: "./images/parodi-film.jpg"
 publishDate: "2025-08-25"
 publish: true
-categories: ["Astro JS", "Web Development"]
+categories: ["Poster Design"]
 
 seo:
   title: "Movie Poster Parody Design"

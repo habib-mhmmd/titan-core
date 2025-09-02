@@ -6,29 +6,29 @@ interface Category {
 
 export const categories: Category[] = [
   {
-    name: 'Tech',
-    slug: 'tech',
-    description: 'Latest in technology and software development'
+    name: 'Thumbnail Design',
+    slug: 'thumbnail-design',
+    description: ''
   },
   {
-    name: 'Web Development',
-    slug: 'web-development',
-    description: 'Tips and insights for better web development'
+    name: 'Poster Design',
+    slug: 'poster-design',
+    description: ''
   },
   {
-    name: 'Design',
-    slug: 'design',
-    description: 'Exploring design and user experience'
+    name: 'UI/UX Design',
+    slug: 'ui-ux-design',
+    description: ''
   },
   {
-    name: 'Accessibility',
-    slug: 'accessibility',
+    name: 'Animation',
+    slug: 'animation',
     description: 'Exploring accessibility and user experience'
   },
   {
-    name: 'Theme Usage',
-    slug: 'theme-usage',
-    description: 'Learn how to use the theme'
+    name: 'Social Media Design',
+    slug: 'social-media-design',
+    description: ''
   },
   {
     name: 'Astro JS',
