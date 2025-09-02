@@ -26,4 +26,4 @@ This project is a personal project focused on creating a parody poster design fo
 <!-- ![Tinggal Wisuda Poster](./images/poster-lulus.jpg) -->
 |          |          |          |
 |----------|----------|----------|
-| ![Reels1](./images/reels1.jpg) | ![Reels2](./images/reels2.jpg) | ![Reels2](./images/reels3.jpg) |
+| ![Reels1](./images/reels1.png) | ![Reels2](./images/reels2.png) | ![Reels2](./images/reels3.png) |
