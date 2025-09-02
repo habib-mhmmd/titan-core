@@ -599,12 +599,18 @@ pre[class*="language-"] {
 .markdown p,
 .markdown li{
   letter-spacing: 0.02em;
+  font-size: var(--text-base);
+}
+
+.markdown-md p,
+.markdown-md li{
+  letter-spacing: 0.02em;
 }
 
 .markdown hr {
     border: none;
     height: 1px;
-    margin: 1rem 0 2rem 0;
+    margin: 0.5rem 0 2rem 0;
     background-color: transparent;
     /* background-color: var(--color-body-dark); */
     width: 100%;
