@@ -598,13 +598,8 @@ pre[class*="language-"] {
 
 .markdown p,
 .markdown li{
-  letter-spacing: 0.02em;
-  font-size: var(--text-base);
-}
-
-.markdown-md p,
-.markdown-md li{
-  letter-spacing: 0.02em;
+  /* letter-spacing: 0.02em; */
+  @apply prose text-base md:text-small;
 }
 
 .markdown hr {
