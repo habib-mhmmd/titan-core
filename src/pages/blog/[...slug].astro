@@ -40,12 +40,12 @@ else if (!seoImage && post.data.featuredImage) {
 <Layout title={seoTitle} description={seoDescription} image={seoImage}>
     <article class="site-container--small md:site-container-xsmall mx-auto px-4 prose relative z-10 pb-base">
         <!-- Breadcrumb -->
-        <nav class="flex items-center gap-2 text-sm font-medium text-body-light mt-24 md:mt-36">
-            <a href="/" class="flex items-center hover:text-body-base transition">
+        <nav class="flex items-center gap-2 text-sm font-medium mt-24 md:mt-36">
+            <a href="/" class="flex items-center text-body-light hover:text-body-base transition">
                 Home
             </a>
             <span class="text-body-light">›</span>
-            <a href="/blog" class="hover:text-body-base transition">Projects</a>
+            <a href="/blog" class="text-body-light hover:text-body-base transition">Projects</a>
             <span class="text-body-light">›</span>
             <span class="text-body-light">{post.data.seo?.title}</span>
         </nav>
