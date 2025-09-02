@@ -32,7 +32,7 @@ excerpt: "Learn how to edit posts in Astro"
 featuredImage: "./images/edit-posts.jpg"
 publishDate: "2024-03-10"
 publish: true
-categories: ["Theme Usage"]
+categories: ["Poster Design"]
 
 seo:
   title: "Custom SEO Title (Optional)"

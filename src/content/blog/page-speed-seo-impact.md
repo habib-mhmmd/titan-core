@@ -4,7 +4,7 @@ excerpt: "Discover how website performance directly impacts your search engine r
 featuredImage: "./images/page-speed-seo.jpg"
 publishDate: "2025-04-05"
 publish: true
-categories: ["SEO", "Web Development"]
+categories: ["Poster Design"]
 
 seo:
   title: "Why Page Speed is Critical for SEO Success"

@@ -4,7 +4,7 @@ excerpt: "Learn how to add/remove categories"
 featuredImage: "./images/update-categories.jpg"
 publishDate: "2025-02-22"
 publish: true
-categories: ["Theme Usage"]
+categories: ["Poster Design"]
 
 seo:
   title: "How to add/remove categories"

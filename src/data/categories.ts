@@ -23,22 +23,12 @@ export const categories: Category[] = [
   {
     name: 'Animation',
     slug: 'animation',
-    description: 'Exploring accessibility and user experience'
+    description: ''
   },
   {
     name: 'Social Media Design',
     slug: 'social-media-design',
     description: ''
-  },
-  {
-    name: 'Astro JS',
-    slug: 'astro-js',
-    description: 'Everything about Astro JS framework and development'
-  },
-  {
-    name: 'SEO',
-    slug: 'seo',
-    description: 'Search engine optimization strategies and best practices'
   },
   
 ];
