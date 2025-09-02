@@ -4,7 +4,7 @@ excerpt: "A personal exploration in poster design inspired by Vietnamese adverti
 featuredImage: "./images/ojol.jpg"
 publishDate: "2025-08-15"
 publish: true
-categories: ["Thumbnail Design"]
+categories: ["Poster Design"]
 
 seo:
   title: "Vietnamese-style Advertising Poster"
@@ -22,10 +22,14 @@ This project is a personal exploration in poster design inspired by Vietnamese a
 ---
 
 ### Result
-<!-- ![GoTo Services Poster](./images/ojk.jpg) ![GoTo Services Poster](./images/ojk2.jpg) -->
-|          |          |
+![GoTo Services Poster](./images/ojk.jpg)
+
+
+
+![GoTo Services Poster](./images/ojk2.jpg)
+<!-- |          |          |
 |----------|----------|
-| ![GoTo Services Poster](./images/ojk.jpg) | ![GoTo Services Poster](./images/ojk2.jpg) |
+| ![GoTo Services Poster](./images/ojk.jpg) | ![GoTo Services Poster](./images/ojk2.jpg) | -->
 
 
 
