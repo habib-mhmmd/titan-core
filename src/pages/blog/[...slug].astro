@@ -86,8 +86,8 @@ else if (!seoImage && post.data.featuredImage) {
         </div>
 
         <!-- overlay untuk zoom -->
-        <div id="imgOverlay" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50">
-            <img id="imgOverlayTarget" class="max-w-[90%] max-h-[90%] rounded-2xl shadow-lg cursor-zoom-out" />
+        <div id="imgOverlay" class="fixed inset-0 bg-black/80 pt-0 md:pt-20 hidden justify-center items-center z-50 transition-opacity duration-300">
+            <img id="imgOverlayTarget" class="max-w-[90%] max-h-[90%] rounded-lg cursor-zoom-out" />
         </div>
     </article>
 
@@ -97,36 +97,42 @@ else if (!seoImage && post.data.featuredImage) {
     </style>
 
     <script>
-        // jalan setelah DOM siap
         document.addEventListener("DOMContentLoaded", () => {
-        const overlay = document.getElementById("imgOverlay");
-        const overlayImg = document.getElementById("imgOverlayTarget");
+            const overlay = document.getElementById("imgOverlay");
+            const overlayImg = document.getElementById("imgOverlayTarget");
 
-        // Guard: pastikan elemen ada & bertipe benar (hindari error 'overlay/overlayImg null' & 'src' not in HTMLElement)
-        if (!(overlay instanceof HTMLElement) || !(overlayImg instanceof HTMLImageElement)) return;
+            if (!(overlay instanceof HTMLElement) || !(overlayImg instanceof HTMLImageElement)) return;
 
-        // Delegasi event: cukup pasang listener di container markdown
-        const markdown = document.querySelector(".markdown");
-        if (!markdown) return;
+            const markdown = document.querySelector(".markdown");
+            if (!markdown) return;
 
-        markdown.addEventListener("click", (e) => {
-        const target = e.target;
-        // hanya respon kalau yang diklik IMG
-        if (target instanceof HTMLImageElement) {
-            // currentSrc untuk gambar yang dioptimasi
-            overlayImg.src = target.currentSrc || target.src;
-            overlay.classList.remove("hidden");
-            overlay.classList.add("flex");
-        }
+            // buka overlay
+            markdown.addEventListener("click", (e) => {
+            const target = e.target;
+            if (target instanceof HTMLImageElement) {
+                overlayImg.src = target.currentSrc || target.src;
+
+                // tampilkan overlay + kunci scroll body
+                overlay.classList.remove("hidden", "opacity-0");
+                overlay.classList.add("flex", "opacity-100");
+                document.body.classList.add("overflow-hidden"); 
+            }
+            });
+
+            // klik overlay → tutup
+            overlay.addEventListener("click", () => {
+            overlay.classList.remove("opacity-100");
+            overlay.classList.add("opacity-0");
+
+            // kasih delay biar transisi smooth sebelum di-hide
+            setTimeout(() => {
+                overlay.classList.remove("flex");
+                overlay.classList.add("hidden");
+                overlayImg.removeAttribute("src");
+                document.body.classList.remove("overflow-hidden"); 
+            }, 300); // sama dengan duration-300
+            });
         });
-
-        // klik area overlay (atau gambar) untuk tutup
-        overlay.addEventListener("click", () => {
-        overlay.classList.add("hidden");
-        overlay.classList.remove("flex");
-        overlayImg.removeAttribute("src");
-        });
-    });
     </script>
 
 </Layout>
