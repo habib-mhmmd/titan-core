@@ -579,6 +579,10 @@ pre[class*="language-"] {
   background-color: var(--color-background-dark);
 }
 
+.markdown {
+  @apply text-base md:text-small;
+}
+
 .markdown img {
   border-radius: var(--border-radius-small); 
   display: block;
@@ -598,8 +602,8 @@ pre[class*="language-"] {
 
 .markdown p,
 .markdown li{
+    @apply leading-relaxed;
   /* letter-spacing: 0.02em; */
-  @apply prose text-base md:text-small;
 }
 
 .markdown hr {
