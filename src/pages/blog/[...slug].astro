@@ -39,7 +39,20 @@ else if (!seoImage && post.data.featuredImage) {
 
 <Layout title={seoTitle} description={seoDescription} image={seoImage}>
     <article class="site-container--small md:site-container-xsmall mx-auto px-4 prose relative z-10 pb-base">
-        <div class="relative aspect-[16/9] mx-auto mt-24 md:mt-36 mb-4 md:mb-16">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-sm text-body-light mt-24 md:mt-36">
+            <a href="/" class="flex items-center hover:text-foreground transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M13 5v14m-4-4h8" />
+                </svg>
+                Home
+            </a>
+            <span class="text-gray-500">›</span>
+            <a href="/blog" class="hover:text-foreground transition">Projects</a>
+            <span class="text-gray-500">›</span>
+            <span class="text-foreground font-medium">{post.data.title}</span>
+        </nav>
+        <div class="relative aspect-[16/9] mx-auto mt-4 md:mt-8 mb-4 md:mb-16">
             {post.data.featuredImage && (
                 <Image
                     src={post.data.featuredImage}
