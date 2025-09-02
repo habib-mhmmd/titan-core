@@ -587,6 +587,15 @@ pre[class*="language-"] {
   height: auto;
 }
 
+.markdown img[src$="area-mistis-poster.jpg"] {
+  border-radius: var(--border-radius-small); 
+  display: block;
+  margin: 0 auto 1rem auto; /* biar center */
+  width: 1080px;     /* ukuran default */
+  height: 1920px;    /* ukuran default */
+  max-width: 90%;   /* biar responsif */
+}
+
 .markdown h1,
 .markdown h2,
 .markdown h3,
