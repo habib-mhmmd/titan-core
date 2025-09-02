@@ -38,80 +38,14 @@ else if (!seoImage && post.data.featuredImage) {
 ---
 
 <Layout title={seoTitle} description={seoDescription} image={seoImage}>
-    <!-- <div class="w-full h-120 absolute top-0 left-0 z-0 overflow-hidden">
-        {
-            post.data.featuredImage && (
-                <>
-                    <Image
-                        src={post.data.featuredImage}
-                        alt=""
-                        width={1920}
-                        height={1080}
-                        class="w-full h-full object-cover grayscale opacity-60"
-                        quality={60}
-                    />
-                    <div class="absolute inset-0 bg-background/20 backdrop-blur-md" />
-                </>
-            )
-        }
-    </div> -->
-
-    <!-- <article class="site-container--small mx-auto px-4 prose relative z-10 pb-base">
-        <div class="mt-42 mb-12 text-center">
-            <h1 class="text-body-base">{post.data.title}</h1>
-            <div class="flex items-center justify-center gap-4 text-body-light text-smfont-medium">
-                <Date date={post.data.publishDate} />
-                {
-                    post.data.categories && (
-                        <div class="flex flex-wrap gap-2">
-                            {post.data.categories.map((category) => (
-                                <CategoryPill category={category} />
-                            ))}
-                        </div>
-                    )
-                }
-            </div>
-        </div>
-
-        {
-            post.data.featuredImage && (
-                <Image
-                    src={post.data.featuredImage}
-                    alt=""
-                    width={1200}
-                    height={675}
-                    class="w-full h-auto rounded-lg border mb-12 border-black"
-                    quality={80}
-                    format="webp"
-                />
-            )
-        }
-
-        <div class="mt-8">
-            <Content />
-        </div>
-    </article> -->
-    <article class="site-container--small mx-auto px-4 prose relative z-10 pb-base">
-        <!-- {
-            post.data.featuredImage && (
-                <Image
-                    src={post.data.featuredImage}
-                    alt=""
-                    width={1200}
-                    height={675}
-                    class="w-full h-auto rounded-lg border mt-24 md:mt-36 mb-4 md:mb-16 border-background-light"
-                    quality={80}
-                    format="webp"
-                />
-            )
-        } -->
-        <div class="relative aspect-[16/10] mx-auto mt-24 md:mt-36 mb-4 md:mb-16">
+    <article class="site-container--small md:site-container-xsmall mx-auto px-4 prose relative z-10 pb-base">
+        <div class="relative aspect-[16/9] mx-auto mt-24 md:mt-36 mb-4 md:mb-16">
             {post.data.featuredImage && (
                 <Image
                     src={post.data.featuredImage}
                     alt=""
                     width={1920}
-                    height={1200}
+                    height={1080}
                     class="object-cover w-full h-full rounded-lg border border-background-light"
                     quality={100}
                     format="webp"

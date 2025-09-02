@@ -81,6 +81,7 @@
     
     --container-small: 1000px;
     --container-base: 1400px;
+    --container-xsmall: 960px;   
 
     --border-radius-small: 0.5rem;
     --border-radius-base: 1rem;
@@ -520,6 +521,10 @@ body {
 }
 .site-container--small {
     @apply mx-auto max-w-[var(--container-small)] w-full;
+}
+
+.site-container--xsmall {
+    @apply mx-auto max-w-[var(--container-xsmall)] w-full;
 }
 
 .header-offset{
