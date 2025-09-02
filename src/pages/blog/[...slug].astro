@@ -84,5 +84,49 @@ else if (!seoImage && post.data.featuredImage) {
         <div class="mt-8 markdown">
             <Content />
         </div>
+
+        <!-- overlay untuk zoom -->
+        <div id="imgOverlay" class="fixed inset-0 bg-black/80 hidden justify-center items-center z-50">
+            <img id="imgOverlayTarget" class="max-w-[90%] max-h-[90%] rounded-2xl shadow-lg cursor-zoom-out" />
+        </div>
     </article>
+
+    <!-- cursor biar keliatan bisa diklik -->
+    <style is:global>
+    .markdown img { cursor: zoom-in; }
+    </style>
+
+    <script>
+        // jalan setelah DOM siap
+        document.addEventListener("DOMContentLoaded", () => {
+        const overlay = document.getElementById("imgOverlay");
+        const overlayImg = document.getElementById("imgOverlayTarget");
+
+        // Guard: pastikan elemen ada & bertipe benar (hindari error 'overlay/overlayImg null' & 'src' not in HTMLElement)
+        if (!(overlay instanceof HTMLElement) || !(overlayImg instanceof HTMLImageElement)) return;
+
+        // Delegasi event: cukup pasang listener di container markdown
+        const markdown = document.querySelector(".markdown");
+        if (!markdown) return;
+
+        markdown.addEventListener("click", (e) => {
+        const target = e.target;
+        // hanya respon kalau yang diklik IMG
+        if (target instanceof HTMLImageElement) {
+            // currentSrc untuk gambar yang dioptimasi
+            overlayImg.src = target.currentSrc || target.src;
+            overlay.classList.remove("hidden");
+            overlay.classList.add("flex");
+        }
+        });
+
+        // klik area overlay (atau gambar) untuk tutup
+        overlay.addEventListener("click", () => {
+        overlay.classList.add("hidden");
+        overlay.classList.remove("flex");
+        overlayImg.removeAttribute("src");
+        });
+    });
+    </script>
+
 </Layout>
