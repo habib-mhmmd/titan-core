@@ -25,4 +25,4 @@ A personal project in sports graphic poster design, exploring the fusion of athl
 ### Result
 |          |          |
 |----------|----------|
-| ![Area Mistis Poster](./images/lewi-barca.jpg) | ![Area Mistis Poster2](/lewi-barca.gif) |
+| ![Area Mistis Poster](./images/lewi-barca.png) | ![Area Mistis Poster2](/lewi-barca.gif) |
