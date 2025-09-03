@@ -61,7 +61,7 @@ const heroContent = {
                         </Button>
                     )}
                     
-                    <div class="flex items-center gap-2">
+                    {/* <div class="flex items-center gap-2">
                         {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
                             <a
                                 href={pageNum === 1 ? baseUrl : `${baseUrl}/${pageNum}`}
@@ -69,6 +69,22 @@ const heroContent = {
                                     currentPage === pageNum
                                         ? 'bg-primary text-white'
                                         : 'hover:bg-white hover:text-body-base'
+                                }`}
+                                aria-current={currentPage === pageNum ? 'page' : undefined}
+                            >
+                                {pageNum}
+                            </a>
+                        ))}
+                    </div> */}
+
+                    <div class="flex items-center gap-2">
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                            <a
+                                href={pageNum === 1 ? baseUrl : `${baseUrl}/${pageNum}`}
+                                class={`px-4 sm:px-6 py-2 sm:py-3 leading-none text-small flex items-center justify-center transition-colors duration-200 ${
+                                    currentPage === pageNum
+                                        ? 'text-body-base font-medium'
+                                        : 'text-body-light hover:text-body-base'
                                 }`}
                                 aria-current={currentPage === pageNum ? 'page' : undefined}
                             >
