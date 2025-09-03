@@ -585,9 +585,9 @@ pre[class*="language-"] {
   background-color: var(--color-background-dark);
 }
 
-.markdown {
+/* .markdown {
   font-size: var(--text-base);
-}
+} */
 
 /* @media (min-width: 768px) {
   .markdown {
@@ -617,6 +617,7 @@ pre[class*="language-"] {
     @apply leading-relaxed;
   /* letter-spacing: 0.02em; */
     color: var(--color-body-base);
+    font-size: var(--text-base);
 }
 
 .markdown hr {
