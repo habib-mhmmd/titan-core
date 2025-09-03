@@ -21,7 +21,6 @@ This project was completed during my internship at Ampu Studio, focusing on crea
 - Adobe Photoshop
 
 ---
-
 ### Result
 - #### Poster
 |          |          |
