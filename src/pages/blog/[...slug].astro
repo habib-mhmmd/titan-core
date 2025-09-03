@@ -63,12 +63,12 @@ else if (!seoImage && post.data.featuredImage) {
             )}
         </div>
         <div class="mt-4 md:mt-8 mb-10 md:mb-12 text-center">
-            <h2 class="text-body-base mb-8">{post.data.title}</h2>
+            <h2 class="text-body-base mb-4 md:mb-8">{post.data.title}</h2>
             <div class="flex flex-col md:flex-row item-center justify-center md:items-center gap-4 text-body-light text-sm font-medium">
                 <Date date={post.data.publishDate} />
                 {
                     post.data.categories && (
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-start">
                             {post.data.categories.map((category) => (
                                 <CategoryPill category={category} />
                             ))}
