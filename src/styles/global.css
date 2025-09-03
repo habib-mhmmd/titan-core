@@ -478,12 +478,12 @@
     article h5 { font-size: var(--text-article-h5); margin: 0 0 1.25rem; color: var(--color-body-base); }
     article h6 { font-size: var(--text-article-h6); margin: 0 0 1rem; color: var(--color-body-base); } */
 
-    article h1 { font-size: var(--text-article-h1); color: var(--color-body-base);}
-    article h2 { font-size: var(--text-article-h2); color: var(--color-body-base);}
-    article h3 { font-size: var(--text-article-h3); color: var(--color-body-base);}
-    article h4 { font-size: var(--text-article-h4); color: var(--color-body-base);}
-    article h5 { font-size: var(--text-article-h5); color: var(--color-body-base);}
-    article h6 { font-size: var(--text-article-h6); color: var(--color-body-base);}
+    article h1 { font-size: var(--text-article-h1); margin: 0 0 1.5rem;}
+    article h2 { font-size: var(--text-article-h2); margin: 0 0 1.25rem;}
+    article h3 { font-size: var(--text-article-h3); margin: 0 0 1rem;}
+    article h4 { font-size: var(--text-article-h4); margin: 0 0 0.75rem;}
+    article h5 { font-size: var(--text-article-h5); margin: 0 0 0.5rem;}
+    article h6 { font-size: var(--text-article-h6); margin: 0 0 0.25rem;}
 
     /* article p { font-size: var(--text-small); margin: 0 0 1.75rem; line-height: 1.8; color: var(--color-body-light);} */
     article ol { font-size: var(--text-small); margin: 0 0 2rem; padding-left: 2rem; list-style-type: decimal; color: var(--color-body-light);}
@@ -608,7 +608,6 @@ pre[class*="language-"] {
 .markdown h5,
 .markdown h6 {
   @apply text-body-base;
-  @apply leading-relaxed;
 }
 
 .markdown p,
