@@ -608,6 +608,7 @@ pre[class*="language-"] {
 .markdown h5,
 .markdown h6 {
   @apply text-body-base;
+  @apply leading-relaxed;
 }
 
 .markdown p,
