@@ -620,6 +620,15 @@ pre[class*="language-"] {
     font-size: var(--text-base);
 }
 
+@media (min-width: 1400px) {
+  .markdownn p,
+  .markdown li{
+    @apply leading-relaxed;
+    color: var(--color-body-base);
+    font-size: 14px;
+  }
+}
+
 .markdown hr {
     border: none;
     height: 1px;
