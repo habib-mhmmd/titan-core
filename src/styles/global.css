@@ -622,6 +622,7 @@ pre[class*="language-"] {
 @media (min-width: 768px) {
     .markdown p,
     .markdown li{
+        @apply leading-relaxed;
         font-size: var(--text-small);
     }
 }
