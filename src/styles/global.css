@@ -615,13 +615,13 @@ pre[class*="language-"] {
     @apply leading-relaxed;
   /* letter-spacing: 0.02em; */
     color: var(--color-body-base);
-    font-size: var(--text-base);
+    font-size: var(--text-small);
 }
 @media (min-width: 768px) {
     .markdown p,
     .markdown li{
         font-size: var(--text-small);
-        line-height: 1.8;
+        line-height: 2;
     }
 }
 .markdown hr {
