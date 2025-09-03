@@ -585,16 +585,6 @@ pre[class*="language-"] {
   background-color: var(--color-background-dark);
 }
 
-/* .markdown {
-  font-size: var(--text-base);
-} */
-
-/* @media (min-width: 768px) {
-  .markdown {
-    font-size: var(--text-small);
-  }
-} */
-
 .markdown img {
   border-radius: var(--border-radius-small); 
   display: block;
