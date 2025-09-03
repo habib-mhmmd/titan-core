@@ -77,13 +77,13 @@ const heroContent = {
                         ))}
                     </div> */}
 
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-4">
                         {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
                             <a
                                 href={pageNum === 1 ? baseUrl : `${baseUrl}/${pageNum}`}
-                                class={`px-4 sm:px-6 py-2 sm:py-3 leading-none text-small flex items-center justify-center transition-colors duration-200 ${
+                                class={`px-2 py-2 leading-none text-small font-medium flex items-center justify-center transition-colors duration-200 ${
                                     currentPage === pageNum
-                                        ? 'text-body-base font-medium'
+                                        ? 'bg primary font-semibold'
                                         : 'text-body-light hover:text-body-base'
                                 }`}
                                 aria-current={currentPage === pageNum ? 'page' : undefined}
