@@ -612,10 +612,10 @@ pre[class*="language-"] {
 
 .markdown p,
 .markdown li{
-    @apply leading-relaxed;
+    /* @apply leading-relaxed; */
   /* letter-spacing: 0.02em; */
     color: var(--color-body-base);
-    font-size: var(--text-small);
+    font-size: var(--text-base);
 }
 @media (min-width: 768px) {
     .markdown p,
