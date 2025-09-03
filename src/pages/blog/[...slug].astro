@@ -47,7 +47,7 @@ else if (!seoImage && post.data.featuredImage) {
             <span class="text-body-light">›</span>
             <a href="/blog" class="text-body-light hover:text-body-base transition">Projects</a>
             <span class="text-body-light">›</span>
-            <span class="text-body-base">{post.data.seo?.title}</span>
+            <span class="text-body-base truncate max-w-xs bloc">{post.data.seo?.title}</span>
         </nav>
         <div class="relative aspect-[16/9] mx-auto mt-4 md:mt-8 mb-6 md:mb-16">
             {post.data.featuredImage && (
