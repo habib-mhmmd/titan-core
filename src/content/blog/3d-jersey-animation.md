@@ -4,7 +4,7 @@ excerpt: "This project focuses on developing 3D animation visualization as a med
 featuredImage: "./images/Mockup-3d.jpg"
 publishDate: "2025-07-30"
 publish: true
-categories: ["3D Animation"]
+categories: ["Animation"]
 videoUrl: "https://youtube.com/shorts/Nazgl6pN47o"
 
 # videoUrl:
