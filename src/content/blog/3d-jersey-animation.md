@@ -7,6 +7,10 @@ publish: true
 categories: ["Thumbnail Design"]
 videoUrl: "https://youtube.com/shorts/Nazgl6pN47o?si=78lwwWnpySY3eWNY"
 
+# videoUrl:
+#   url: "https://youtube.com/shorts/Nazgl6pN47o"
+#   id: "Nazgl6pN47o"
+
 seo:
   title: "Instagram Reels Thumbnail Design for Ampu Studio’s Music Cover"
   description: ""
