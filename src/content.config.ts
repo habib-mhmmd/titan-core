@@ -22,6 +22,7 @@ const blog = defineCollection({
                     image: z.string().optional(),
                 })
                 .optional(),
+            videoUrl: z.string().url().optional(), // contoh: link YouTube
         }),
 });
 
