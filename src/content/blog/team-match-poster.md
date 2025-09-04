@@ -36,7 +36,7 @@ This project is a personal exploration in graphic design, where I created match 
 
 |          |          |
 |----------|----------|
-| ![Malaga CF](./images/poster-malaga.png) | ![El Clasico](./images/elclasico2.jpg) |
+| ![Malaga CF](./images/poster_malaga.png) | ![El Clasico](./images/elclasico2.jpg) |
 
 ---
 
