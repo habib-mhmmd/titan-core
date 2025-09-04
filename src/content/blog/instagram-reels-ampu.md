@@ -23,7 +23,6 @@ This project was completed during my internship at Ampu Studio, focusing on crea
 ---
 
 ### Result
-<!-- ![Tinggal Wisuda Poster](./images/poster-lulus.jpg) -->
 |          |          |          |
 |----------|----------|----------|
 | ![Reels1](./images/reels1.png) | ![Reels2](./images/reels2.png) | ![Reels2](./images/reels3.png) |

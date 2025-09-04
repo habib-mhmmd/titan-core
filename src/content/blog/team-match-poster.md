@@ -23,10 +23,11 @@ This project is a personal exploration in graphic design, where I created match 
 ---
 
 ### Result
-- #### Indonesia National Team Match
+-  **Indonesia National Team Match**
 |          |          |
 |----------|----------|
 | ![Indonesia1](./images/indo-match1.png) | ![Indonesia2](./images/indo-match2.png) |
+
 |          |          |
 |----------|----------|
 | ![Indonesia3](./images/indo-match3.jpg) | ![Indonesia4](./images/indo-match4.png) |

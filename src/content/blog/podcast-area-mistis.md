@@ -22,12 +22,12 @@ This project was completed during my internship at Ampu Studio, focusing on crea
 
 ---
 ### Result
-- #### Poster
+-  **Poster**
 |          |          |
 |----------|----------|
 | ![Area Mistis Poster](./images/area-mistis-poster.jpg) | ![Area Mistis Poster2](/area-mistis.gif) |
 
 ---
 
-- #### Thumbnail
+- **Thumbnail**
 ![Area Mistis Thumbnail](./images/area-mistis-thmbnl.png)
