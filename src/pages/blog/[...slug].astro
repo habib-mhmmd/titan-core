@@ -83,6 +83,9 @@ else if (!seoImage && post.data.featuredImage) {
 
         <div class="mt-8 markdown">
             <Content />
+            {post.data.videoUrl && (
+                <a href={post.data.videoUrl} target="_blank">🎬 Tonton di YouTube</a>
+            )}
         </div>
 
         <!-- overlay untuk zoom -->
