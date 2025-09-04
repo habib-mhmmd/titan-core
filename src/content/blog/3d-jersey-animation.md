@@ -1,10 +1,10 @@
 ---
 title: "Visualization of 3D Animation Jersey Vol. 5 E-Sport Arena Community"
-excerpt: "Creating thumbnail designs for Instagram Reels Music Cover content. The designs were created to..."
-featuredImage: "./images/ampu-music.jpg"
+excerpt: "This project focuses on developing 3D animation visualization as a medium to represent the design..."
+featuredImage: "./images/Mockup-3d.jpg"
 publishDate: "2025-07-30"
 publish: true
-categories: ["Thumbnail Design"]
+categories: ["3D Animation"]
 videoUrl: "https://youtube.com/shorts/Nazgl6pN47o"
 
 # videoUrl:
@@ -12,22 +12,23 @@ videoUrl: "https://youtube.com/shorts/Nazgl6pN47o"
 #   id: "Nazgl6pN47o"
 
 seo:
-  title: "Instagram Reels Thumbnail Design for Ampu Studio’s Music Cover"
+  title: "3D Animation Jersey Vol. 5 E-Sport Arena Community"
   description: ""
-  image: "./images/ampu-music.jpg"
+  image: "./images/Mockup-3d.jpg"
 ---
 
 ### Description
-This project was completed during my internship at Ampu Studio, focusing on creating thumbnail designs for Instagram Reels Music Cover content. The designs were created to showcase a consistent visual identity, attract audience attention, and support Ampu Studio's branding in presenting music cover content. The thumbnails designed help enhance visual appeal so that the content stands out more in the Instagram feed.
+This project focuses on developing 3D animation visualization as a medium to represent the design of the Arena E-Sport Volume 5 Community Jersey, which has not yet been physically produced. By utilizing CLO3D for modeling and simulation, as well as Blender for animation and rendering, this jersey visualization is presented with high-quality and realistic details. The use of camera movement techniques adds a cinematic dimension, enhancing the visual appeal of the design. This approach aims to provide a more professional and realistic representation, while also serving as an effective medium for introducing the product and strengthening the image of the E-Sport Arena Community within the esports ecosystem.
 
 ---
 
 ### Tools
-- Adobe Photoshop
+- CLO3D
+- Blender
+- Adobe Illustrator
+- Adobe After Effect
+- Adobe Premier Pro
 
 ---
 
 ### Result
-|          |          |          |
-|----------|----------|----------|
-| ![Reels1](./images/reels1.png) | ![Reels2](./images/reels2.png) | ![Reels2](./images/reels3.png) |
