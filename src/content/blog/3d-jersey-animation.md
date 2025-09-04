@@ -5,7 +5,7 @@ featuredImage: "./images/ampu-music.jpg"
 publishDate: "2025-07-30"
 publish: true
 categories: ["Thumbnail Design"]
-videoUrl: "https://youtube.com/shorts/Nazgl6pN47o?si=78lwwWnpySY3eWNY"
+videoUrl: "https://youtube.com/shorts/Nazgl6pN47o"
 
 # videoUrl:
 #   url: "https://youtube.com/shorts/Nazgl6pN47o"
