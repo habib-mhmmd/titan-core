@@ -2,7 +2,7 @@
 title: "Redesign of the Sudirman Squad Poster for PBSI"
 excerpt: "This project was motivated by concerns regarding the official PBSI poster released ..."
 featuredImage: "./images/mockup-pbsi.jpg"
-publishDate: "2025-08-25"
+publishDate: "2025-04-22"
 publish: true
 categories: ["Poster Design"]
 

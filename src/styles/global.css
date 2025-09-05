@@ -637,5 +637,5 @@ pre[class*="language-"] {
   font-size: medium;
   color: var(--color-body-base);
   @apply pb-4;
-  @apply text-left;
+  
 }
