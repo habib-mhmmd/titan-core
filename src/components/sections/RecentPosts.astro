@@ -25,7 +25,7 @@ export interface Props {
     category?: string;
 }
 
-const { content, background = 'base', postsToShow = 4, category } = Astro.props;
+const { content, background = 'base', postsToShow = 3, category } = Astro.props;
 
 // Get background and text colors
 const bgColor = getBackgroundColor(background);
@@ -57,7 +57,7 @@ if (filteredPosts.length === 0) {
 
 filteredPosts = filteredPosts
     .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
-    .slice(0, 4);
+    .slice(0, postsToShow);
 
 
 ---
@@ -112,35 +112,17 @@ filteredPosts = filteredPosts
 </section>
 
 <style>
-    /* .posts-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    } */
-
-    /* Responsive adjustments */
-    /* @media (max-width: 768px) {
-        .posts-grid {
-            grid-template-columns: 1fr;
-        }
-    } */
     .posts-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1rem;
     }
 
-    /* Tablet (<=1024px) jadi 2 kolom */
-    @media (max-width: 1024px) {
-        .posts-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    /* Mobile (<=640px) jadi 1 kolom */
-    @media (max-width: 640px) {
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
         .posts-grid {
             grid-template-columns: 1fr;
         }
     }
+    
 </style>
