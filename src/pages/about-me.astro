@@ -1,0 +1,19 @@
+---
+import Layout from '@layouts/Layout.astro';
+import InnerHero from '@components/sections/InnerHero.astro';
+
+
+const seoTitle = "About Me";
+const seoDescription = "";
+
+const heroContent = {
+    title: "Hi,",
+    description: "I'm Muhammad Habib Al Hudry",
+}
+
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+    <InnerHero content={heroContent}  />
+    <h1>Teessss Bang</h1>
+</Layout>
