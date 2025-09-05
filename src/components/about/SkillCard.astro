@@ -1,0 +1,16 @@
+---
+// src/components/SkillCard.astro
+export interface Props {
+  title: string;
+  skills: string[];
+}
+
+const { title, skills } = Astro.props;
+---
+
+<div class="bg-background-dark rounded-lg p-4">
+  <h4 class="font-medium text-body-base mb-2">{title}</h4>
+  <ul class="text-body-light list-disc list-inside text-sm">
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+</div>

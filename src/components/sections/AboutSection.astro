@@ -1,0 +1,35 @@
+---
+// src/components/AboutSection.astro
+import ProfileCard from 'src/components/about/profileCard.astro';
+import SkillCard from 'src/components/about/SkillCard.astro';
+
+--- 
+
+<section class="site-container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <!-- Foto -->
+  <div class="flex justify-center md:justify-start">
+    <ProfileCard />
+  </div>
+
+  <!-- Konten -->
+  <div>
+    <h2 class="text-lg text-gray-300 mb-2">Hello, I’m</h2>
+    <h1 class="text-3xl md:text-4xl font-bold text-white mb-6">
+      Muhammad Habib Al Hudry
+    </h1>
+    <p class="text-gray-400 leading-relaxed mb-8">
+      Informatics graduate passionate about graphic design, UI/UX, and basic animation
+      using After Effects, Premiere Pro, Blender, and CLO3D. Skilled with creative tools
+      including Photoshop, Illustrator, Figma, and CorelDraw. Actively involved in
+      organizations and awarded 5th place in a national UI/UX competition. Ready to
+      contribute fresh ideas and collaborate in a dynamic team environment.
+    </p>
+
+    <h3 class="text-xl font-semibold text-white mb-4">Key Skills</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <SkillCard title="Core Skills" skills={['Graphic Design', 'Digital Imaging']} />
+      <SkillCard title="Intermediate" skills={['UI/UX Design', 'Motion Graphic']} />
+      <SkillCard title="Foundational" skills={['3D Animation', 'Video Editing']} />
+    </div>
+  </div>
+</section>
