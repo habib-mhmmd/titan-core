@@ -1,75 +1,18 @@
 ---
-import Layout from '@layouts/Layout.astro';
 import InnerHero from '@components/sections/InnerHero.astro';
-
+import Layout from '@layouts/Layout.astro';
+import AboutSection from 'src/components/sections/AboutSection.astro';
 
 const seoTitle = "About Me";
 const seoDescription = "";
-
-const heroContent = {
-    title: "Hi,",
-    description: "I'm Muhammad Habib Al Hudry",
-}
-
 ---
 
+<!-- const heroContent = {
+    title: "Hi,",
+    description: "I'm Muhammad Habib Al Hudry",
+} -->
+
+
 <Layout title={seoTitle} description={seoDescription}>
-    <div class="header-offset relative">
-        <div class="absolute inset-0 left-0 top-0 w-full h-full z-0 hero-background"></div>
-        <div class="site-container z-10 mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <!-- Foto Profil -->
-            <div class="w-[296px] h-[395px] rounded-lg overflow-hidden shadow-lg">
-            <img 
-                src="/home/profile.png" 
-                alt="photo profile" 
-                class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-300"
-            />
-            </div>
-
-              <!-- Konten Kanan -->
-            <div>
-                <!-- Intro -->
-                <h5 class="text-body-base">Hello, I’m</h5>
-                <h4 class="text-body-base">
-                Muhammad Habib Al Hudry
-                </h4>
-            </div>
-
-            <!-- Deskripsi -->
-            <p class="text-body-light leading-relaxed mb-8">
-                Informatics graduate passionate about graphic design, UI/UX, and basic animation using After Effects, Premiere Pro, Blender, and CLO3D. Skilled with creative tools including Photoshop, Illustrator, Figma, and CorelDraw. Actively involved in organizations and awarded 5th place in a national UI/UX competition. Ready to contribute fresh ideas and collaborate in a dynamic team environment.
-            </p>
-
-            <!-- Key Skills -->
-            <h3 class="text-xl font-semibold text-white mb-4">Key Skills</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <!-- Core Skills -->
-                <div class="bg-gray-800 rounded-lg p-4">
-                    <h4 class="font-medium text-white mb-2">Core Skills</h4>
-                    <ul class="text-gray-300 list-disc list-inside text-sm">
-                        <li>Graphic Design</li>
-                        <li>Digital Imaging</li>
-                    </ul>
-                </div>
-
-                <!-- Intermediate -->
-                <div class="bg-gray-800 rounded-lg p-4">
-                    <h4 class="font-medium text-white mb-2">Intermediate</h4>
-                    <ul class="text-gray-300 list-disc list-inside text-sm">
-                        <li>UI/UX Design</li>
-                        <li>Motion Graphic</li>
-                    </ul>
-                </div>
-
-                <!-- Foundational -->
-                <div class="bg-gray-800 rounded-lg p-4">
-                    <h4 class="font-medium text-white mb-2">Foundational</h4>
-                    <ul class="text-gray-300 list-disc list-inside text-sm">
-                        <li>3D Animation</li>
-                        <li>Video Editing</li>
-                    </ul>
-                </div>
-            </div>
-        </div>  
-    </div>
+  <AboutSection />
 </Layout>
