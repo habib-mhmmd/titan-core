@@ -25,4 +25,5 @@ This project was motivated by concerns regarding the official PBSI poster releas
 ### Result
 |My Version|Official PBSI|
 |----------|----------|
+|----------|----------|
 | ![Sudirman Squad Poster Unofficial](./images/poster-pbsi.png) | ![Sudirman Squad Poster Official](./images/pbsi.jpg) |
