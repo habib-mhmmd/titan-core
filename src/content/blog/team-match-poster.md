@@ -1,6 +1,6 @@
 ---
 title: "Team Match Poster Design"
-excerpt: "Personal exploration in graphic design, where I created match posters for several football teams..."
+excerpt: "Personal exploration in graphic design, where I created match posters for several football teams ..."
 featuredImage: "./images/mockup-match.jpg"
 publishDate: "2024-12-09"
 publish: true
