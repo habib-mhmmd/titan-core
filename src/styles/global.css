@@ -636,5 +636,5 @@ pre[class*="language-"] {
 .markdown table thead th {
   font-size: var(--text-h6);
   color: var(--color-body-base);
-  margin-bottom: 0.75rem;
+  margin: 0 0 1rem 0;
 }
