@@ -9,8 +9,8 @@ const { title, skills } = Astro.props;
 ---
 
 <div class="bg-background-dark rounded-lg p-4">
-  <h6 class="font-medium text-body-base mb-2">{title}</h6>
-  <ul class="text-gray-300 list-disc list-inside text-sm">
+  <h6 class="text-body-base mb-2">{title}</h6>
+  <ul class="text-gray-300 list-disc list-inside text-base space-y-1">
     {skills.map((skill) => <li>{skill}</li>)}
   </ul>
 </div>
