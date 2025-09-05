@@ -42,10 +42,24 @@ const allPosts = await getCollection('blog', ({ data }) => {
 });
 
 // Filter and sort posts
+// let filteredPosts = allPosts
+//     .filter((post) => !category || post.data.categories.includes(category))
+//     .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+//     .slice(0, postsToShow);
+
 let filteredPosts = allPosts
-    .filter((post) => !category || post.data.categories.includes(category))
+    .filter((post) => !category || post.data.categories.includes(category));
+
+// kalau hasil filter kosong → fallback ke semua post
+if (filteredPosts.length === 0) {
+    filteredPosts = allPosts;
+}
+
+filteredPosts = filteredPosts
     .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
     .slice(0, postsToShow);
+
+
 ---
 
 <section class:list={['relative', bgColor, paddingClass]}>
