@@ -1,7 +1,7 @@
 ---
 title: "Redesign of the Sudirman Squad Poster for PBSI"
 excerpt: "This project was motivated by concerns regarding the official PBSI poster released ..."
-featuredImage: "./images/parodi-film.jpg"
+featuredImage: "./images/mockup-pbsi.jpg"
 publishDate: "2025-08-25"
 publish: true
 categories: ["Poster Design"]
@@ -9,7 +9,7 @@ categories: ["Poster Design"]
 seo:
   title: "Redesign of the Sudirman Squad Poster"
   description: ""
-  image: "./images/parodi-film.jpg"
+  image: "./images/mockup-pbsi.jpg"
 ---
 
 ### Description
@@ -25,4 +25,4 @@ This project was motivated by concerns regarding the official PBSI poster releas
 ### Result
 |My Version|Official PBSI|
 |----------|----------|
-| ![Sudirman Squad Poster Unofficial](./images/poster-pbsi.png) | ![Sudirman Squad Poster Official](/tinggal-wisuda2.gif) |
+| ![Sudirman Squad Poster Unofficial](./images/poster-pbsi.png) | ![Sudirman Squad Poster Official](./images/pbsi.jpg) |
