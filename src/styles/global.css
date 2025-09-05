@@ -632,3 +632,9 @@ pre[class*="language-"] {
     /* background-color: var(--color-body-dark); */
     width: 100%;
 }
+
+.markdown table thead th {
+  font-size: var(--text-h6);
+  color: var(--color-body-base);
+  margin-bottom: 0.75rem;
+}
