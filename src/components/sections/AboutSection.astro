@@ -5,11 +5,11 @@ import profileImg from '../../assets/images/profile.png';
 
 --- 
 
-<section class="site-container mx-auto px-4 pb-16 pt-36">
+<section class="site-container--small mx-auto px-4 pb-16 pt-36">
     <div class="grid grid-cols-1 md:grid-cols-[296px_auto] gap-[56px] items-center">
         
         <!-- Gambar -->
-        <div class="hidden md:block w-[296px] h-[395px] bg-grays border-6 border-bg-background-dark rounded-lg overflow-hidden">
+        <div class="hidden md:block w-[296px] h-[395px] top-0 bg-grays border-12 border-primary-dark rounded-large overflow-hidden">
             <img 
             src={profileImg.src} 
             alt="photo profile" 
@@ -19,11 +19,11 @@ import profileImg from '../../assets/images/profile.png';
 
         <!-- Konten -->
         <div>
-            <h2 class="text-lg text-gray-300 mb-2">Hello, I’m</h2>
-            <h1 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h5 class="text-body-base mb-2">Hello, I'm</h5>
+            <h4 class="text-body-base mb-6">
                 Muhammad Habib Al Hudry
-            </h1>
-            <p class="text-gray-400 leading-relaxed mb-8">
+            </h4>
+            <p class="text-body-light leading-relaxed mb-8">
                 Informatics graduate passionate about graphic design, UI/UX, and basic animation
                 using After Effects, Premiere Pro, Blender, and CLO3D. Skilled with creative tools
                 including Photoshop, Illustrator, Figma, and CorelDraw. Actively involved in
@@ -31,7 +31,7 @@ import profileImg from '../../assets/images/profile.png';
                 contribute fresh ideas and collaborate in a dynamic team environment.
             </p>
 
-            <h3 class="text-xl font-semibold text-white mb-4">Key Skills</h3>
+            <h5 class="text-body-base mb-4">Key Skills</h5>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <SkillCard title="Core Skills" skills={['Graphic Design', 'Digital Imaging']} />
                 <SkillCard title="Intermediate" skills={['UI/UX Design', 'Motion Graphic']} />
