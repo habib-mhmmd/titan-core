@@ -633,8 +633,8 @@ pre[class*="language-"] {
     width: 100%;
 }
 
-.markdown table thead th {
+.markdown table th {
   font-size: medium;
   color: var(--color-body-base);
-  @apply mb-8;
+  @apply pb-4;
 }
