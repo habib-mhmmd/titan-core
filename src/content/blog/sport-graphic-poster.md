@@ -24,6 +24,7 @@ A personal project in sports graphic poster design, exploring the fusion of athl
 
 ### Result
 - **Robert Lewandowski 'Top Scores on La Liga'**
+
 |          |          |
 |----------|----------|
 | ![Lewi Barca](./images/lewi-barca.png) | ![Lewi Barca2](/lewi-barca.gif) |
