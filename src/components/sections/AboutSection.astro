@@ -2,56 +2,60 @@
 // src/components/AboutSection.astro
 import SkillCard from '@components/about/SkillCard.astro';
 import profileImg from '../../assets/images/profile.png';
+import profileImg2 from '../../assets/images/profile3.png';
+import profileImg3 from '../../assets/images/profileSVG.svg';
+import Button from '@components/ui/Button.astro';
+import { FileText } from 'lucide-astro';
 
+const cvButton = {
+    name: 'See My CV',
+    link: '',
+};
 --- 
 
-<section class="site-container mx-auto px-4 pb-16 pt-36">
-    <div class="grid grid-cols-1 md:grid-cols-[296px_auto] gap-[56px]">
-        
-        <!-- Gambar -->
-        <div class="hidden md:block w-[296px] h-[395px] bg-grays border border-background-light rounded-lg overflow-hidden">
-            <img 
-            src={profileImg.src} 
-            alt="photo profile" 
-            class="w-full h-full object-cover rounded-lg grayscale hover:grayscale-0 transition duration-300"
-            />
-        </div>
+<section class="header-offset relative">
+    <div class="absolute inset-0 left-0 top-0 w-full h-full hero-backgrounds"></div>
+    <div class="site-container mx-auto px-4 pt-20 z-10">
+        <div class="relative items-center justify-center mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-[2.75fr_2fr] md:gap-8 lg:gap-20 items-center justify-center">
+                
+                <div class="flex flex-col justify-center items-start gap-8">
+                    <div>
+                        <h3 class="text-body-base">Hello, I'm</h3>
+                        <h1 class="text-body-base">
+                            Muhammad Habib Al Hudry
+                        </h1>
+                        <p class="text-body-light text-base leading-[var(--leading-base)] mt-4 lg:mt-6">
+                            Informatics graduate passionate about graphic design, UI/UX, and basic animation
+                            using After Effects, Premiere Pro, Blender, and CLO3D. Skilled with creative tools
+                            including Photoshop, Illustrator, Figma, and CorelDraw. Actively involved in
+                            organizations and awarded 5th place in a national UI/UX competition. Ready to
+                            contribute fresh ideas and collaborate in a dynamic team environment.
+                        </p>
+                    </div>
 
-        <!-- Konten -->
-        <div>
-            <h5 class="text-body-base">Hello, I'm</h5>
-            <h3 class="text-body-base">
-                Muhammad Habib Al Hudry
-            </h3>
-            <p class="text-body-light text-base leading-relaxed mt-4">
-                Informatics graduate passionate about graphic design, UI/UX, and basic animation
-                using After Effects, Premiere Pro, Blender, and CLO3D. Skilled with creative tools
-                including Photoshop, Illustrator, Figma, and CorelDraw. Actively involved in
-                organizations and awarded 5th place in a national UI/UX competition. Ready to
-                contribute fresh ideas and collaborate in a dynamic team environment.
-            </p>
+                    <div class= "flex flex-row justify-start items-start mt-0 md:mt-0 lg:mt-1 gap-6">
 
-            <h5 class="text-body-base mt-7">Key Skills</h5>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
-                <SkillCard title="Core Skills" skills={['Graphic Design', 'Digital Imaging']} />
-                <SkillCard title="Intermediate" skills={['UI/UX Design', 'Motion Graphic']} />
-                <SkillCard title="Foundational" skills={['3D Animation', 'Video Editing']} />
-            </div>
-        </div>
+                            <Button href={cvButton.link} variant="secondary" size='lg'>
+                                <FileText class="w-5 h-5" />
+                                {cvButton.name}
+                            </Button>
+                    </div>
+                </div>
 
-    </div>
+                <div class="relative flex md:ml-0 lg:ml-20 h-full items-end justify-center">
+                    <!-- Foto -->
+                    <div class="hidden md:block aspect-[4/5] w-full md:max-w-[320px] lg:max-w-[360px] overflow-hidden justify-center">
+                        <img 
+                        src={profileImg3.src} 
+                        alt="photo profile" 
+                        class="w-full h-full object-cover rounded-lg grayscale hover:grayscale-0 transition duration-300"
+                        />
+                    </div>
+                </div>
 
-</section>
-
-<section class = "relative mt-20">
-    <div class="absolute inset-0 left-0 top-0 w-full h-full hero-background"></div>
-    <div class= "site-container mx-auto px-4 z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[auto_322px]">
-            
-            <div class="self-stretch flex flex-col justify-start items-start gap-6">
-                <span class="text-body-base text-h4">Hello, I’m<br/></span>
-                <span class="text-body-base text-h2']">Muhammad Habib Al Hudry</span>
             </div>
         </div>
     </div>
+
 </section>
