@@ -30,7 +30,7 @@
     
     --color-body-base: #eaeaea;
     --color-body-light: #aeaeae;
-    --color-body-dark: #373737;
+    --color-body-dark: #656565;
 
     --color-input: var(--color-background-light);
     --color-input-light: var(--color-background-light);
@@ -150,7 +150,7 @@
         --color-headline-dark: #ffffff;
         --color-body-base: #eaeaea;
         --color-body-light: #aeaeae;
-        --color-body-dark: #373737;
+        --color-body-dark: #656565;
         --color-eyebrow: #1e3c8c;
         --color-eyebrow-light: #1e3c8c;
         --color-eyebrow-dark: #e6b800;
@@ -678,7 +678,6 @@ pre[class*="language-"] {
     height: 1px;
     margin: 0.5rem 0 2rem 0;
     background-color: transparent;
-    /* background-color: var(--color-body-dark); */
     width: 100%;
 }
 
@@ -688,3 +687,25 @@ pre[class*="language-"] {
   @apply pb-4;
   
 }
+
+/* @keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  gap: 2rem;
+  min-width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+} */
+
+

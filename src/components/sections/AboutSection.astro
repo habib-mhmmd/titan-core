@@ -6,11 +6,13 @@ import profileImg2 from '../../assets/images/profile3.png';
 import profileImg3 from '../../assets/images/profileSVG.svg';
 import Button from '@components/ui/Button.astro';
 import { FileText } from 'lucide-astro';
+//import SkillAnimation from '@components/about/SkillAnimation.astro';    
 
 const cvButton = {
     name: 'See My CV',
     link: '',
 };
+
 --- 
 
 <section class="header-offset relative">
@@ -59,3 +61,85 @@ const cvButton = {
     </div>
 
 </section>
+<section class="site-container mx-auto px-4 py-20">
+
+    <div class="marquee-container overflow-hidden">
+        <!-- tetap pakai H4 supaya ukuran heading 4 dipertahankan -->
+        <h4 class="marquee-content text-body-dark">
+            <span class="hover:text-body-light transition-colors duration-300">Graphic Design</span>
+            <span class="hover:text-body-light transition-colors duration-300">Digital Imaging</span>
+            <span class="hover:text-body-light transition-colors duration-300">UI/UX Design</span>
+            <span class="hover:text-body-light transition-colors duration-300">Motion Graphic</span>
+            <span class="hover:text-body-light transition-colors duration-300">Animation</span>
+            <span class="hover:text-body-light transition-colors duration-300">Video Editing</span>
+        </h4>
+    </div>
+
+    <style>
+        .marquee-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;         /* ini penting! clone sejajar */
+        flex-wrap: nowrap;
+        }
+
+        .marquee-content{
+        display: inline-flex;
+        gap: 3rem;
+        white-space: nowrap;
+        align-items: center;
+        will-change: transform;
+        margin: 0;
+        padding: 0;
+        }
+
+        .marquee-clone {
+        display: inline-flex;
+        gap: 3rem;
+        white-space: nowrap;
+        align-items: center;
+        will-change: transform;
+        margin-left: 3rem;
+        padding: 0;
+        }
+
+        /* jangan set font-size di sini — biarkan H4 wariskan ukuran heading */
+        /* .marquee-content span { color: var(--color-body-dark);} */
+    </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.marquee-container');
+      if (!container) return;
+
+      const marquee = container.querySelector('.marquee-content') as HTMLElement;
+      if (!marquee) return;
+
+      const clone = marquee.cloneNode(true) as HTMLElement;
+      clone.classList.add('marquee-clone');
+      container.appendChild(clone);
+
+      let offset = 0;
+      let isPaused = false;
+      const speed = 0.6;
+
+      function animate() {
+        if (!isPaused && marquee) {
+          offset -= speed;
+          if (Math.abs(offset) >= marquee.scrollWidth) {
+            offset += marquee.scrollWidth;
+          }
+          marquee.style.transform = `translateX(${offset}px)`;
+          clone.style.transform = `translateX(${offset}px)`;
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      container.addEventListener('mouseenter', () => { isPaused = true; });
+      container.addEventListener('mouseleave', () => { isPaused = false; });
+    });
+  </script>
+</section>
+
