@@ -1,16 +1,31 @@
 ---
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 // src/components/SkillCard.astro
 export interface Props {
   title: string;
-  skills: string[];
+  description: string;
+  iconUrl?: string;
+  icon?: AstroComponentFactory;   
 }
 
-const { title, skills } = Astro.props;
+const { title, description, icon: Icon, iconUrl } = Astro.props;
 ---
 
-<div class="bg-background-dark rounded-lg p-4">
-  <p class="text-body-base font-semibold mb-2">{title}</p>
-  <ul class="text-body-light list-disc list-inside font-medium text-small space-y-1 px-2">
-    {skills.map((skill) => <li>{skill}</li>)}
-  </ul>
+<div class="bg-background rounded-lg p-6">
+  {Icon && (
+    <div class="w-12 h-12 flex items-center justify-center bg-primary rounded-md">
+      <Icon class="w-6 h-6" aria-label={title} />
+    </div>
+  )}
+  {iconUrl && (
+    <div class="w-12 h-12 flex items-center justify-center bg-primary rounded-md">
+      <img src={iconUrl} alt={title} class="w-6 h-6" />
+    </div>
+  )}
+  <div>
+    <h5 class="text-body-base mt-6 mb-1">{title}</h5>
+    <p class="text-small text-body-light leading-[var(--leading-base)]">
+      {description}
+    </p>
+  </div>
 </div>

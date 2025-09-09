@@ -1,12 +1,13 @@
 ---
 // src/components/AboutSection.astro
 import SkillCard from '@components/about/SkillCard.astro';
-import profileImg from '../../assets/images/profile.png';
-import profileImg2 from '../../assets/images/profile3.png';
 import profileImg3 from '../../assets/images/profileSVG.svg';
 import Button from '@components/ui/Button.astro';
 import { FileText } from 'lucide-astro';
-import MarqueeSkill from '@components/about/MarqueeSkill.astro';   
+import MarqueeSkill from '@components/about/MarqueeSkill.astro';
+import GDicon from '../../assets/icons/graphic.svg';
+import AnimationIcon from '../../assets/icons/animation.svg';
+import UiDesignIcon from '../../assets/icons/web-design.svg?url';
 
 const cvButton = {
     name: 'See My CV',
@@ -20,14 +21,13 @@ const cvButton = {
     <div class="site-container mx-auto px-4 py-base z-10">
         <div class="relative items-center justify-center mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-[2.75fr_2fr] md:gap-8 lg:gap-20 items-center justify-center">
-                
                 <div class="flex flex-col justify-center items-start gap-8">
                     <div>
-                        <h3 class="text-body-base">Hello, I'm</h3>
-                        <h1 class="text-body-base">
+                        <h3 class="text-body-base" data-aos="fade-up">Hello, I'm</h3>
+                        <h1 class="text-body-base" data-aos="fade-up" data-aos-delay="50">
                             Muhammad Habib Al Hudry
                         </h1>
-                        <p class="text-body-light text-base leading-[var(--leading-base)] mt-4 lg:mt-6">
+                        <p class="text-body-light text-base leading-[var(--leading-base)] mt-4 lg:mt-6" data-aos="fade-up" data-aos-delay="75">
                             Informatics graduate passionate about graphic design, UI/UX, and basic animation
                             using After Effects, Premiere Pro, Blender, and CLO3D. Skilled with creative tools
                             including Photoshop, Illustrator, Figma, and CorelDraw. Actively involved in
@@ -38,7 +38,7 @@ const cvButton = {
 
                     <div class= "flex flex-row justify-start items-start mt-0 md:mt-0 lg:mt-1 gap-6">
 
-                            <Button href={cvButton.link} variant="secondary" size='lg'>
+                            <Button href={cvButton.link} variant="secondary" size='lg' data-aos="fade-up" data-aos-delay="100">
                                 <FileText class="w-5 h-5" />
                                 {cvButton.name}
                             </Button>
@@ -52,6 +52,8 @@ const cvButton = {
                         src={profileImg3.src} 
                         alt="photo profile" 
                         class="w-full h-full object-cover rounded-lg grayscale hover:grayscale-0 transition duration-300"
+                        data-aos="fade-center"
+                        data-aos-delay="200"
                         />
                     </div>
                 </div>
@@ -59,9 +61,31 @@ const cvButton = {
             </div>
         </div>
     </div>
-
 </section>
+
 <section class="site-container mx-auto px-4 py-base">
     <MarqueeSkill />
 </section>
 
+<section class="site-container mx-auto px-4 py-base bg-background-dark">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <SkillCard 
+            title="Graphic Design" 
+            description="My strongest skills are crafting impactful designs and detailed image manipulations that define my creative identity."
+            icon={GDicon}
+        />
+        
+        <SkillCard 
+            title="UI/UX Design" 
+            description="I design user-friendly interfaces, balancing aesthetics and usability to create digital experiences that feel engaging and intuitive."
+            iconUrl={UiDesignIcon}
+        />
+
+        <SkillCard 
+            title="Animation" 
+            description="I have basic skills in motion and editing that bring energy to visuals, making designs more dynamic and expressive."
+            icon={AnimationIcon}
+        />
+    </div>
+
+</section>

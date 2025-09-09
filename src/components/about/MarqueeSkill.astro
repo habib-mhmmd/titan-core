@@ -11,36 +11,56 @@
     </div>
 </div>
 
-    <style>
-        .marquee-container {
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        display: flex;        
-        flex-wrap: nowrap;
-        }
+<style>
+  .marquee-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+  }
 
-        .marquee-content{
-        display: inline-flex;
-        gap: 4rem;
-        white-space: nowrap;
-        align-items: center;
-        will-change: transform;
-        margin: 0;
-        padding: 0;
-        }
+  .marquee-content {
+    display: inline-flex;
+    gap: 4rem;
+    white-space: nowrap;
+    align-items: center;
+    will-change: transform;
+    margin: 0;
+    padding: 0;
+  }
 
-        .marquee-clone {
-        display: inline-flex;
-        gap: 4rem;
-        white-space: nowrap;
-        align-items: center;
-        will-change: transform;
-        margin-left: 4rem;
-        padding: 0;
-        }
+  .marquee-clone {
+    display: inline-flex;
+    gap: 4rem;
+    white-space: nowrap;
+    align-items: center;
+    will-change: transform;
+    margin-left: 4rem;
+    padding: 0;
+  }
 
-    </style>
+  .marquee-container::before,
+  .marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20rem; /* atur lebar fade sesuai selera */
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-background) 0%, transparent 100%);
+  }
+
+  .marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-background) 0%, transparent 100%);
+  }
+</style>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
