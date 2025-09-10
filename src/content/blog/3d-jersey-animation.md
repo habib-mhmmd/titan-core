@@ -1,6 +1,6 @@
 ---
 title: "3D Animation Visualization of Jersey vol. 5 'E-Sport Arena Community"
-excerpt: "This project featured a 3D visualization for the Arena E-Sport Community vol. 5 jersey design ..."
+excerpt: "This project featured a 3D visualization for the Arena E-Sport Community vol. 5 jersey design, which was yet to be physically produced. By utilizing CLO3D for modeling and Blender for animation and rendering, the jersey design was visualized in detail with a realistic and high-quality appearance"
 featuredImage: "./images/Mockup-3d.jpg"
 publishDate: "2025-07-30"
 publish: true

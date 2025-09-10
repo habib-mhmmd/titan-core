@@ -1,6 +1,6 @@
 ---
 title: "Team Match Poster Design"
-excerpt: "Personal exploration in graphic design, where I created match posters for several football teams ..."
+excerpt: "This project is a personal exploration in graphic design, where I created match posters for several soccer teams. The main objective of this project was to practice and improve my skills in sports poster design, with a focus on visual composition, typography, and photo manipulation"
 featuredImage: "./images/mockup-match.jpg"
 publishDate: "2024-12-09"
 publish: true

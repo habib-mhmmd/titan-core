@@ -1,6 +1,6 @@
 ---
 title: "Sport Graphic Poster Design"
-excerpt: "Exploring the fusion of athlete photography with modern graphic elements, dynamic typography ..."
+excerpt: "A personal project in sports graphic poster design, exploring the fusion of athlete photography with modern graphic elements, dynamic typography, and bold colors to capture the dynamic spirit of sports"
 featuredImage: "./images/sport-graphic-mockup.jpg"
 publishDate: "2024-10-31"
 publish: true

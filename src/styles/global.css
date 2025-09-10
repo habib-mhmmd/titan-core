@@ -141,9 +141,9 @@
         --color-secondary-light: #e6b800;
         --color-secondary-dark: #997300;
         --color-accent: #1e3c8c;
-        --color-background: var(--color-background);
-        --color-background-light: var(--color-background-light);
-        --color-background-dark: var(--color-background-dark);
+        --color-background: #232323;
+        --color-background-light: #303030;
+        --color-background-dark: #1c1c1c;
         --color-headline: #1a1f3c;
         --color-headline-light: #1a1f3c;
         --color-headline-dark: #ffffff;
@@ -640,7 +640,7 @@ pre[class*="language-"] {
 }
 
 .markdown img {
-  border-radius: var(--border-radius-small); 
+  border-radius: var(--border-radius-base);
   display: block;
   margin: 0 auto 1rem auto; /* biar center */
   max-width: 90%;   /* biar responsif */
@@ -679,13 +679,12 @@ pre[class*="language-"] {
 }
 
 .markdown table th {
-  font-size: medium;
+  /* font-size: medium; */
+  font-weight:600;
   color: var(--color-body-base);
   @apply pb-4;
   
 }
 
-.rounded-small {border-radius: var(--border-radius-small);}
-.rounded-large {border-radius: var(--border-radius-large);}
 
 

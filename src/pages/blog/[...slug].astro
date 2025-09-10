@@ -64,7 +64,7 @@ else if (!seoImage && post.data.featuredImage) {
                     alt=""
                     width={1920}
                     height={1080}
-                    class="object-cover w-full h-full rounded-lg border border-background-light"
+                    class="object-cover w-full h-full border-2 border-background-light rounded-[var(--border-radius-base)] md:rounded-[var(--border-radius-xlarge)]"
                     quality={100}
                     format="webp"
                 />
@@ -84,21 +84,17 @@ else if (!seoImage && post.data.featuredImage) {
                     )
                 }
             </div>
-                <!-- items-center justify-center  asli -->
-                 <!-- flex text-left md:items-center md:justify-center md:text-center gap-4 text-body-light text-sm font-medium -->
         </div>
 
 
         <div class="mt-8 markdown">
             <Content />
-            <!-- {post.data.videoUrl && (
-                <a href={post.data.videoUrl} target="_blank">🎬 Tonton di YouTube</a>
-            )} -->
+
 
             {videoId && (
             <div class="aspect-video w-site-container-small mx-auto mt-4 md:mt-6 px-2 md:px-4">
                 <iframe
-                    class="w-full h-full rounded-lg"
+                    class="w-full h-full rrounded-[var(--border-radius-base)] md:rounded-[var(--border-radius-xlarge)]"
                     src={`https://www.youtube.com/embed/${videoId}`}
                     title="YouTube video player"
                     frameborder="0"
@@ -112,7 +108,7 @@ else if (!seoImage && post.data.featuredImage) {
 
         <!-- overlay untuk zoom -->
         <div id="imgOverlay" class="fixed inset-0 bg-black/80 pt-0 md:pt-20 hidden justify-center items-center z-50 transition-opacity duration-300">
-            <img id="imgOverlayTarget" class="max-w-[90%] max-h-[90%] rounded-lg cursor-zoom-out" />
+            <img id="imgOverlayTarget" class="max-w-[96%] max-h-[96%] rounded-[var(--border-radius-base)] md:rounded-[var(--border-radius-xlarge)] cursor-zoom-out" />
         </div>
     </article>
 

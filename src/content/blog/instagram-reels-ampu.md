@@ -1,6 +1,6 @@
 ---
 title: "Instagram Reels Thumbnail Design for Ampu Studio’s Music Cover"
-excerpt: "Creating thumbnail designs for Instagram Reels Music Cover content. The designs were created to ..."
+excerpt: "This project was completed during my internship at Ampu Studio, focusing on creating thumbnail designs for Instagram Reels Music Cover content. The designs were created to showcase a consistent visual identity"
 featuredImage: "./images/ampu-music.jpg"
 publishDate: "2024-12-15"
 publish: true
