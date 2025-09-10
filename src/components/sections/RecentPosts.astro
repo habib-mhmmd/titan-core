@@ -89,7 +89,7 @@ filteredPosts = filteredPosts
             )
         }
 
-        <div class="posts-grid">
+        <div class="posts-grid gap-8">
             {
                 filteredPosts.map((post, index) => (
                     <div>
@@ -115,6 +115,6 @@ filteredPosts = filteredPosts
     .posts-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1rem;
+        
     }
 </style>

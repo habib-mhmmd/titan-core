@@ -38,11 +38,12 @@ const {
             </div>
         )}
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr">
+<!-- grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr -->
+        <div class="grid-cols-auto-fit gap-8">
             {features.map((feature, index) => (
                 <div 
                     class:list={[
-                        "p-6 rounded-[var(--border-radius-xlarge)]",
+                        "p-6 rounded-[var(--border-radius-large)]",
                         "bg-background-base",
                         "flex flex-col"
                     ]}
@@ -50,7 +51,7 @@ const {
                     data-aos-delay={index * 100}
                 >
                     <div class:list={[
-                        "w-12 h-12 flex items-center justify-center rounded-lg mb-4",
+                        "w-12 h-12 flex items-center justify-center rounded-[var(--border-radius-base)] mb-4",
                         "bg-primary"
                     ]}>
                         <feature.icon
@@ -72,6 +73,8 @@ const {
 
 <style>
     .grid-cols-auto-fit {
+        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
     }
 </style>
