@@ -1,10 +1,10 @@
 ---
 // src/components/AboutSection.astro
-import SkillCard from '@components/about/SkillCard.astro';
 import profileImg3 from '../../assets/images/profileSVG.svg';
 import Button from '@components/ui/Button.astro';
 import { FileText } from 'lucide-astro';
 import MarqueeSkill from '@components/about/MarqueeSkill.astro';
+import SkillCard from '@components/about/SkillCard.astro';
 import GDicon from '../../assets/icons/graphic.svg';
 import AnimationIcon from '../../assets/icons/animation.svg';
 import UiDesignIcon from '../../assets/icons/web-design.svg?url';
@@ -27,7 +27,7 @@ const cvButton = {
                         <h1 class="text-body-base" data-aos="fade-up" data-aos-delay="50">
                             Muhammad Habib Al Hudry
                         </h1>
-                        <p class="text-body-light text-base leading-[var(--leading-base)] mt-4 lg:mt-6" data-aos="fade-up" data-aos-delay="75">
+                        <p class="text-body-light leading-[var(--leading-base)] mt-4 lg:mt-6" data-aos="fade-up" data-aos-delay="75">
                             Informatics graduate passionate about graphic design, UI/UX, and basic animation
                             using After Effects, Premiere Pro, Blender, and CLO3D. Skilled with creative tools
                             including Photoshop, Illustrator, Figma, and CorelDraw. Actively involved in
@@ -46,7 +46,6 @@ const cvButton = {
                 </div>
 
                 <div class="relative flex md:ml-0 lg:ml-20 h-full items-end justify-center">
-                    <!-- Foto -->
                     <div class="hidden md:block aspect-[4/5] w-full md:max-w-[320px] lg:max-w-[360px] overflow-hidden justify-center">
                         <img 
                         src={profileImg3.src} 
@@ -67,25 +66,33 @@ const cvButton = {
     <MarqueeSkill />
 </section>
 
-<section class="site-container mx-auto px-4 py-base bg-background-dark">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <SkillCard 
-            title="Graphic Design" 
-            description="My strongest skills are crafting impactful designs and detailed image manipulations that define my creative identity."
-            icon={GDicon}
-        />
-        
-        <SkillCard 
-            title="UI/UX Design" 
-            description="I design user-friendly interfaces, balancing aesthetics and usability to create digital experiences that feel engaging and intuitive."
-            iconUrl={UiDesignIcon}
-        />
+<!-- <section class="relative items-center py-base bg-background-dark">
+    <div class="site-container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <SkillCard 
+                title="Graphic Design" 
+                description="My strongest skills are crafting impactful designs and detailed image manipulations that define my creative identity."
+                icon={GDicon}
+                data-aos="fade-up"
+                data-aos-delay="50"
+            />
+            
+            <SkillCard 
+                title="UI/UX Design" 
+                description="I design user-friendly interfaces, balancing aesthetics and usability to create digital experiences that feel engaging and intuitive."
+                iconUrl={UiDesignIcon}
+                data-aos="fade-up"
+                data-aos-delay="100"
+            />
 
-        <SkillCard 
-            title="Animation" 
-            description="I have basic skills in motion and editing that bring energy to visuals, making designs more dynamic and expressive."
-            icon={AnimationIcon}
-        />
+            <SkillCard 
+                title="Animation" 
+                description="I have basic skills in motion and editing that bring energy to visuals, making designs more dynamic and expressive."
+                icon={AnimationIcon}
+                data-aos="fade-up"
+                data-aos-delay="150"
+            />
+        </div>
     </div>
 
-</section>
+</section> -->

@@ -1,12 +1,15 @@
-import { Zap, Shield, Heart, Coffee, Smile, Type, TabletSmartphone, CodeXml } from 'lucide-astro';
-
+// import { Zap, Shield, Heart, Coffee, Smile, Type, TabletSmartphone, CodeXml } from 'lucide-astro';
 // Define the LucideIcon type based on the structure of Lucide icons
-type LucideIcon = typeof Zap;
+// type LucideIcon = typeof Zap;
+import GDicon from '../assets/icons/graphic.svg';
+import AnimationIcon from '../assets/icons/animation.svg';
+import UiDesignIcon from '../assets/icons/web-design.svg';
 
 export interface Feature {
-    icon: LucideIcon;
+    icon: any;
     title: string;
     description: string;
+    
 }
 
 export interface FeatureList {
@@ -16,59 +19,62 @@ export interface FeatureList {
 
 // Example feature lists
 export const featureLists: Record<string, FeatureList> = {
-    main: {
-        id: 'main',
-        features: [
-            {
-                icon: Zap,
-                title: 'Lightning Fast Performance',
-                description: 'Optimized for speed and performance'
-            },
-            {
-                icon: Shield,
-                title: 'SEO Optimized Structure',
-                description: 'Built with SEO best practices in mind'
-            },
-            {
-                icon: TabletSmartphone,
-                title: 'Responsive by Default',
-                description: 'Mobile-friendly out of the box'
-            },
-            {
-                icon: Smile,
-                title: 'Easy Customization',
-                description: 'Customize the theme to your liking'
-            },
-            {
-                icon: Type,
-                title: 'TypeScript Support',
-                description: 'Built with TypeScript in mind'
-            },
-            {
-                icon: CodeXml,
-                title: 'Minimal Dependencies',
-                description: 'Keep your project lightweight'
-            }
-        ]
-    },
+
     secondary: {
         id: 'secondary',
         features: [
             {
-                icon: Heart,
-                title: 'Made with Love',
-                description: 'Crafted with attention to detail'
+                icon: GDicon,
+                title: 'Graphic Design',
+                description: 'My strongest skills are crafting impactful designs and detailed image manipulations that define my creative identity.'
             },
             {
-                icon: Coffee,
-                title: 'Always Fresh',
-                description: 'Regular updates and improvements'
+                icon: UiDesignIcon,
+                title: 'UI/UX Design',
+                description: 'I design user-friendly interfaces, balancing aesthetics and usability to create digital experiences that feel engaging and intuitive.'
             },
             {
-                icon: Smile,
-                title: 'User Friendly',
-                description: 'Intuitive and easy to use'
+                icon: AnimationIcon,
+                title: 'Animation & Video',
+                description: 'I have basic skills in motion and editing that bring energy to visuals, making designs more dynamic and expressive.'
             }
         ]
     }
 };
+
+
+    // main: {
+    //     id: 'main',
+    //     features: [
+    //         {
+    //             icon: Zap,
+    //             title: 'Lightning Fast Performance',
+    //             description: 'Optimized for speed and performance'
+    //         },
+    //         {
+    //             icon: Shield,
+    //             title: 'SEO Optimized Structure',
+    //             description: 'Built with SEO best practices in mind'
+    //         },
+    //         {
+    //             icon: TabletSmartphone,
+    //             title: 'Responsive by Default',
+    //             description: 'Mobile-friendly out of the box'
+    //         },
+    //         {
+    //             icon: Smile,
+    //             title: 'Easy Customization',
+    //             description: 'Customize the theme to your liking'
+    //         },
+    //         {
+    //             icon: Type,
+    //             title: 'TypeScript Support',
+    //             description: 'Built with TypeScript in mind'
+    //         },
+    //         {
+    //             icon: CodeXml,
+    //             title: 'Minimal Dependencies',
+    //             description: 'Keep your project lightweight'
+    //         }
+    //     ]
+    // },

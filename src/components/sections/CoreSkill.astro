@@ -1,5 +1,77 @@
 ---
-// src/components/AboutSection.astro
-import SkillCard from '@components/about/SkillCard.astro';
+import type { Feature } from '@data/features';
+
+export interface Props {
+    content: {
+        title?: string;
+        description?: string;
+        features: Feature[];
+    };
+}
+
+const {
+    content: {
+        title,
+        description,
+        features
+    },
+} = Astro.props;
 
 --- 
+<section class="relative bg-background-dark py-base">
+    <div class="site-container px-4" >
+        {(title || description) && (
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                {title && (
+                    <h2 class="text-body-base whitespace-pre-line" data-aos="fade-up">
+                        {title}
+                    </h2>
+                )}
+                {description && (
+                    <p 
+                        class="text-body-light mt-2 md:mt-4"
+                        data-aos="fade-up" data-aos-delay="100">
+                        {description}
+                    </p>
+                )}
+
+            </div>
+        )}
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr">
+            {features.map((feature, index) => (
+                <div 
+                    class:list={[
+                        "p-6 rounded-lg",
+                        "bg-background-base",
+                        "flex flex-col"
+                    ]}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                >
+                    <div class:list={[
+                        "w-12 h-12 flex items-center justify-center rounded-lg mb-4",
+                        "bg-primary"
+                    ]}>
+                        <feature.icon
+                            //size={5}
+                            class="text-body-base w-6 h-6"
+                        />
+                    </div>
+                    <h4 class:list={["text-h4 mb-2","text-body-base"]}>
+                        {feature.title}
+                    </h4>
+                    <p class:list={["text-small", "text-body-light"]}>
+                        {feature.description}
+                    </p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .grid-cols-auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+</style>

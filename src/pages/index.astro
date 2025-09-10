@@ -15,6 +15,10 @@ import RecentPosts from '@components/sections/RecentPosts.astro';
 import heroImage from '../assets/images/home/Linear1.png';
 import styleGuideImage from '../assets/images/home/developer.jpg';
 import { imageConfig } from 'astro:assets';
+import AboutSection from '@components/sections/AboutSection.astro';
+import CoreSkill from '@components/sections/CoreSkill.astro';
+
+
 
 const seoTitle = "Habibmuhd";
 const seoDescription = "Muhammad Habib Al Hudry | Graphic Designer";
@@ -66,12 +70,18 @@ const featuresSection = {
     eyebrow: "",
     title: "Key Skills",
     description: "",
-    features: featureLists.main.features,
+    features: featureLists.secondary.features,
     button: {
         text: "View Theme Info",
         link: "/theme-info",
         variant: "primary" as const
     }
+}
+
+const coreSkillSection = {
+    title: "Passionate about\nTurning Idea into Visuals",
+    description: "I believe every idea can become a powerful story through visuals. With creativity and precision, I transform concepts into designs that inspire and convey messages.",
+    features: featureLists.secondary.features,
 }
 
 const FooterCta = {
@@ -158,8 +168,10 @@ const recentPostsSection = {
 ---
 
 <Layout footerCta={FooterCta} title={seoTitle} description={seoDescription}>
-    <Hero content={heroContent} />
-    <Features content={featuresSection} padding="base" background="base" />
+    <AboutSection />
+    <!-- <Hero content={heroContent} /> -->
+    <CoreSkill content={coreSkillSection} />
+    <!-- <Features content={featuresSection} padding="base" background="dark" /> -->
     <RecentPosts content={recentPostsSection} background="base" padding="base" postsToShow={3} category="Theme Usage"/>
     <SplitPanel content={styleGuideSection} imagePosition="right" background="light" padding="base" />
     <CtaBanner content={mainCta} variant="contained" background="light" paddingBottom="base" />

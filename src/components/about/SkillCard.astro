@@ -5,13 +5,15 @@ export interface Props {
   title: string;
   description: string;
   iconUrl?: string;
-  icon?: AstroComponentFactory;   
+  icon?: AstroComponentFactory;
+  class?: string;   
 }
 
-const { title, description, icon: Icon, iconUrl } = Astro.props;
+const { title, description, icon: Icon, iconUrl, class: className } = Astro.props;
 ---
-
-<div class="bg-background rounded-lg p-6">
+<!-- skill-card bg-background rounded-lg p-6 -->
+<div class={`bg-background rounded-lg p-6 ${className || ""}`}>
+  
   {Icon && (
     <div class="w-12 h-12 flex items-center justify-center bg-primary rounded-md">
       <Icon class="w-6 h-6" aria-label={title} />
@@ -23,7 +25,7 @@ const { title, description, icon: Icon, iconUrl } = Astro.props;
     </div>
   )}
   <div>
-    <h5 class="text-body-base mt-6 mb-1">{title}</h5>
+    <h4 class="text-body-base mt-6 mb-2">{title}</h4>
     <p class="text-small text-body-light leading-[var(--leading-base)]">
       {description}
     </p>
