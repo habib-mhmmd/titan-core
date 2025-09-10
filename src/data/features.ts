@@ -20,6 +20,42 @@ export interface FeatureList {
 // Example feature lists
 export const featureLists: Record<string, FeatureList> = {
 
+    main: {
+        id: 'main',
+        features: [
+            {
+                icon: GDicon,
+                title: 'Lightning Fast Performance',
+                description: 'Optimized for speed and performance'
+            },
+            {
+                icon: GDicon,
+                title: 'SEO Optimized Structure',
+                description: 'Built with SEO best practices in mind'
+            },
+            {
+                icon: GDicon,
+                title: 'Responsive by Default',
+                description: 'Mobile-friendly out of the box'
+            },
+            {
+                icon: GDicon,
+                title: 'Easy Customization',
+                description: 'Customize the theme to your liking'
+            },
+            {
+                icon: GDicon,
+                title: 'TypeScript Support',
+                description: 'Built with TypeScript in mind'
+            },
+            {
+                icon: GDicon,
+                title: 'Minimal Dependencies',
+                description: 'Keep your project lightweight'
+            }
+        ]
+    },
+
     secondary: {
         id: 'secondary',
         features: [
@@ -43,38 +79,4 @@ export const featureLists: Record<string, FeatureList> = {
 };
 
 
-    // main: {
-    //     id: 'main',
-    //     features: [
-    //         {
-    //             icon: Zap,
-    //             title: 'Lightning Fast Performance',
-    //             description: 'Optimized for speed and performance'
-    //         },
-    //         {
-    //             icon: Shield,
-    //             title: 'SEO Optimized Structure',
-    //             description: 'Built with SEO best practices in mind'
-    //         },
-    //         {
-    //             icon: TabletSmartphone,
-    //             title: 'Responsive by Default',
-    //             description: 'Mobile-friendly out of the box'
-    //         },
-    //         {
-    //             icon: Smile,
-    //             title: 'Easy Customization',
-    //             description: 'Customize the theme to your liking'
-    //         },
-    //         {
-    //             icon: Type,
-    //             title: 'TypeScript Support',
-    //             description: 'Built with TypeScript in mind'
-    //         },
-    //         {
-    //             icon: CodeXml,
-    //             title: 'Minimal Dependencies',
-    //             description: 'Keep your project lightweight'
-    //         }
-    //     ]
-    // },
+
