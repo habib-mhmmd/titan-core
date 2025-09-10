@@ -33,9 +33,9 @@ const activeCategories = categories.filter((category) =>
             <div class="flex flex-wrap gap-2">
                 <a
                     href="/blog"
-                    class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors duration-200 ${
+                    class={`px-4 py-2 leading-none rounded-[var(--border-radius-small)] md:rounded-[var(--border-radius-base)] text-small font-semibold flex items-center justify-center transition-colors duration-200 ${
                         !currentCategory
-                            ? 'bg-primary text-body-base'
+                            ? 'bg-body-base text-background'
                             : 'text-body-light hover:text-body-base border border-body-dark hover:border-body-light'
                     }`}
                 >
@@ -45,7 +45,7 @@ const activeCategories = categories.filter((category) =>
                     activeCategories.map((category) => (
                         <a
                             href={`/category/${category.slug}`}
-                            class={`px-4 sm:px-6 py-2 sm:py-3 leading-none rounded-md text-small flex items-center justify-center transition-colors duration-200 ${
+                            class={`px-4 py-2 leading-none rounded-[var(--border-radius-small)] md:rounded-[var(--border-radius-base)] text-small flex items-center justify-center transition-colors duration-200 ${
                                 currentCategory === category.name
                                     ? 'bg-primary text-body-base'
                                     : 'text-body-light hover:text-body-base border border-body-dark hover:border-body-light'

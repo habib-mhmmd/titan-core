@@ -156,11 +156,11 @@ const faqsSection = {
 }
 
 const recentPostsSection = {
-    eyebrow: "LATEST INSIGHTS",
-    title: " Learn From Our Experience",
-    description: "Explore our latest articles on Astro JS development, theme customization tips, and web performance best practices.",
+    eyebrow: "",
+    title: "Last Projects",
+    description: "Here are my most recent projects, reflecting a blend of design skills, problem-solving, and continuous growth.",
     button: {
-            text: "View All Posts",
+            text: "View All My Projects",
             link: "/blog",
         variant: "primary" as const
     }
@@ -172,7 +172,7 @@ const recentPostsSection = {
     <!-- <Hero content={heroContent} /> -->
     <CoreSkill content={coreSkillSection} />
     <!-- <Features content={featuresSection} padding="base" background="dark" /> -->
-    <RecentPosts content={recentPostsSection} background="base" padding="base" postsToShow={3} category="Theme Usage"/>
+    <RecentPosts content={recentPostsSection} background="base" padding="large" postsToShow={3} category="Theme Usage"/>
     <SplitPanel content={styleGuideSection} imagePosition="right" background="light" padding="base" />
     <CtaBanner content={mainCta} variant="contained" background="light" paddingBottom="base" />
     <Logos content={logosSection} background="base" padding='small'/>

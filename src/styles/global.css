@@ -115,14 +115,13 @@
     --leading-large:  1.4;  /* judul lebih rapat */
     --leading-xlarge: 1.2;  /* hero heading rapat */
 
-
     --container-small: 1000px;
     --container-base: 1400px;
-    --container-xsmall: 960px;   
 
-    --border-radius-small: 0.5rem;
-    --border-radius-base: 1rem;
-    --border-radius-large: 2rem;
+    --border-radius-small: 6px;
+    --border-radius-base: 8px;
+    --border-radius-large: 12px;
+    --border-radius-xlarge: 16px;
     
     --font-bruno-ace: 'Plus Jakarta Sans', sans-serif;
     --font-noto-sans-kr: 'Plus Jakarta Sans', sans-serif;
@@ -142,9 +141,9 @@
         --color-secondary-light: #e6b800;
         --color-secondary-dark: #997300;
         --color-accent: #1e3c8c;
-        --color-background: #232323;
-        --color-background-light: #303030;
-        --color-background-dark: #1c1c1c;
+        --color-background: var(--color-background);
+        --color-background-light: var(--color-background-light);
+        --color-background-dark: var(--color-background-dark);
         --color-headline: #1a1f3c;
         --color-headline-light: #1a1f3c;
         --color-headline-dark: #ffffff;
@@ -548,6 +547,7 @@
     .py-large { padding-top: var(--spacing-large); padding-bottom: var(--spacing-large); }
     
     .cursor-pointer { cursor: pointer; }
+
 }
 
 html,
@@ -574,9 +574,6 @@ body::-webkit-scrollbar {
     @apply mx-auto max-w-[var(--container-small)] w-full;
 }
 
-.site-container--xsmall {
-    @apply mx-auto max-w-[var(--container-xsmall)] w-full;
-}
 
 .header-offset{
     @apply pt-24;
@@ -688,5 +685,7 @@ pre[class*="language-"] {
   
 }
 
+.rounded-small {border-radius: var(--border-radius-small);}
+.rounded-large {border-radius: var(--border-radius-large);}
 
 

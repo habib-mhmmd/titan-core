@@ -22,9 +22,10 @@ const validCategories = postCategories.filter((categoryName: string) =>
 );
 ---
 
+<!-- rounded-lg -->
 <a
     href={`/blog/${slug}`}
-    class="group flex flex-col h-full overflow-hidden bg-background-light rounded-lg border-2 border-background hover:border-body-base transition-all duration-300"
+    class="group flex flex-col h-full overflow-hidden bg-background-light rounded-[var(--border-radius-large)] border-2 border-background hover:border-body-base transition-all duration-300"
     data-aos="fade-up"
     data-aos-delay={index * 100}
 >
