@@ -4,10 +4,6 @@ import profileImg3 from '../../assets/images/profileSVG.svg';
 import Button from '@components/ui/Button.astro';
 import { FileText } from 'lucide-astro';
 import MarqueeSkill from '@components/about/MarqueeSkill.astro';
-import SkillCard from '@components/about/SkillCard.astro';
-import GDicon from '../../assets/icons/graphic.svg';
-import AnimationIcon from '../../assets/icons/animation.svg';
-import UiDesignIcon from '../../assets/icons/web-design.svg?url';
 
 const cvButton = {
     name: 'See My CV',
@@ -24,15 +20,15 @@ const cvButton = {
                 <div class="flex flex-col justify-center items-start gap-8">
                     <div>
                         <h3 class="text-body-base" data-aos="fade-up">Hello, I'm</h3>
-                        <h1 class="text-body-base" data-aos="fade-up" data-aos-delay="50">
+                        <h2 class="text-body-base" data-aos="fade-up" data-aos-delay="50">
                             Muhammad Habib Al Hudry
-                        </h1>
+                        </h2>
                         <p class="text-body-light leading-[var(--leading-base)] mt-4 lg:mt-6" data-aos="fade-up" data-aos-delay="75">
-                            Informatics graduate passionate about graphic design, UI/UX, and basic animation
-                            using After Effects, Premiere Pro, Blender, and CLO3D. Skilled with creative tools
-                            including Photoshop, Illustrator, Figma, and CorelDraw. Actively involved in
-                            organizations and awarded 5th place in a national UI/UX competition. Ready to
-                            contribute fresh ideas and collaborate in a dynamic team environment.
+                            I am a Computer Science graduate with a strong interest in graphic design, UI/UX, and basic animation.
+                            I am proficient in using Photoshop, Illustrator, Figma, and CorelDraw, and have explored motion and 3D design through After Effects, 
+                            Premiere Pro, Blender, and CLO3D. I have experience in creating visually appealing designs and interfaces, supported by active involvement 
+                            in organizations and achievements such as ranking 5th in the UI/UX Design competition at INDONERIS 2023. 
+                            Combining creativity and technical skills, I am ready to bring fresh ideas and collaborate in a dynamic team to create impactful design solutions.
                         </p>
                     </div>
 
@@ -45,7 +41,7 @@ const cvButton = {
                     </div>
                 </div>
 
-                <div class="relative flex md:ml-0 lg:ml-20 h-full items-end justify-center">
+                <div class="relative flex md:ml-0 lg:ml-20 h-full items-center justify-center">
                     <div class="hidden md:block aspect-[4/5] w-full md:max-w-[320px] lg:max-w-[360px] overflow-hidden justify-center">
                         <img 
                         src={profileImg3.src} 
@@ -62,37 +58,6 @@ const cvButton = {
     </div>
 </section>
 
-<section class="site-container mx-auto px-4 py-base">
+<section class="site-container mx-auto px-4 py-large">
     <MarqueeSkill />
 </section>
-
-<!-- <section class="relative items-center py-base bg-background-dark">
-    <div class="site-container mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <SkillCard 
-                title="Graphic Design" 
-                description="My strongest skills are crafting impactful designs and detailed image manipulations that define my creative identity."
-                icon={GDicon}
-                data-aos="fade-up"
-                data-aos-delay="50"
-            />
-            
-            <SkillCard 
-                title="UI/UX Design" 
-                description="I design user-friendly interfaces, balancing aesthetics and usability to create digital experiences that feel engaging and intuitive."
-                iconUrl={UiDesignIcon}
-                data-aos="fade-up"
-                data-aos-delay="100"
-            />
-
-            <SkillCard 
-                title="Animation" 
-                description="I have basic skills in motion and editing that bring energy to visuals, making designs more dynamic and expressive."
-                icon={AnimationIcon}
-                data-aos="fade-up"
-                data-aos-delay="150"
-            />
-        </div>
-    </div>
-
-</section> -->

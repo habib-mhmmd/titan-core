@@ -24,7 +24,7 @@
 
   .marquee-content {
     display: inline-flex;
-    gap: 4rem;
+    gap: 2rem;
     white-space: nowrap;
     align-items: center;
     will-change: transform;
@@ -34,11 +34,11 @@
 
   .marquee-clone {
     display: inline-flex;
-    gap: 4rem;
+    gap: 2rem;
     white-space: nowrap;
     align-items: center;
     will-change: transform;
-    margin-left: 4rem;
+    margin-left: 2rem;
     padding: 0;
   }
 
@@ -61,6 +61,28 @@
   .marquee-container::after {
     right: 0;
     background: linear-gradient(to left, var(--color-background) 0%, transparent 100%);
+  }
+
+  @media (min-width: 768px) {
+
+    .marquee-content {
+      display: inline-flex;
+      gap: 4rem;
+      white-space: nowrap;
+      align-items: center;
+      will-change: transform;
+      margin: 0;
+      padding: 0;
+    }
+    .marquee-clone {
+      display: inline-flex;
+      gap: 4rem;
+      white-space: nowrap;
+      align-items: center;
+      will-change: transform;
+      margin-left: 4rem;
+      padding: 0;
+    }
   }
 </style>
 

@@ -18,14 +18,14 @@ const {
 } = Astro.props;
 
 --- 
-<section class="relative bg-background-dark py-base">
+<section class="relative bg-background-dark py-large">
     <div class="site-container px-4" >
         {(title || description) && (
             <div class="text-center mb-16 max-w-3xl mx-auto">
                 {title && (
-                    <h2 class="text-body-base whitespace-pre-line" data-aos="fade-up">
+                    <h1 class="text-body-base whitespace-pre-line" data-aos="fade-up">
                         {title}
-                    </h2>
+                    </h1>
                 )}
                 {description && (
                     <p 
