@@ -144,9 +144,9 @@
         --color-background: #1D1D1D;
         --color-background-light: #232323;
         --color-background-dark: #151515;
-        --color-headline: #1a1f3c;
-        --color-headline-light: #1a1f3c;
-        --color-headline-dark: #ffffff;
+        --color-headline: #eaeaea;
+        --color-headline-light: #aeaeae;
+        --color-headline-dark: #656565;
         --color-body-base: #eaeaea;
         --color-body-light: #aeaeae;
         --color-body-dark: #656565;
@@ -155,7 +155,7 @@
         --color-eyebrow-dark: #e6b800;
         --color-input: var(--color-background-light);
         --color-input-light: var(--color-background-light);
-        --color-input-dark: var(--color-background-dark);
+        --color-input-dark: var(--color-background-base);
         --color-input-text: var(--color-body-base);
         --color-input-text-light: var(--color-headline-light);
         --color-input-text-dark: var(--color-headline-dark);

@@ -5,6 +5,7 @@ import Textarea from "@components/ui/form/Textarea.astro";
 import Radio from "@components/ui/form/Radio.astro";
 import Checkbox from "@components/ui/form/Checkbox.astro";
 import Select from "@components/ui/form/Select.astro";
+import { Send } from 'lucide-astro';
 
 const hearAboutOptions = [
     { label: "Search Engine", value: "search" },
@@ -35,60 +36,9 @@ const budgetOptions = [
     { label: "$50,000+", value: "50k+" }
 ];
 
-const formBackground = 'light';
+const formBackground = 'dark';
 ---
-<form class="space-y-6 bg-background-dark p-6 rounded-lg">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Input
-        label="Name"
-        id="name"
-        name="name"
-        required
-        background={formBackground}
-        />
-        <Input
-        label="Email"
-        type="email"
-        id="email"
-        name="email"
-        required
-        background={formBackground}
-        />
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <Input
-        label="Phone"
-        type="tel"
-        id="phone"
-        name="phone"
-        background={formBackground}
-    />
-    <Input
-        label="Company"
-        id="company"
-        name="company"
-        background={formBackground}
-    />
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Radio
-            label="How did you hear about us?"
-            id="hear-about"
-            name="hear-about"
-            options={hearAboutOptions}
-            required
-            background={formBackground}
-        />
-    <Checkbox
-        label="Areas of Interest"
-        id="interests"
-        name="interests"
-        options={interestOptions}
-        background={formBackground}
-    />
-    </div>
-    
+<form class="space-y-6 bg-background-light p-6 rounded-[var(--border-radius-xlarge)]">
     <Textarea
         label="Message"
         id="message"
@@ -96,39 +46,29 @@ const formBackground = 'light';
         required
         background={formBackground}
     />
-    
-    <Checkbox
-        label="I agree to the terms and conditions"
-        id="terms"
-        name="terms"
-        required
-        background={formBackground}
-    />
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Select
-            label="What service are you interested in?"
-            id="service"
-            name="service"
-            options={serviceOptions}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Input
+            label="Name"
+            id="name"
+            name="name"
             required
-            placeholder="Choose a service"
             background={formBackground}
         />
-        <Select
-            label="Budget Range"
-            id="budget"
-            name="budget"
-            options={budgetOptions}
+        <Input
+            label="Email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
             required
-            placeholder="Select your budget"
             background={formBackground}
         />
     </div>
 
-
-
-    <div class="mt-6">
-        <Button>Submit</Button>
+    <div class="grid grid-cols-1 mt-6 justify-items-end">
+        <Button variant="secondary">
+            Send
+            <Send class="w-4 h-4 ml-1" />
+        </Button>
     </div>
 </form>

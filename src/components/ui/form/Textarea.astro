@@ -34,7 +34,7 @@ const inputTextClass = getInputTextColor(background);
 <div class="form-group">
     <label 
         for={id} 
-        class={`block text-sm font-medium mb-1 ${labelClass}`}
+        class={`block text-small font-medium mb-2 ${labelClass}`}
     >
         {label}
         {required && <span class="text-red-500">*</span>}
@@ -49,10 +49,11 @@ const inputTextClass = getInputTextColor(background);
             w-full px-4 py-2 
             ${inputBgClass}
             ${inputTextClass}
-            border border-primary/20
-            rounded-lg 
-            focus:ring-2 focus:ring-primary focus:border-primary 
-            placeholder:text-body-base/50
+            border border-body-dark
+            rounded-[var(--border-radius-base)]
+            focus:outline-none focus:ring-0
+            focus:border-body-base 
+            placeholder:text-body-dark
             ${className}
         `}
     ></textarea>

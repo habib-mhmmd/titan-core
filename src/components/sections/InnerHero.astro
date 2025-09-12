@@ -16,29 +16,18 @@ const { content } = Astro.props;
 const opacity = content.overlayOpacity ?? 1;
 ---
 
-<section class="w-full pt-38 pb-18 relative">
+<section class="w-full pt-large pb-base relative">
     <div class="absolute inset-0 left-0 top-0 w-full h-full overflow-hidden">
-            <!-- {content.backgroundImage && (
-                <Image
-                    src={content.backgroundImage}
-                    alt=""
-                    width={1920}
-                    height={1080}
-                    class="w-full h-full object-cover"
-                    quality={70}
-                    format="webp"
-                />
-            )} -->
             <div
                 class="hero-backgrounds absolute inset-0 left-0 top-0 w-full h-full overflow-hidden"
                 style={`opacity: ${opacity};`}
             ></div>
         </div>
 
-    <div class="site-container mx-auto px-4 relative z-10">
+    <div class="site-container mx-auto px-4 pt-8 relative z-10">
         <div>
             <h1 class="text-body-base" data-aos="fade-up">{content.title}</h1>
-            {content.description && <p class="subtitle text-body-light" data-aos="fade-up" data-aos-delay="100">{content.description}</p>}
+            {content.description && <p class="subtitle text-body-light max-w-lg" data-aos="fade-up" data-aos-delay="100">{content.description}</p>}
         </div>
     </div>
 </section>

@@ -38,7 +38,7 @@ export const getHeadlineColor = (background: ThemeColor = 'base'): string => {
     const headlineColors = {
         base: 'text-headline',
         light: 'text-headline-light',
-        dark: 'text-headline-dark'
+        dark: 'text-headline-light'
     };
     return headlineColors[background];
 };
@@ -64,8 +64,8 @@ export const getInputBackgroundColor = (background: ThemeColor = 'base'): string
 export const getInputTextColor = (background: ThemeColor = 'base'): string => {
     const inputTextColors = {
         base: 'text-input-text',
-        light: 'text-input-text-light',
-        dark: 'text-input-text-dark'
+        light: 'text-input-text',
+        dark: 'text-input-text'
     };
     return inputTextColors[background];
 }; 
