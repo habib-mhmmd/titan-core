@@ -26,3 +26,9 @@ export const legalMenu = [
     { name: 'Terms of Service', link: '/legal/terms-of-service' }
 ];
 
+export const socialMenu =[
+    {name: 'LinkedIn', link:'https://www.linkedin.com/in/mhmmdhabib', target:'_blank'},
+    {name: 'Instagram', link:'https://www.instagram.com/prtfl.habibmuhd/', target:'_blank'},
+    {name: 'WhatsApp', link:'https://wa.me/6287794041360', target:'_blank'},
+
+];

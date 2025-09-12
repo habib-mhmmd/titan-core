@@ -1,5 +1,5 @@
 ---
-import { footerMenu, legalMenu } from '@data/menu';
+import { footerMenu, legalMenu, socialMenu } from '@data/menu';
 import Logo from '@components/Logo.astro';
 import MyLogo from './myLogo.astro';
 import Button from '@components/ui/Button.astro';
@@ -58,7 +58,42 @@ const currentYear = new Date().getFullYear();
       </div>
     )}
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 pb-8 border-b border-background-light">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] md:grid-cols-[3fr_1fr] gap-8 lg:gap-0 pb-8 border-b border-background-light">
+      <div class="relative items-start">
+        <div class="relative">
+          <MyLogo variant='footer'/>
+        </div>
+        <p class="mt-4 text-body-light max-w-lg text-small">
+          I’m always open to new opportunities and creative collaborations. Let’s bring your ideas to life with impactful design.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8 lg:gap-0 md:justify-items-end">
+        <div class="relative">
+          <h3 class="text-lg font-semibold mb-4">Pages</h3>
+          <nav>
+            <ul class="space-y-2">
+              {footerMenu.map(item => (
+                <li><a href={item.link} class="text-small text-body-dark hover:text-white transition-colors">{item.name}</a></li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+
+        <div class="relative">
+          <h3 class="text-lg font-semibold mb-4">Social</h3>
+          <nav>
+            <ul class="space-y-2">
+              {socialMenu.map(item => (
+                <li><a href={item.link} class="text-small text-body-dark hover:text-white transition-colors" target='_blank'>{item.name}</a></li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-40 pb-8 border-b border-background-light">
       <div class="col-span-1">
         <MyLogo variant='footer'/>
         <p class="mt-4 text-body-base">
@@ -76,10 +111,21 @@ const currentYear = new Date().getFullYear();
           </ul>
         </nav>
       </div>
-    </div>
+
+      <div class="col-span-1">
+        <h3 class="text-lg font-semibold mb-4">Social</h3>
+        <nav>
+          <ul class="space-y-2">
+            {socialMenu.map(item => (
+              <li><a href={item.link} class="text-body-dark hover:text-white transition-colors" target='_blank'>{item.name}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </div> -->
 
     <div class="mt-8 flex flex-col md:flex-row justify-between items-center">
-      <div class="text-body-dark text-sm">
+      <div class="text-body-dark text-xsmall">
         © {currentYear} {siteConfig.companyName}. All rights reserved.
       </div>
       
@@ -89,7 +135,7 @@ const currentYear = new Date().getFullYear();
             <li>
               <a 
                 href={item.link} 
-                class="text-sm text-body-dark hover:text-white transition-colors"
+                class="text-xsmall text-body-dark hover:text-white transition-colors"
               >
                 {item.name}
               </a>
