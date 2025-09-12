@@ -1,6 +1,7 @@
 ---
 import { footerMenu, legalMenu } from '@data/menu';
 import Logo from '@components/Logo.astro';
+import MyLogo from './myLogo.astro';
 import Button from '@components/ui/Button.astro';
 import { siteConfig } from '@data/config';
 
@@ -23,7 +24,7 @@ const { footerCta } = Astro.props;
 
 const defaultCta = {
   title: "Ready Work With Me?",
-  description: "Join us today and transform your digital presence with our innovative solutions.",
+  description: "I’m always open to new opportunities and creative collaborations. Let’s bring your ideas to life with impactful design.",
   hideCta: false,
   button: {
     text: "Contact Us",
@@ -36,17 +37,17 @@ const cta = footerCta || defaultCta;
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class={`bg-background-dark text-white pb-small ${cta.hideCta ? 'pt-large' : 'pt-base'}`}>
+<footer class={`bg-background-dark text-body-base pb-small ${cta.hideCta ? 'pt-large' : 'pt-base'}`}>
   <div class="site-container mx-auto px-4">
     {!cta.hideCta && (
       <div class="text-center border-b border-background-light mb-12 pb-base">
-        <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">{cta.title}</h2>
-        <p class="text-white mb-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-3xl text-body-base font-bold mb-4" data-aos="fade-up">{cta.title}</h2>
+        <p class="text-body-light mb-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
           {cta.description}
         </p>
         <Button 
           href={cta.button.link} 
-          variant="ghostLight"
+          variant="primary"
           size="lg"
           data-aos="fade-up"
           data-aos-delay="200"
@@ -57,10 +58,10 @@ const currentYear = new Date().getFullYear();
       </div>
     )}
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-background-light">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 pb-8 border-b border-background-light">
       <div class="col-span-1">
-        <Logo variant="footer" />
-        <p class="mt-4 text-white">
+        <MyLogo variant='footer'/>
+        <p class="mt-4 text-body-base">
           Empowering your digital journey with innovative solutions.
         </p>
       </div>

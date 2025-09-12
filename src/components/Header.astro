@@ -4,6 +4,7 @@ import Logo from '@components/Logo.astro';
 import { Menu, X, ChevronDown } from 'lucide-astro';
 import Button from '@components/ui/Button.astro';
 import Navigation from './ui/Navigation.astro';
+import MyLogo from './myLogo.astro';
 
 const ctaButton = {
     name: 'Contact Us',
@@ -26,9 +27,10 @@ const isCurrentPage = (link: string) => {
     <div class="absolute inset-0 w-full h-full bg-background/30 backdrop-blur-md z-0"></div>
     <div class="site-container mx-auto relative z-30">
         <div class="flex justify-between items-center py-4 px-4">
-            <div class="w-8 h-8 flex items-center">
+            <!-- <div class="w-8 h-8 flex items-center">
                 <Logo />
-            </div>
+            </div> -->
+            <MyLogo variant='header'/>
             <Navigation/>
         </div>
     </div>

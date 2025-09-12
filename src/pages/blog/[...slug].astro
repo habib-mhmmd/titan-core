@@ -46,7 +46,25 @@ else if (!seoImage && post.data.featuredImage) {
 ---
 
 <Layout title={seoTitle} description={seoDescription} image={seoImage}>
-    <article class="site-container--small mx-auto px-4 prose relative pb-base">
+        <div class="w-full h-140 absolute top-0 left-0 z-0 overflow-hidden">
+        {
+            post.data.featuredImage && (
+                <>
+                    <Image
+                        src={post.data.featuredImage}
+                        alt=""
+                        width={1920}
+                        height={1080}
+                        class="w-full h-full object-cover grayscale opacity-20"
+                        quality={60}
+                    />
+                    {/* <div class="absolute inset-0 bg-background-light/10 backdrop-blur-md" /> */}
+                    <div class="absolute w-full h-96 left-0 bottom-0" style="background: linear-gradient(to top, var(--color-background) 0%, transparent 100%);"/>
+                </>
+            )
+        }
+        </div>
+    <article class="site-container--small mx-auto px-4 prose relative pb-base z-10">
         <!-- Breadcrumb -->
         <nav class="hidden md:flex items-center gap-2 text-sm font-medium mt-24 md:mt-36">
             <a href="/" class="flex items-center text-body-light hover:text-body-base transition">

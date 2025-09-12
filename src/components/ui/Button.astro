@@ -20,7 +20,7 @@ const {
   ...rest
 } = Astro.props;
 
-const baseStyles = 'group relative inline-flex overflow-hidden items-center justify-center rounded-border-lg font-medium transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 rounded-md flex items-center gap-2';
+const baseStyles = 'group relative inline-flex overflow-hidden items-center justify-center rounded-[var(--border-radius-small)] md:rounded-[var(--border-radius-base)] font-medium transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 rounded-md flex items-center gap-2';
 
 
 const variants = {
