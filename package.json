@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@astrojs/vercel": "^8.2.7",
+        "@vercel/speed-insights": "^1.2.0",
         "aos": "^2.3.4",
         "resend": "^6.0.3"
     },

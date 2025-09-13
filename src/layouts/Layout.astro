@@ -6,6 +6,8 @@ import ThemeSwitcher from "../components/ThemeSwitcher.astro";
 import { SEO, siteConfig } from "../data/config";
 import 'aos/dist/aos.css';
 import { themeSetting } from "../data/config";
+import SpeedInsights from '@vercel/speed-insights/astro';
+
 const { theme } = themeSetting;
 
 const { SiteName, Separator, defaultDescription } = SEO;
@@ -42,10 +44,6 @@ const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<!-- <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
 		<link rel="icon" href="/Logo-icon.svg" type="image/svg+xml">
 		<link rel="icon" href="/Logo-icon.ico" type="image/x-icon">
 		<link rel="icon" href="/Logo-icon-apple.png" type="image/png">
@@ -78,7 +76,6 @@ const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 		<slot />
 		<Footer footerCta={footerCta} />
 		
-		
 		<script>
 			import AOS from 'aos';
 			AOS.init({
@@ -86,5 +83,13 @@ const fullCanonicalUrl = new URL(canonicalPath, siteConfig.siteUrl).toString();
 				once: true,
 			});
 		</script>
+
+		<script is:inline>
+			function speedInsightsBeforeSend(data){
+				console.log("Speed Insights before send", data)
+				return data;
+			}
+		</script>
+		<SpeedInsights />
 	</body>
 </html>
