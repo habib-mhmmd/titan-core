@@ -1,13 +1,13 @@
 
   <div class="site-container mx-auto px-4">
       <div class="marquee-container overflow-hidden">
-          <h4 class="marquee-content text-body-dark hover:cursor-pointer select-none">
-              <span class="hover:text-body-light transition-colors duration-300">Graphic Design</span>
-              <span class="hover:text-body-light transition-colors duration-300">Digital Imaging</span>
-              <span class="hover:text-body-light transition-colors duration-300">UI/UX Design</span>
-              <span class="hover:text-body-light transition-colors duration-300">Motion Graphic</span>
-              <span class="hover:text-body-light transition-colors duration-300">Animation</span>
-              <span class="hover:text-body-light transition-colors duration-300">Video Editing</span>
+          <h4 class="marquee-content text-body-base/30 hover:cursor-pointer select-none">
+              <span class="hover:text-body-base transition-colors duration-300">Graphic Design</span>
+              <span class="hover:text-body-base transition-colors duration-300">Digital Imaging</span>
+              <span class="hover:text-body-base transition-colors duration-300">UI/UX Design</span>
+              <span class="hover:text-body-base transition-colors duration-300">Motion Graphic</span>
+              <span class="hover:text-body-base transition-colors duration-300">Animation</span>
+              <span class="hover:text-body-base transition-colors duration-300">Video Editing</span>
           </h4>
       </div>
   </div>
@@ -47,10 +47,23 @@
     content: "";
     position: absolute;
     top: 0;
-    width: 20rem; /* atur lebar fade sesuai selera */
+    width: 4rem; /* atur lebar fade sesuai selera */
     height: 100%;
     pointer-events: none;
     z-index: 2;
+  }
+
+  @media (min-width: 768px) {
+    .marquee-container::before,
+    .marquee-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 14rem; /* atur lebar fade sesuai selera */
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
   }
 
   .marquee-container::before {
