@@ -6,9 +6,9 @@ export const siteConfig = {
       Github: 'https://github.com/withastro',
       Instagram: 'https://www.instagram.com/astrodotbuild',
       LinkedIn: 'https://www.linkedin.com/company/astrodotbuild',
-      Email: 'support@titan-core.com',
-      Phone: '+123 456 7890',
-      Location: '123 Main St, Anytown, USA',
+      Email: 'muhabib10alhud@gmail.com',
+      Phone: '+62 877 9404 1360',
+      Location: 'Kebumen, Central Java',
   }
 };
 
