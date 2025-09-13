@@ -49,33 +49,22 @@
 //   }
 // };
 
-import type { APIRoute } from "astro";
+export const prerender = false; // biar endpoint tetap server-side
 
-export const prerender = false; // 👈 WAJIB biar route ini bukan static
-
-const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
-const FROM_ADDRESS = "contact@habibmuhammad.my.id"; // email/domain terverifikasi di Resend
-const TO_ADDRESS = "muhabib10alhud@gmail.com"; // email tujuan kamu
-
-export const POST: APIRoute = async ({ request }) => {
+export async function POST({ request }: { request: Request }) {
   try {
-    const data = await request.formData();
-    const name = data.get("name");
-    const email = data.get("email");
-    const message = data.get("message");
+    const formData = await request.formData();
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
 
-    if (!name || !email || !message) {
-      return new Response(
-        JSON.stringify({ success: false, message: "Invalid form data" }),
-        { status: 400 }
-      );
-    }
+    const FROM_ADDRESS = "contact@habibmuhammad.my.id";
+    const TO_ADDRESS = "muhabib10alhud@gmail.com";
 
-    // Panggil Resend API via fetch
-    const res = await fetch("https://api.resend.com/emails", {
+    const resendRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
+        Authorization: `Bearer ${import.meta.env.RESEND_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -84,19 +73,18 @@ export const POST: APIRoute = async ({ request }) => {
         subject: `New message from ${name}`,
         reply_to: email,
         html: `
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <hr/>
-          <p>${(message as string).replace(/\n/g, "<br/>")}</p>
+          <p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
+          <hr />
+          <p>${message}</p>
         `,
       }),
     });
 
-    if (!res.ok) {
-      const error = await res.text();
-      console.error("Resend API Error:", error);
+    if (!resendRes.ok) {
+      const errText = await resendRes.text();
+      console.error("RESEND ERROR:", errText);
       return new Response(
-        JSON.stringify({ success: false, message: "Failed to send email" }),
+        JSON.stringify({ success: false, message: "Failed to send email." }),
         { status: 500 }
       );
     }
@@ -112,4 +100,4 @@ export const POST: APIRoute = async ({ request }) => {
       { status: 500 }
     );
   }
-};
+}
