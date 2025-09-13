@@ -49,48 +49,92 @@
 //   }
 // };
 
-export const prerender = false; // biar endpoint tetap server-side
 
-export async function POST({ request }: { request: Request }) {
+// btasss
+
+// export const prerender = false; // biar endpoint tetap server-side
+
+// export async function POST({ request }: { request: Request }) {
+//   try {
+//     const formData = await request.formData();
+//     const name = formData.get("name");
+//     const email = formData.get("email");
+//     const message = formData.get("message");
+
+//     const FROM_ADDRESS = "contact@habibmuhammad.my.id";
+//     const TO_ADDRESS = "muhabib10alhud@gmail.com";
+
+//     const resendRes = await fetch("https://api.resend.com/emails", {
+//       method: "POST",
+//       headers: {
+//         Authorization: `Bearer ${import.meta.env.RESEND_API_KEY}`,
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         from: `Website Contact <${FROM_ADDRESS}>`,
+//         to: [TO_ADDRESS],
+//         subject: `New message from ${name}`,
+//         reply_to: email,
+//         html: `
+//           <p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
+//           <hr />
+//           <p>${message}</p>
+//         `,
+//       }),
+//     });
+
+//     if (!resendRes.ok) {
+//       const errText = await resendRes.text();
+//       console.error("RESEND ERROR:", errText);
+//       return new Response(
+//         JSON.stringify({ success: false, message: "Failed to send email." }),
+//         { status: 500 }
+//       );
+//     }
+
+//     return new Response(
+//       JSON.stringify({ success: true, message: "Email sent successfully!" }),
+//       { status: 200 }
+//     );
+//   } catch (err) {
+//     console.error("CONTACT POST ERROR:", err);
+//     return new Response(
+//       JSON.stringify({ success: false, message: "Server error" }),
+//       { status: 500 }
+//     );
+//   }
+// }
+
+
+import type { APIRoute } from "astro";
+
+export const POST: APIRoute = async ({ request }) => {
   try {
-    const formData = await request.formData();
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
+    const { name, email, message } = await request.json();
 
-    const FROM_ADDRESS = "contact@habibmuhammad.my.id";
-    const TO_ADDRESS = "muhabib10alhud@gmail.com";
-
-    const resendRes = await fetch("https://api.resend.com/emails", {
+    // 🔑 pastikan RESEND_API_KEY sudah di-set di Cloudflare Pages Environment Variables
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${import.meta.env.RESEND_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: `Website Contact <${FROM_ADDRESS}>`,
-        to: [TO_ADDRESS],
+        from: "Website Contact <contact@habibmuhammad.my.id>",
+        to: "muhabib10alhud@gmail.com",
         subject: `New message from ${name}`,
-        reply_to: email,
-        html: `
-          <p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
-          <hr />
-          <p>${message}</p>
-        `,
+        html: `<p><strong>From:</strong> ${name} &lt;${email}&gt;</p><hr /><p>${message.replace(/\n/g, "<br/>")}</p>`,
       }),
     });
 
-    if (!resendRes.ok) {
-      const errText = await resendRes.text();
-      console.error("RESEND ERROR:", errText);
-      return new Response(
-        JSON.stringify({ success: false, message: "Failed to send email." }),
-        { status: 500 }
-      );
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("Resend error:", errorText);
+      throw new Error(errorText);
     }
 
     return new Response(
-      JSON.stringify({ success: true, message: "Email sent successfully!" }),
+      JSON.stringify({ success: true, message: "Email sent" }),
       { status: 200 }
     );
   } catch (err) {
@@ -100,4 +144,4 @@ export async function POST({ request }: { request: Request }) {
       { status: 500 }
     );
   }
-}
+};
