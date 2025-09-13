@@ -4,6 +4,8 @@ import { getBackgroundColor, getTextColor, getPaddingClass } from '@utils/styleU
 import type { ThemeColor, PaddingSize } from '@utils/styleUtils';
 import { siteConfig } from '@data/config';
 import { Mail, Phone, MapPin } from 'lucide-astro';
+
+
 export interface Props {
     content?: {
         title?: string;
@@ -51,7 +53,8 @@ const paddingClass = getPaddingClass({ padding, paddingTop, paddingBottom });
                 </div>
             </div>
             <div>
-                <Contact />
+                <!-- <Contact /> -->
+                
             </div>
         </div>
     </div>

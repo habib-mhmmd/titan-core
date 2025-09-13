@@ -2,43 +2,12 @@
 import Button from "@components/ui/Button.astro";
 import Input from "@components/ui/form/Input.astro";
 import Textarea from "@components/ui/form/Textarea.astro";
-import Radio from "@components/ui/form/Radio.astro";
-import Checkbox from "@components/ui/form/Checkbox.astro";
-import Select from "@components/ui/form/Select.astro";
 import { Send } from 'lucide-astro';
-
-const hearAboutOptions = [
-    { label: "Search Engine", value: "search" },
-    { label: "Social Media", value: "social" },
-    { label: "Friend/Colleague", value: "referral" },
-    { label: "Other", value: "other" }
-];
-
-const interestOptions = [
-    { label: "Web Development", value: "web" },
-    { label: "Mobile Development", value: "mobile" },
-    { label: "Design Services", value: "design" },
-    { label: "Consulting", value: "consulting" }
-];
-
-const serviceOptions = [
-    { label: "Website Development", value: "website" },
-    { label: "Mobile App Development", value: "mobile" },
-    { label: "UI/UX Design", value: "design" },
-    { label: "Digital Marketing", value: "marketing" },
-    { label: "Consulting", value: "consulting" }
-];
-
-const budgetOptions = [
-    { label: "$5,000 - $10,000", value: "5-10k" },
-    { label: "$10,000 - $25,000", value: "10-25k" },
-    { label: "$25,000 - $50,000", value: "25-50k" },
-    { label: "$50,000+", value: "50k+" }
-];
 
 const formBackground = 'dark';
 ---
-<form class="space-y-6 bg-background-light p-6 rounded-[var(--border-radius-xlarge)]">
+
+<form id="contact-form" class="space-y-6 bg-background-light p-6 rounded-[var(--border-radius-xlarge)]">
     <Textarea
         label="Message"
         id="message"
@@ -66,9 +35,94 @@ const formBackground = 'dark';
     </div>
 
     <div class="grid grid-cols-1 mt-6 justify-items-end">
-        <Button variant="secondary">
+        <Button variant="secondary" type="submit" id="contact-submit">
             Send
             <Send class="w-4 h-4 ml-1" />
         </Button>
     </div>
+
 </form>
+
+<!-- <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#contact-form");
+  if (!(form instanceof HTMLFormElement)) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const submitBtn = document.querySelector("#contact-submit");
+    try {
+      submitBtn?.setAttribute("disabled", "true");
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      // debug: lihat response body (jika ada)
+      const resJson = await response.json().catch(() => ({}));
+
+      if (response.ok) {
+        alert("✅ Email sent!");
+        form.reset();
+      } else {
+        console.error("Server responded:", response.status, resJson);
+        alert("❌ Failed to send email. " + (resJson.message || ""));
+      }
+    } catch (err) {
+      console.error("Fetch error:", err);
+      alert("⚠️ Error submitting form. Cek console & server log.");
+    } finally {
+      submitBtn?.removeAttribute("disabled");
+    }
+  });
+});
+</script> -->
+
+<script>
+  // Pastikan script ini berada setelah elemen <form>
+  (function () {
+    const form = document.querySelector("#contact-form");
+    if (!form) return;
+
+    const submitBtn = document.querySelector("#contact-submit");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!(form instanceof HTMLFormElement)) return;
+
+      submitBtn?.setAttribute("disabled", "true");
+
+      try {
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        const resJson = await res.json().catch(() => ({}));
+
+        if (res.ok) {
+          alert("✅ Email sent!");
+          form.reset();
+        } else {
+          console.error("Server response:", res.status, resJson);
+          alert("❌ Failed to send email. " + (resJson.message || ""));
+        }
+      } catch (err) {
+        console.error("Fetch error:", err);
+        alert("⚠️ Error submitting form. Cek console & server log.");
+      } finally {
+        submitBtn?.removeAttribute("disabled");
+      }
+    });
+  })();
+</script>
