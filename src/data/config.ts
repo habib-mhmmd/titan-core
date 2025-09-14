@@ -4,9 +4,9 @@ export const siteConfig = {
   Socials: {
       xSocial: 'https://x.com/astrodotbuild',
       Github: 'https://github.com/withastro',
-      Instagram: 'https://www.instagram.com/astrodotbuild',
-      LinkedIn: 'https://www.linkedin.com/company/astrodotbuild',
-      Email: 'muhabib10alhud@gmail.com',
+      Instagram: 'https://www.instagram.com/prtfl.habibmuhd/',
+      LinkedIn: 'https://www.linkedin.com/in/mhmmdhabib',
+      Email: 'contact@habibmuhammad.my.id',
       Phone: '+62 877 9404 1360',
       Location: 'Kebumen, Central Java',
   }
