@@ -46,24 +46,33 @@ const paddingClass = getPaddingClass({ padding, paddingTop, paddingBottom });
                 <p class:list={[textColor]}>
                     You can contact us via email or phone.
                 </p> -->
-                <div class:list={["flex flex-col gap-6", "text-body-light hover:text-body-base"]}>
-                    <div class:list={["flex items-center gap-2"]}><MapPin aria-hidden="true" />
-                        <a href={`https://maps.google.com/?q=${siteConfig.Socials.Location}`} class="text-body-light hover:text-body-base" target="_blank">
-                            {siteConfig.Socials.Location}
-                        </a>
-                    </div>
-                    
-                    <div class:list={["flex items-center gap-2"]}><Mail aria-hidden="true" />
-                        <a href={`mailto:${siteConfig.Socials.Email}`} class="text-body-light hover:text-body-base" target="_blank">
-                            {siteConfig.Socials.Email}
-                        </a>
-                    </div>
+                <div class:list={["flex flex-col gap-6"]}>
+                    <a 
+                        href={`https://maps.google.com/?q=${siteConfig.Socials.Location}`} 
+                        target="_blank"
+                        class="flex items-center gap-2 text-body-light hover:text-body-base w-fit"
+                        >
+                        <MapPin aria-hidden="true" />
+                        <span>{siteConfig.Socials.Location}</span>
+                    </a>
 
-                    <div class:list={["flex items-center gap-2"]}><Phone aria-hidden="true" />
-                        <a href="https://wa.me/6287794041360" class="text-body-light hover:text-body-base" target="_blank">
-                            {siteConfig.Socials.Phone}
-                        </a>
-                    </div>
+                    <a 
+                        href={`mailto:${siteConfig.Socials.Email}`} 
+                        target="_blank"
+                        class="flex items-center gap-2 text-body-light hover:text-body-base w-fit"
+                        >
+                        <Mail aria-hidden="true" />
+                        <span>{siteConfig.Socials.Email}</span>
+                    </a>
+
+                    <a 
+                        href="https://wa.me/6287794041360"
+                        target="_blank"
+                        class="flex items-center gap-2 text-body-light hover:text-body-base w-fit"
+                        >
+                        <Phone aria-hidden="true" />
+                        <span>{siteConfig.Socials.Phone}</span>
+                    </a>
 
                 </div>
             </div>
