@@ -6,13 +6,18 @@ interface Category {
 
 export const categories: Category[] = [
   {
+    name: 'Poster Design',
+    slug: 'poster-design',
+    description: ''
+  },
+  {
     name: 'Thumbnail Design',
     slug: 'thumbnail-design',
     description: ''
   },
   {
-    name: 'Poster Design',
-    slug: 'poster-design',
+    name: 'Social Media Design',
+    slug: 'social-media-design',
     description: ''
   },
   {
@@ -23,11 +28,6 @@ export const categories: Category[] = [
   {
     name: 'Animation',
     slug: 'animation',
-    description: ''
-  },
-  {
-    name: 'Social Media Design',
-    slug: 'social-media-design',
     description: ''
   },
   

@@ -25,4 +25,6 @@ This project is the result of my internship at Ampu Studio, where I play a role 
 ### Result
 ![ampu2](./images/uiux/ampu2.jpg)
 ---
-![ampu2](./images/uiux/ampu3.jpg)
+![ampu3](./images/uiux/ampu3.jpg)
+---
+![ampu4](./images/uiux/ampu4.jpg)

@@ -23,9 +23,10 @@ This project was completed during my internship at Ampu Studio, focusing on crea
 ---
 ### Result
 -  **Poster**
+
 |          |          |
 |----------|----------|
-| ![Area Mistis Poster](./images/area-mistis-poster.jpg) | ![Area Mistis Poster2](/area-mistis.gif) |
+|![Area Mistis Poster](./images/area-mistis-poster.jpg)|![Area Mistis Poster2](/area-mistis.gif)|
 
 ---
 
