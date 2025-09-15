@@ -19,7 +19,7 @@ export const SEO = {
 };
   
 export const blogSetting = {
-  postsPerPage: 9   
+  postsPerPage: 6   
 
 }
 
