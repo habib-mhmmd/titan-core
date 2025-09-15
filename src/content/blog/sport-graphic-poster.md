@@ -1,5 +1,5 @@
 ---
-title: "Sport Graphic Poster Design"
+title: "Vibrant Sport Graphic Poster Design for Social Media"
 excerpt: "A personal project in sports graphic poster design, exploring the fusion of athlete photography with modern graphic elements, dynamic typography, and bold colors to capture the dynamic spirit of sports"
 featuredImage: "./images/sport-graphic-mockup.jpg"
 publishDate: "2024-10-31"
