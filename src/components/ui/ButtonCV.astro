@@ -38,9 +38,8 @@ const links ={
   document.addEventListener("DOMContentLoaded", () => {
     const wrapper = document.querySelector("#dropdownWrapper");
     const menu = document.querySelector("#dropdownMenu");
-    const btndrop = document.querySelector("#btnDrop");
 
-    if (!wrapper || !menu || !btndrop) return;
+    if (!wrapper || !menu) return;
 
     let hideTimeout:any; // 
 
@@ -87,7 +86,7 @@ const links ={
     });
 
     // Mobile / click
-    btndrop.addEventListener("click", (e) => {
+    wrapper.addEventListener("click", (e) => {
         e.stopPropagation(); // supaya click di wrapper ga memicu hide global
         if (menu.classList.contains("hidden")) {
         showMenu();
