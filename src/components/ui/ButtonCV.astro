@@ -13,7 +13,7 @@ const links ={
 ---
 
 <div class="relative inline-block" id="dropdownWrapper">
-    <Button variant="secondary" size='lg' data-aos="fade-up" data-aos-delay="100">
+    <Button variant="secondary" size='lg' id="btnDrop"data-aos="fade-up" data-aos-delay="100">
         <FileText class="w-4 h-4 mr-0 md:w-5 md:h-5 md:mr-1" />
         {cvButtons.name}
     </Button>
@@ -38,8 +38,9 @@ const links ={
   document.addEventListener("DOMContentLoaded", () => {
     const wrapper = document.querySelector("#dropdownWrapper");
     const menu = document.querySelector("#dropdownMenu");
+    const btndrop = document.querySelector("#btnDrop");
 
-    if (!wrapper || !menu) return;
+    if (!wrapper || !menu || !btndrop) return;
 
     let hideTimeout:any; // 
 
@@ -86,7 +87,7 @@ const links ={
     });
 
     // Mobile / click
-    wrapper.addEventListener("click", (e) => {
+    btndrop.addEventListener("click", (e) => {
         e.stopPropagation(); // supaya click di wrapper ga memicu hide global
         if (menu.classList.contains("hidden")) {
         showMenu();
