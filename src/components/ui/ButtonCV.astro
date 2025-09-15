@@ -1,0 +1,106 @@
+---
+import Button from '@components/ui/Button.astro';
+import { FileText } from 'lucide-astro';
+
+const cvButtons = {
+    name: 'See My CV',
+
+};
+const links ={
+    linkEN: 'https://drive.google.com/file/d/1cIq-I8WZz8OHBrLU5Ye4kxcK4G1AAlWu/view?usp=sharing',
+    linkID: 'https://drive.google.com/file/d/18PbRKgs6suZOSAqA0yLWMrTILBcXJNKV/view?usp=sharing',
+}
+---
+
+<div class="relative inline-block" id="dropdownWrapper">
+    <Button variant="secondary" size='lg' data-aos="fade-up" data-aos-delay="100">
+        <FileText class="w-4 h-4 mr-0 md:w-5 md:h-5 md:mr-1" />
+        {cvButtons.name}
+    </Button>
+    <div class="relative hidden z-10" id="dropdownMenu">
+        <div class="absolute w-52 mt-2 left-0 py-4 px-6 bg-background-light rounded-[var(--border-radius-small)] md:rounded-[var(--border-radius-base)]"
+            >
+            <a
+                href={links.linkEN} target="_blank"
+                class="block pt-2 pb-4 text-small text-body-light hover:text-body-base"
+                >English</a
+            >
+            <a
+                href={links.linkID} target="_blank"
+                class="block py-2 text-small text-body-light hover:text-body-base"
+                >Bahasa Indonesia</a
+            >
+        </div>
+    </div>
+</div>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector("#dropdownWrapper");
+    const menu = document.querySelector("#dropdownMenu");
+
+    if (!wrapper || !menu) return;
+
+    let hideTimeout:any; // 
+
+    // wrapper.addEventListener("mouseenter", () => {
+    //   clearTimeout(hideTimeout); // batalin kalau ada timeout jalan
+    //   menu.classList.remove("hidden");
+    //   menu.classList.add("opacity-100");
+    //   menu.classList.remove("opacity-0");
+    // });
+
+    // wrapper.addEventListener("mouseleave", () => {
+    //   hideTimeout = setTimeout(() => {
+    //     menu.classList.add("opacity-0");
+    //     menu.classList.remove("opacity-100");
+
+    //     // kasih delay sebelum benar-benar di-hide biar transisi halus
+    //     setTimeout(() => {
+    //       menu.classList.add("hidden");
+    //     }, 200); // sama dengan duration-200
+    //   }, 200); // delay sebelum mulai sembunyi
+    // });
+
+    // Fungsi untuk show menu
+    const showMenu = () => {
+        clearTimeout(hideTimeout);
+        menu.classList.remove("hidden", "opacity-0");
+        menu.classList.add("opacity-100");
+    };
+
+    // Fungsi untuk hide menu
+    const hideMenu = () => {
+        menu.classList.remove("opacity-100");
+        menu.classList.add("opacity-0");
+
+        setTimeout(() => {
+        menu.classList.add("hidden");
+        }, 200); // harus sama dengan durasi transisi
+    };
+
+    // Desktop hover
+    wrapper.addEventListener("mouseenter", showMenu);
+    wrapper.addEventListener("mouseleave", () => {
+        hideTimeout = setTimeout(hideMenu, 200);
+    });
+
+    // Mobile / click
+    wrapper.addEventListener("click", (e) => {
+        e.stopPropagation(); // supaya click di wrapper ga memicu hide global
+        if (menu.classList.contains("hidden")) {
+        showMenu();
+        } else {
+        hideMenu();
+        }
+    });
+
+    // Klik di luar menu untuk menutup
+    document.addEventListener("click", () => {
+        if (!menu.classList.contains("hidden")) {
+        hideMenu();
+        }
+    });
+  });
+</script>
+
