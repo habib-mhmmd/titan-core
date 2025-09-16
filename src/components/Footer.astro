@@ -64,7 +64,11 @@ const currentYear = new Date().getFullYear();
           <MyLogo variant='footer'/>
         </div>
         <p class="mt-4 text-body-light max-w-lg text-small">
-          I’m always open to new opportunities and creative collaborations. Let’s bring your ideas to life with impactful design.
+          <span 
+            class="block">Habibmuhd | 
+            <span id="role" class="transition-opacity duration-500">Graphic Design</span>
+          </span>
+          <span class="block">Open for collaborations and new opportunities.</span>
         </p>
       </div>
 
@@ -146,3 +150,30 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const roles = ["Graphic Design", "Digital Imaging", "UI/UX Design", "Motion Graphic", "Animation", "Video Editing"];
+  const roleElement = document.getElementById("role");
+  if (!roleElement) { 
+    console.error("Element with id='role' not found"); 
+    return; 
+  }
+
+  let index = 0;
+  const FADE_MS = 500;    // waktu fade (sama dengan duration-500)
+  const INTERVAL_MS = 3000; // ganti tiap 5 detik
+
+  setInterval(() => {
+    // fade out
+    roleElement.classList.add("opacity-0");
+
+    // setelah fade out selesai, ganti teks dan fade in
+    setTimeout(() => {
+      index = (index + 1) % roles.length;
+      roleElement.textContent = roles[index];
+      roleElement.classList.remove("opacity-0");
+    }, FADE_MS);
+  }, INTERVAL_MS);
+});
+</script>
