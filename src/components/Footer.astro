@@ -63,6 +63,7 @@ const currentYear = new Date().getFullYear();
         <div class="relative">
           <MyLogo variant='footer'/>
         </div>
+        
         <p class="mt-4 text-body-light max-w-lg text-small">
           <span 
             class="block">Habibmuhd | 
@@ -70,6 +71,7 @@ const currentYear = new Date().getFullYear();
           </span>
           <span class="block">Open for collaborations and new opportunities.</span>
         </p>
+        
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8 lg:gap-0 md:justify-items-end">
@@ -97,43 +99,12 @@ const currentYear = new Date().getFullYear();
       </div>
     </div>
 
-    <!-- <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-40 pb-8 border-b border-background-light">
-      <div class="col-span-1">
-        <MyLogo variant='footer'/>
-        <p class="mt-4 text-body-base">
-          Empowering your digital journey with innovative solutions.
-        </p>
-      </div>
-      
-      <div class="col-span-1">
-        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-        <nav>
-          <ul class="space-y-2">
-            {footerMenu.map(item => (
-              <li><a href={item.link} class="text-body-dark hover:text-white transition-colors">{item.name}</a></li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-
-      <div class="col-span-1">
-        <h3 class="text-lg font-semibold mb-4">Social</h3>
-        <nav>
-          <ul class="space-y-2">
-            {socialMenu.map(item => (
-              <li><a href={item.link} class="text-body-dark hover:text-white transition-colors" target='_blank'>{item.name}</a></li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </div> -->
-
-    <div class="mt-8 flex flex-col md:flex-row justify-between items-center">
+    <div class="mt-8">
       <div class="text-body-dark text-xsmall">
         © {currentYear} {siteConfig.companyName}. All rights reserved.
       </div>
       
-      <nav class="mt-4 md:mt-0">
+      <!-- <nav class="mt-4 md:mt-0">
         <ul class="flex flex-wrap gap-6">
           {legalMenu.map(item => (
             <li>
@@ -146,7 +117,7 @@ const currentYear = new Date().getFullYear();
             </li>
           ))}
         </ul>
-      </nav>
+      </nav> -->
     </div>
   </div>
 </footer>
