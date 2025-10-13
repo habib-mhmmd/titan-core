@@ -88,5 +88,18 @@ const heroContent = {
         </nav>
     )}
     </main>
+    <script is:inline>
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            try {
+            const currentPath = window.location.pathname + window.location.search;
+            if (currentPath.startsWith("/blog") || currentPath.startsWith("/category")) {
+                sessionStorage.setItem("blogLastPage", currentPath);
+            }
+            } catch (err) {
+            console.warn("Gagal menyimpan posisi blog terakhir:", err);
+            }
+        });
+    </script>
 </Layout> 
 

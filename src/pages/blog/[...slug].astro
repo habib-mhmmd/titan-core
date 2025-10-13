@@ -67,14 +67,24 @@ else if (!seoImage && post.data.featuredImage) {
     <article class="site-container--small mx-auto px-4 prose relative pb-base z-10">
         <!-- Breadcrumb -->
         <nav class="hidden md:flex items-center gap-2 text-sm font-medium mt-24 md:mt-36">
-            <a href="/" class="flex items-center text-body-light hover:text-body-base transition">
-                Home
-            </a>
-            <span class="text-body-light">›</span>
-            <a href="/blog" class="text-body-light hover:text-body-base transition">Projects</a>
+            <!-- <a href="/blog" class="text-body-light hover:text-body-base transition">Projects</a> -->
+            <a id="breadcrumb-projects" href="/blog" class="text-body-light hover:text-body-base transition">Projects</a>
             <span class="text-body-light">›</span>
             <span class="text-body-base truncate max-w-xs block">{post.data.seo?.title}</span>
         </nav>
+        <script is:inline>
+        document.addEventListener("DOMContentLoaded", () => {
+            try {
+            const lastPage = sessionStorage.getItem("blogLastPage");
+            const link = document.getElementById("breadcrumb-projects");
+            if (link && lastPage) {
+                link.href = lastPage;
+            }
+            } catch (err) {
+            console.warn("Gagal memulihkan halaman blog terakhir:", err);
+            }
+        });
+        </script>
         <div class="relative aspect-[16/9] mx-auto mt-28 md:mt-8 mb-6 md:mb-16">
             {post.data.featuredImage && (
                 <Image
