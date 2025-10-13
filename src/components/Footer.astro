@@ -132,14 +132,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   let index = 0;
-  const FADE_MS = 500;    // waktu fade (sama dengan duration-500)
-  const INTERVAL_MS = 3000; // ganti tiap 5 detik
+  const FADE_MS = 500;    
+  const INTERVAL_MS = 3000; 
 
   setInterval(() => {
-    // fade out
     roleElement.classList.add("opacity-0");
 
-    // setelah fade out selesai, ganti teks dan fade in
+    
     setTimeout(() => {
       index = (index + 1) % roles.length;
       roleElement.textContent = roles[index];

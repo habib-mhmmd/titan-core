@@ -37,21 +37,15 @@ const paddingClass = getPaddingClass({
     paddingBottom: Astro.props.paddingBottom,
 });
 
-// Fetch posts
+
 const allPosts = await getCollection('blog', ({ data }) => {
     return import.meta.env.DEV || data.publish !== false;
 });
 
-// Filter and sort posts
-// let filteredPosts = allPosts
-//     .filter((post) => !category || post.data.categories.includes(category))
-//     .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
-//     .slice(0, postsToShow);
-
 let filteredPosts = allPosts
     .filter((post) => !category || post.data.categories.includes(category));
 
-// kalau hasil filter kosong → fallback ke semua post
+
 if (filteredPosts.length === 0) {
     filteredPosts = allPosts;
 }
@@ -80,9 +74,6 @@ filteredPosts = filteredPosts
                     )}
                     {content?.button && (
                         <div class="mt-6" data-aos="fade-up" data-aos-delay="200">
-                            {/* <Button href={content.button.link} variant={content.button.variant || 'secondary'}>
-                                {content.button.text}
-                            </Button> */}
                             <Button href={content.button.link} variant={content.button.variant || 'secondary'} size={content.button.size || 'lg'}>
                                 {content.button.text}
                                 <svg 

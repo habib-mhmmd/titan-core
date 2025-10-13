@@ -124,13 +124,11 @@ else if (!seoImage && post.data.featuredImage) {
 
         </div>
 
-        <!-- overlay untuk zoom -->
         <div id="imgOverlay" class="fixed inset-0 bg-black/80 pt-0 md:pt-20 hidden justify-center items-center z-50 transition-opacity duration-300">
             <img id="imgOverlayTarget" class="max-w-[96%] max-h-[96%] rounded-[var(--border-radius-base)] md:rounded-[var(--border-radius-xlarge)] cursor-zoom-out" />
         </div>
     </article>
 
-    <!-- cursor biar keliatan bisa diklik -->
     <style is:global>
     .markdown img { cursor: zoom-in; }
     </style>
@@ -145,31 +143,29 @@ else if (!seoImage && post.data.featuredImage) {
             const markdown = document.querySelector(".markdown");
             if (!markdown) return;
 
-            // buka overlay
+
             markdown.addEventListener("click", (e) => {
             const target = e.target;
             if (target instanceof HTMLImageElement) {
                 overlayImg.src = target.currentSrc || target.src;
 
-                // tampilkan overlay + kunci scroll body
+
                 overlay.classList.remove("hidden", "opacity-0");
                 overlay.classList.add("flex", "opacity-100");
                 document.body.classList.add("overflow-hidden"); 
             }
             });
 
-            // klik overlay → tutup
             overlay.addEventListener("click", () => {
             overlay.classList.remove("opacity-100");
             overlay.classList.add("opacity-0");
 
-            // kasih delay biar transisi smooth sebelum di-hide
             setTimeout(() => {
                 overlay.classList.remove("flex");
                 overlay.classList.add("hidden");
                 overlayImg.removeAttribute("src");
                 document.body.classList.remove("overflow-hidden"); 
-            }, 300); // sama dengan duration-300
+            }, 300); 
             });
         });
     </script>
