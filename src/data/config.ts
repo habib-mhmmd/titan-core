@@ -8,7 +8,7 @@ export const siteConfig = {
       LinkedIn: 'https://www.linkedin.com/in/mhmmdhabib',
       Email: 'contact@habibmuhammad.my.id',
       Phone: '+62 877 9404 1360',
-      Location: 'Purwokerto, Central Java',
+      Location: 'Kebumen, Central Java',
   }
 };
 

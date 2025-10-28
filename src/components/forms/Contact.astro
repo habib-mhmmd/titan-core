@@ -33,6 +33,23 @@ const formBackground = 'dark';
             background={formBackground}
         />
     </div>
+    <!-- 🧩 Capybara Captcha -->
+    <!-- <div id="captcha-container" class="mt-4 text-sm text-gray-300"></div>
+    <input type="hidden" id="captcha_token" name="captcha_token" /> -->
+
+    <div class="border p-4 rounded-md bg-gray-50">
+      <p class="mb-2 font-medium">Verification</p>
+      <button
+        id="captcha-btn"
+        type="button"
+        class="px-4 py-2 bg-blue-600 text-white rounded-md"
+      >
+        Verify CAPTCHA
+      </button>
+      <p id="captcha-status" class="text-sm mt-2 text-gray-600">
+        Not verified yet.
+      </p>
+    </div>
 
     <div class="grid grid-cols-1 mt-6 justify-items-end">
         <Button variant="secondary" type="submit" id="contact-submit">
@@ -44,42 +61,64 @@ const formBackground = 'dark';
 </form>
 
 <script>
-  (function () {
-    const form = document.querySelector("#contact-form");
-    if (!form) return;
-    const submitBtn = document.querySelector("#contact-submit");
+document.addEventListener("DOMContentLoaded", async () => {
+  const form = document.querySelector<HTMLFormElement>("#contact-form");
+  const submitBtn = document.querySelector<HTMLButtonElement>("#contact-submit");
+  const captchaContainer = document.querySelector<HTMLElement>("#captcha-container");
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      if (!(form instanceof HTMLFormElement)) return;
+  if (!form || !captchaContainer) return;
 
-      submitBtn?.setAttribute("disabled", "true");
+  async function loadCaptcha() {
+    try {
+      // 🔹 Ambil challenge captcha dari server
+      const captchaRes = await fetch("/api/captcha");
+      const captchaData = await captchaRes.json();
 
-      try {
-        const formData = new FormData(form);
-        const payload = Object.fromEntries(formData.entries());
+      captchaContainer!.innerHTML = captchaData.html;
+      const tokenInput = document.querySelector<HTMLInputElement>("#captcha_token");
+      if (tokenInput) tokenInput.value = captchaData.token;
+    } catch (err) {
+      captchaContainer!.innerHTML = "<p class='text-red-500'>Gagal memuat captcha.</p>";
+    }
+  }
 
-        const res = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
+  // 🔹 Panggil pertama kali
+  await loadCaptcha();
 
-        const resJson = await res.json().catch(() => ({}));
+  // 🔹 Listener submit form
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-        if (res.ok) {
-          alert("✅ Email sent!");
-          form.reset();
-        } else {
-          console.error("Server response:", res.status, resJson);
-          alert("❌ Failed to send email. " + (resJson.message || ""));
-        }
-      } catch (err) {
-        console.error("Fetch error:", err);
-        alert("⚠️ Error submitting form. Check console & server log.");
-      } finally {
-        submitBtn?.removeAttribute("disabled");
+    if (submitBtn) submitBtn.disabled = true;
+
+    // Use HTMLFormElement.checkValidity()
+    if (!form.checkValidity()) {
+      if (submitBtn) submitBtn.disabled = false;
+      return;
+    }
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+      alert(result.message);
+      if (result.success) {
+        form.reset();          // Bersihkan isi form
+        await loadCaptcha();   // Muat ulang captcha baru
       }
-    });
-  })();
+    } catch (err) {
+      alert("Terjadi kesalahan saat mengirim pesan.");
+    } finally {
+      submitBtn?.removeAttribute("disabled");
+    }
+  });
+});
 </script>
+
