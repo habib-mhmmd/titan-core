@@ -32,3 +32,9 @@ export const socialMenu =[
     {name: 'WhatsApp', link:'https://wa.me/6287794041360', target:'_blank'},
 
 ];
+
+export const docsMenu =[
+    {name: 'CV (English)', link:'/CV-EN.pdf', target:'_blank'},
+    {name: 'CV (Indonesia)', link:'/CV-ID.pdf', target:'_blank'},
+    {name: 'Portfolio (Pdf)', link:'/Portfolio.pdf', target:'_blank'},
+];

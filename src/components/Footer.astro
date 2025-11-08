@@ -1,5 +1,5 @@
 ---
-import { footerMenu, legalMenu, socialMenu } from '@data/menu';
+import { footerMenu, socialMenu, docsMenu } from '@data/menu';
 import Logo from '@components/Logo.astro';
 import MyLogo from './myLogo.astro';
 import Button from '@components/ui/Button.astro';
@@ -58,7 +58,7 @@ const currentYear = new Date().getFullYear();
       </div>
     )}
 
-    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] md:grid-cols-[3fr_1fr] gap-8 lg:gap-0 pb-8 border-b border-background-light">
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 lg:gap-0 pb-8 border-b border-background-light">
       <div class="relative items-start">
         <div class="relative">
           <MyLogo variant='footer'/>
@@ -74,7 +74,7 @@ const currentYear = new Date().getFullYear();
         
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8 lg:gap-0 md:justify-items-end">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8 lg:gap-0 md:justify-items-start">
         <div class="relative">
           <h3 class="text-lg font-semibold mb-4">Pages</h3>
           <nav>
@@ -87,7 +87,18 @@ const currentYear = new Date().getFullYear();
         </div>
 
         <div class="relative">
-          <h3 class="text-lg font-semibold mb-4">Social</h3>
+          <h3 class="text-lg font-semibold mb-4">Documents</h3>
+          <nav>
+            <ul class="space-y-2">
+              {docsMenu.map(item => (
+                <li><a href={item.link} class="text-small text-body-dark hover:text-white transition-colors">{item.name}</a></li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+
+        <div class="relative">
+          <h3 class="text-lg font-semibold mb-4">Socials</h3>
           <nav>
             <ul class="space-y-2">
               {socialMenu.map(item => (
