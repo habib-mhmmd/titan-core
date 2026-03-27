@@ -36,5 +36,6 @@ export const socialMenu =[
 export const docsMenu =[
     {name: 'CV (English)', link:'/CV-EN.pdf', target:'_blank'},
     {name: 'CV (Indonesia)', link:'/CV-ID.pdf', target:'_blank'},
-    {name: 'Portfolio (Pdf)', link:'/Portfolio26.pdf', target:'_blank'},
+    // {name: 'Portfolio (Pdf)', link:'/Portfolio26.pdf', target:'_blank'},
+    {name: 'Portfolio (Pdf)', link:'https://drive.google.com/file/d/1u1_GUYLFx0s6FV5bQ2FW5icR6PyNxYNS/view?usp=sharing', target:'_blank'},
 ];
